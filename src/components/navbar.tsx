@@ -2,14 +2,24 @@ import Link from "next/link"
 import Image from "next/image"
 import styles from "./navbar.module.scss"
 import Pill from "./Pill";
+import {useRouter} from 'next/router'
 
-export default function Navbar() {
+import {useState} from "react";
+
+// @TODO put more in the module.css file of this file to clean it up of css statements and easy manipulation without searching
+
+export default function Navbar(props, test) {
+
+    const router = useRouter();
+    const [navBarOpen, setNavBarOpen] = useState(false);
+    const path = router.pathname;
+    
     return (
         <div className={styles.navbar}>
 
-            <div className={"flex flex-1 py-3 px-4 border-b border-gray-100 md:border-b-0"}>
+            <div className={"flex flex-1 border-b border-gray-100 md:border-b-0"}>
                 <Link href={"/"}>
-                    <div className={"flex w-48 items-center cursor-pointer"}>
+                    <div className={"px-4 w-auto flex w-48 items-center cursor-pointer"}>
                         <Image
                             alt={"Picture of tigo"}
                             src={"/img/profilepicture.png"}
@@ -21,37 +31,48 @@ export default function Navbar() {
                     </div>
                 </Link>
                 <div className={"flex-1"}/>
-                {/*<div className={styles.navHamburger}><button><Image height={16}*/}
-                {/*                                                    width={16}*/}
-                {/*                                                    src={"/bars-solid.svg"}/></button></div>*/}
+                <div>
+                    <button onClick={() => setNavBarOpen(!navBarOpen)}
+                            className={styles.navMenuButton + " self-center"}>
+                        <Image height={24}
+                               width={16}
+                               src={"/bars-solid.svg"}/>
+                    </button>
+                </div>
             </div>
 
-            <div className={"flex flex-col md:flex md:flex-row md:items-center border-red-700"}>
-                <Link href={"/"}>
-                    <div className={styles.navItemInactive}>Home</div>
-                </Link>
-                <Link href={"/clients"}>
-                    <div className={styles.navItemActive + " flex items-center"}>
-                        <p className={"mr-1"}>Clients</p>
-                        <Pill>New!</Pill>
-
+            <div
+                className={!navBarOpen ? "hidden lg:flex" : "flex"}>
+                <div className={"flex-col md:flex md:flex-row md:items-center border-red-700"}>
+                    <Link href={"/"}>
+                        <div className={path == "/" ? styles.navItemActive : styles.navItemInactive}>Home</div>
+                    </Link>
+                    <Link href={"/clients"}>
+                        <div className={path == "/clients" ? styles.navItemActive : styles.navItemInactive}>
+                            <p className={"mr-1"}>Clients</p>
+                            <Pill>New!</Pill>
+                        </div>
+                    </Link>
+                    <Link href={"/projects"}>
+                        <div className={path == "/projects" ? styles.navItemActive : styles.navItemInactive}>
+                            <p className={"mr-1"}>Projects</p>
+                            <Pill>New!</Pill>
+                        </div>
+                    </Link>
+                    <div className={"flex"}>
+                        <button className={styles.navButton + " w-12 justify-center"}>
+                            <Image height={24}
+                                   width={16}
+                                   src={"/bars-solid.svg"}/>
+                        </button>
+                        <button className={styles.navButton}>
+                            <Image height={24}
+                                   width={16}
+                                   src={"/moon-solid.svg"}/>
+                        </button>
                     </div>
-                </Link>
-                <Link href={"/projects"}>
-                    <div className={styles.navItemInactive + " flex items-center"}>
-                        <p className={"mr-1"}>Projects</p>
-                        <Pill>New!</Pill>
-                    </div>
-                </Link>
-                {/*<div className={styles.navButton}>*/}
-                {/*    <button className={"flex items-center"}>*/}
-                {/*        <Image height={16}*/}
-                {/*               width={16}*/}
-                {/*               src={"/moon-solid.svg"}/>*/}
-                {/*    </button>*/}
-                {/*</div>*/}
+                </div>
             </div>
         </div>
     )
-
 }

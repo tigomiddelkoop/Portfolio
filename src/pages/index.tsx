@@ -1,7 +1,5 @@
 import Head from 'next/head';
-import Link from "next/link";
 import {Fragment} from 'react';
-import {motion} from "framer-motion"
 
 export default function Home() {
     return (
@@ -27,25 +25,21 @@ export default function Home() {
                                 <div className="mb-4">
                                     <p className={"block font-semibold md:inline mb-2 md:mb-0 md:mr-2"}>SystemManager<span
                                         className={"hidden md:inline"}>:</span></p>
-                                    <a className="shadow bg-gray-100 border-gray-300 border mr-1 font-semibold hover:bg-gray-600 px-4 py-1.5 rounded-lg"
+                                    <a className="shadow bg-gray-100 border-gray-300 border mr-1 font-semibold hover:bg-gray-200 px-4 py-1.5 rounded-lg"
                                        href="https://systemmanager.io">Core</a>
-                                    <a className="shadow bg-gray-100 border-gray-300 border mr-1 font-semibold hover:bg-gray-600 px-4 py-1.5 rounded-lg"
+                                    <a className="shadow bg-gray-100 border-gray-300 border mr-1 font-semibold hover:bg-gray-200 px-4 py-1.5 rounded-lg"
                                        href="https://systemmanager.cloud">Cloud</a>
                                 </div>
                                 <div className={"mb-4"}>
                                     <p className={"block md:inline mb-2 md:mb-0 md:mr-2"}>Social<span
                                         className={"hidden md:inline"}>:</span></p>
-                                    <a className="shadow bg-gray-100 border-gray-300 border mr-1 font-semibold hover:bg-gray-600 px-4 py-1.5 rounded-lg"
+                                    <a className="shadow bg-gray-100 border-gray-300 border mr-1 font-semibold hover:bg-gray-200 px-4 py-1.5 rounded-lg"
                                        href="https://www.linkedin.com/in/tigo-middelkoop-92067a15b/">LinkedIn</a>
-                                    <a className="shadow bg-gray-100 border-gray-300 border mr-1 font-semibold hover:bg-gray-600 px-4 py-1.5 rounded-lg"
+                                    <a className="shadow bg-gray-100 border-gray-300 border mr-1 font-semibold hover:bg-gray-200 px-4 py-1.5 rounded-lg"
                                        href="https://github.com/tigomiddelkoop">
                                         GitHub</a>
                                 </div>
                             </div>
-                        </div>
-                        <div className={"flex"}>
-                            <h1 className={"font-bold text-6xl"}>Hi!</h1>
-                            <h1 className={"font-bold text-6xl"}>I'm Tigo</h1>
                         </div>
                     </div>
                 </main>
