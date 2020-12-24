@@ -3,15 +3,13 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 
 export default function Layout({children}) {
-    return <div>
+    return (
         <div>
             <Navbar/>
+            <div className={"m-4"}>
+                {children}
+            </div>
+            <Footer/>
         </div>
-        <div className={"m-4"}>
-            {children}
-        </div>
-        {/*<div>*/}
-        {/*    <Footer/>*/}
-        {/*</div>*/}
-    </div>
+    )
 }

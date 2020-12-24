@@ -13,7 +13,7 @@ export default function Navbar(props, test) {
     const router = useRouter();
     const [navBarOpen, setNavBarOpen] = useState(false);
     const path = router.pathname;
-    
+
     return (
         <div className={styles.navbar}>
 
@@ -42,8 +42,8 @@ export default function Navbar(props, test) {
             </div>
 
             <div
-                className={!navBarOpen ? "hidden lg:flex" : "flex"}>
-                <div className={"flex-col md:flex md:flex-row md:items-center border-red-700"}>
+                className={!navBarOpen ? "hidden lg:block" : "block"}>
+                <div className={"flex flex-col md:flex md:flex-row md:items-center border-red-700"}>
                     <Link href={"/"}>
                         <div className={path == "/" ? styles.navItemActive : styles.navItemInactive}>Home</div>
                     </Link>
@@ -63,7 +63,7 @@ export default function Navbar(props, test) {
                         <button className={styles.navButton + " w-12 justify-center"}>
                             <Image height={24}
                                    width={16}
-                                   src={"/bars-solid.svg"}/>
+                                   src={"/user-solid.svg"}/>
                         </button>
                         <button className={styles.navButton}>
                             <Image height={24}
