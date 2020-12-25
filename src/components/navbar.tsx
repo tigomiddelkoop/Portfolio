@@ -43,7 +43,7 @@ export default function Navbar(props, test) {
 
             <div
                 className={!navBarOpen ? "hidden lg:block" : "block"}>
-                <div className={"flex flex-col md:flex md:flex-row md:items-center border-red-700"}>
+                <div className={"flex flex-col lg:flex-row lg:items-center border-red-700"}>
                     <Link href={"/"}>
                         <div className={path == "/" ? styles.navItemActive : styles.navItemInactive}>Home</div>
                     </Link>
