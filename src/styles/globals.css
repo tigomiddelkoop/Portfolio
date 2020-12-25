@@ -18,6 +18,10 @@ a {
   box-sizing: border-box;
 }
 
+.title {
+  @apply text-2xl;
+}
+
 @tailwind base;
 
 /* Start purging... */

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import styles from "./navbar.module.scss"
-import Pill from "./Pill";
+import Pill from "./pill";
 import {useRouter} from 'next/router'
 
 import {useState} from "react";

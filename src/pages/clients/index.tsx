@@ -6,7 +6,7 @@ import {Fragment} from "react";
 export default function index() {
     return <Fragment>
         <Head>
-            <title>Projects</title>
+            <title>Tigo Middelkoop - Clients</title>
         </Head>
         <h1>The people I worked for</h1>
         <h2 className={""}><Link href={"/"}>Back to the homepage!</Link></h2>

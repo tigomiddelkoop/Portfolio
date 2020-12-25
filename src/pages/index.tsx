@@ -7,12 +7,11 @@ export default function Home() {
         <Fragment>
             <div>
                 <Head>
-                    <title>Tigo Middelkoop</title>
+                    <title>Tigo Middelkoop - Home</title>
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
                 <main>
                     <div className={""}>
-
                         <div className="md:flex">
                             <img className="shadow border-2 h-64 w-64 mx-auto md:mx-0 md:mr-6 rounded-full"
                                  alt="Tigo" src={"/img/profilepicture.png"}/>
@@ -23,18 +22,14 @@ export default function Home() {
                                 <h4 className="text-xs font-light mb-6">Interested in Learning: C++, C, Objective-C,
                                     Java &
                                     Rust</h4>
-                                <div className="mb-4">
-                                    <p className={"block font-semibold md:inline mb-2 md:mb-0 md:mr-2"}>SystemManager<span
-                                        className={"hidden md:inline"}>:</span></p>
+                                <div className="mb-4 flex">
+                                    <a className={"mr-1"}
+                                        href="https://systemmanager.io"><Button color={"primary"}>Core</Button></a>
                                     <a
-                                        href="https://systemmanager.io"><Button>Core</Button></a>
-                                    <a
-                                        href="https://systemmanager.cloud"><Button>Cloud</Button></a>
+                                        href="https://systemmanager.cloud"><Button color={"primary"}>Cloud</Button></a>
                                 </div>
-                                <div className={"mb-4"}>
-                                    <p className={"block md:inline mb-2 md:mb-0 md:mr-2"}>Social<span
-                                        className={"hidden md:inline"}>:</span></p>
-                                    <a
+                                <div className={"mb-4 flex"}>
+                                    <a className={"mr-1"}
                                         href="https://www.linkedin.com/in/tigo-middelkoop-92067a15b/"><Button>LinkedIn</Button></a>
                                     <a
                                         href="https://github.com/tigomiddelkoop">
@@ -42,11 +37,10 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
+                        <h1 className={"text-4xl"}>Tools</h1>
+                        <h1 className={"text-1xl"}>Tools</h1>
                     </div>
                 </main>
-                <footer>
-
-                </footer>
             </div>
         </Fragment>
     )

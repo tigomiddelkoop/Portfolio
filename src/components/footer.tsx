@@ -1,9 +1,9 @@
-import Pill from "./Pill";
+import Pill from "./pill";
 import styles from "./footer.module.scss"
 
 export default function Footer() {
 
-    return <div
+    return <footer
         className={"p-4 border-t border-b border-gray-100 items-center justify-center text-center"}>
         <h1 className={"text-2xl"}>tigo.tech</h1>
         <div className={"flex flex-col lg:flex-row items-center justify-center text-center"}>
@@ -35,6 +35,6 @@ export default function Footer() {
                 <p>Build id:</p>
             </div>
         </div>
-    </div>
+    </footer>
 
 }
