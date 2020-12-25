@@ -37,8 +37,8 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <h1 className={"text-4xl"}>Tools</h1>
-                        <h1 className={"text-1xl"}>Tools</h1>
+                        <h1 className={"text-4xl"}>Tools and languages</h1>
+                        <h1 className={"text-1xl"}>Tools I can use (and I probably use on the regular)</h1>
                     </div>
                 </main>
             </div>

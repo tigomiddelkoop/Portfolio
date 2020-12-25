@@ -10,7 +10,7 @@ export default function Footer() {
             <div className={styles.footerCategoryContainer}>
                 <p className={styles.footerCategoryTitle}>Sites</p>
                 <div className={"flex items-center"}><a href={"https://tigo.tech"}
-                                                        className={"mr-1"}>tigo.tech</a><Pill>You're
+                                                        className={"mr-1"}>tigo.tech</a><Pill color={"info"}>You're
                     here</Pill></div>
                 <div className={"flex items-center"}><a href={"https://genericdevelopment.nl"}>GenericDevelopment</a>
                 </div>
@@ -21,7 +21,8 @@ export default function Footer() {
                 <p className={styles.footerCategoryTitle}>Socials</p>
                 <p className={styles.footerCategorySubTitle}>These socials I am willing to give</p>
                 <div><a rel={"noreferrer noopener _blank"} href={"https://github.com/tigomiddelkoop"}>GitHub</a></div>
-                <div><a rel={"noreferrer noopener _blank"} href={"https://www.linkedin.com/in/tigo-middelkoop-92067a15b/"}>LinkedIn</a></div>
+                <div><a rel={"noreferrer noopener _blank"}
+                        href={"https://www.linkedin.com/in/tigo-middelkoop-92067a15b/"}>LinkedIn</a></div>
                 {/*<div><a>Twitter</a></div>*/}
             </div>
 
@@ -31,8 +32,14 @@ export default function Footer() {
                     <p>That's right! It's deployed in kubernetes!</p>
                     <p>I'm even learning kubernetes</p>
                 </div>
-                <p>Served from node: </p>
-                <p>Build id:</p>
+                <div className={"flex items-center"}>
+                    <p className={"mr-1"}>Served from node: </p>
+                    <Pill>unknown</Pill>
+                </div>
+                <div className={"flex items-center"}>
+                    <p className={"mr-1"}> Build id:</p>
+                    <Pill>unknown</Pill>
+                </div>
             </div>
         </div>
     </footer>

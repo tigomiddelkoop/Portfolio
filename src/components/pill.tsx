@@ -1,5 +1,10 @@
 import styles from "./pill.module.scss"
 
+
+interface Props {
+    children: any,
+    color?: "primary" | "secondary" | "danger" | "warning" | "success" | "info";
+}
 export default function Pill(props) {
 
 

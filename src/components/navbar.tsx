@@ -50,13 +50,13 @@ export default function Navbar(props, test) {
                     <Link href={"/clients"}>
                         <div className={path == "/clients" ? styles.navItemActive : styles.navItemInactive}>
                             <p className={"mr-1"}>Clients</p>
-                            <Pill>New!</Pill>
+                            <Pill color={"success"}>New!</Pill>
                         </div>
                     </Link>
                     <Link href={"/projects"}>
                         <div className={path == "/projects" ? styles.navItemActive : styles.navItemInactive}>
                             <p className={"mr-1"}>Projects</p>
-                            <Pill>New!</Pill>
+                            <Pill color={"success"}>New!</Pill>
                         </div>
                     </Link>
                     <div className={"flex"}>
