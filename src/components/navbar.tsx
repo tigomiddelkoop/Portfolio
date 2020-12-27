@@ -33,7 +33,9 @@ export default function Navbar(props, test) {
                         <p className={"ml-2"}>Tigo Middelkoop</p>
                     </div>
                 </Link>
-                <div className={"flex-1"}/>
+                <div className={"flex flex-1 lg:text-xl dark:text-white items-center justify-center"}>
+                    <p className={"hidden lg:block animate-pulse text-red-500"}>Work in Progress, thought I might share the progress</p>
+                </div>
                 <div>
                     <button onClick={() => setNavBarOpen(!navBarOpen)}
                             className={styles.navMenuButton + " self-center"}>
@@ -48,7 +50,9 @@ export default function Navbar(props, test) {
                 className={!navBarOpen ? "hidden lg:block" : "block"}>
                 <div className={"flex flex-col lg:flex-row lg:items-center border-red-700"}>
                     <Link href={"/"}>
-                        <div className={path == "/" ? activeNav : inactiveNav}>Home</div>
+                        <div className={path == "/" ? activeNav : inactiveNav}>
+                            <p>Home</p>
+                        </div>
                     </Link>
                     <Link href={"/clients"}>
                         <div className={path == "/clients" ? activeNav : inactiveNav}>
@@ -60,6 +64,12 @@ export default function Navbar(props, test) {
                         <div className={path == "/projects" ? activeNav : inactiveNav}>
                             <p className={"mr-1"}>Projects</p>
                             <Pill color={"success"}>New!</Pill>
+                        </div>
+                    </Link>
+                    <Link href={"/blog"}>
+                        <div className={path == "/blog" ? activeNav : inactiveNav}>
+                            <p className={"mr-1"}>Blog</p>
+                            <Pill color={"danger"}>Expected</Pill>
                         </div>
                     </Link>
                     <div className={"flex"}>

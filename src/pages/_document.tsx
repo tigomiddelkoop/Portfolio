@@ -6,9 +6,10 @@ class MyDocument extends Document {
         return { ...initialProps }
     }
 
+
     render() {
         return (
-            <Html className={"dark"}>
+            <Html className={""}>
                 <Head />
                 <body>
                 <Main />

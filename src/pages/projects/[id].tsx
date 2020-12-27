@@ -54,6 +54,6 @@ export async function getStaticPaths() {
     console.log(pages)
     return {
         paths: pages,
-        fallback: true
+        fallback: false
     }
 }
