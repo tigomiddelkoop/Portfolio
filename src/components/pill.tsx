@@ -13,7 +13,7 @@ export default function Pill(props) {
     switch (props.color) {
         default: // default to primary colors when no color has been given
         case "primary": {
-            type = styles.primary + " dark:border-gray-600 dark:text-white dark:hover:bg-gray-500 dark:bg-gray-700";
+            type = styles.primary + " dark:text-white dark:bg-gray-700 dark:border-gray-600 dark:border";
             break;
         }
         case "secondary": {
