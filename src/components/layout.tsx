@@ -6,8 +6,10 @@ export default function Layout({children}) {
     return (
         <div>
             <Navbar/>
-            <div className={"m-4"}>
-                {children}
+            <div className={"dark:bg-gray-800"}>
+                <div className={"p-4"}>
+                    {children}
+                </div>
             </div>
             <Footer/>
         </div>

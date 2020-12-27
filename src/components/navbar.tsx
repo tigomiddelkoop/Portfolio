@@ -7,6 +7,9 @@ import {useRouter} from 'next/router'
 import {useState} from "react";
 
 // @TODO put more in the module.css file of this file to clean it up of css statements and easy manipulation without searching
+const darkHover = " dark:hover:bg-gray-800"
+const inactiveNav = styles.navItemInactive + darkHover;
+const activeNav = styles.navItemActive + darkHover;
 
 export default function Navbar(props, test) {
 
@@ -15,9 +18,9 @@ export default function Navbar(props, test) {
     const path = router.pathname;
 
     return (
-        <div className={styles.navbar}>
+        <div className={styles.navbar + " dark:bg-gray-900 dark:text-white dark:border-gray-500"}>
 
-            <div className={"flex flex-1 border-b border-gray-100 md:border-b-0"}>
+            <div className={"flex flex-1 border-b-1 border-gray-100 md:border-b-0"}>
                 <Link href={"/"}>
                     <div className={"px-4 w-auto flex w-48 items-center cursor-pointer"}>
                         <Image
@@ -45,16 +48,16 @@ export default function Navbar(props, test) {
                 className={!navBarOpen ? "hidden lg:block" : "block"}>
                 <div className={"flex flex-col lg:flex-row lg:items-center border-red-700"}>
                     <Link href={"/"}>
-                        <div className={path == "/" ? styles.navItemActive : styles.navItemInactive}>Home</div>
+                        <div className={path == "/" ? activeNav : inactiveNav}>Home</div>
                     </Link>
                     <Link href={"/clients"}>
-                        <div className={path == "/clients" ? styles.navItemActive : styles.navItemInactive}>
+                        <div className={path == "/clients" ? activeNav : inactiveNav}>
                             <p className={"mr-1"}>Clients</p>
                             <Pill color={"success"}>New!</Pill>
                         </div>
                     </Link>
                     <Link href={"/projects"}>
-                        <div className={path == "/projects" ? styles.navItemActive : styles.navItemInactive}>
+                        <div className={path == "/projects" ? activeNav : inactiveNav}>
                             <p className={"mr-1"}>Projects</p>
                             <Pill color={"success"}>New!</Pill>
                         </div>

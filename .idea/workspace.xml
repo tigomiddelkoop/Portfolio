@@ -7,10 +7,11 @@
     <list default="true" id="2b13bfc0-9bdb-4ec5-8437-2627290d70db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pill.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pill.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_document.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +104,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/_document.tsx</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
