@@ -27,18 +27,24 @@ export default function Footer() {
             </div>
 
             <div className={styles.footerCategoryContainer}>
-                <p className={styles.footerCategoryTitle}>Kubernetes info</p>
-                <div className={styles.footerCategorySubTitle}>
-                    <p>That's right! It's deployed in kubernetes!</p>
-                    <p>I'm even learning kubernetes</p>
+                <div className={"mb-2"}>
+                    <p className={styles.footerCategoryTitle}>Kubernetes info</p>
+                    <div className={styles.footerCategorySubTitle}>
+                        <p>Its not in kubernetes yet</p>
+                        {/*<p>That's right! It's deployed in kubernetes!</p>*/}
+                        {/*<p>I'm even learning kubernetes</p>*/}
+                    </div>
+                    <div className={"flex items-center"}>
+                        <p className={"mr-1"}>Served from node: </p>
+                        <Pill>unknown</Pill>
+                    </div>
                 </div>
-                <div className={"flex items-center"}>
-                    <p className={"mr-1"}>Served from node: </p>
-                    <Pill>unknown</Pill>
-                </div>
-                <div className={"flex items-center"}>
-                    <p className={"mr-1"}> Build id:</p>
-                    <Pill>unknown</Pill>
+                <div>
+                    <p className={styles.footerCategoryTitle}>Site Info</p>
+                    <div className={"flex items-center"}>
+                        <p className={"mr-1"}>Build id:</p>
+                        <Pill>unknown</Pill>
+                    </div>
                 </div>
             </div>
         </div>

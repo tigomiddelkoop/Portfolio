@@ -2,14 +2,18 @@ import Link from "next/link"
 import Image from "next/image"
 import styles from "./navbar.module.scss"
 import Pill from "./pill";
-import {useRouter} from 'next/router'
+import {useRouter} from 'next/router';
 
 import {useState} from "react";
+
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faUser, faMoon} from "@fortawesome/free-solid-svg-icons";
 
 // @TODO put more in the module.css file of this file to clean it up of css statements and easy manipulation without searching
 const darkHover = " dark:hover:bg-gray-800"
 const inactiveNav = styles.navItemInactive + darkHover;
 const activeNav = styles.navItemActive + darkHover;
+const navButton = styles.navButton + darkHover
 
 export default function Navbar(props, test) {
 
@@ -73,12 +77,14 @@ export default function Navbar(props, test) {
                         </div>
                     </Link>
                     <div className={"flex"}>
-                        <button className={styles.navButton + " w-12 justify-center"}>
+                        <Link href={"/login"}>
+                            <div className={navButton}>
                             <Image height={24}
                                    width={16}
                                    src={"/user-solid.svg"}/>
-                        </button>
-                        <button className={styles.navButton}>
+                            </div>
+                        </Link>
+                        <button className={navButton}>
                             <Image height={24}
                                    width={16}
                                    src={"/moon-solid.svg"}/>

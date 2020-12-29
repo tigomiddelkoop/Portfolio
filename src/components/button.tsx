@@ -1,6 +1,7 @@
 import styles from "./button.module.scss"
 
 interface Props {
+    className?: any;
     children: any;
     color?: "primary" | "secondary" | "danger" | "warning" | "success" | "info";
     onClick?: Function;
@@ -40,9 +41,12 @@ export default function Button(props: Props) {
 
     }
 
+    let classNames = ""
+    if (props.className !== undefined) classNames = props.className;
+
 
     return (
-        <div className={type}>
+        <div className={type + " " + classNames}>
             {props.children}
         </div>
     )
