@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import {Fragment} from 'react';
+import Pill from "../components/pill"
 import Button from "../components/button";
 import Image from "next/image";
 
@@ -12,7 +12,7 @@ export default function Home() {
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
                 <main className={"h-full dark:text-white"}>
-                    <div className={"flex flex-col mb-4"}>
+                    <div className={"flex flex-col lg:flex-row mb-4 items-center"}>
                         <div className="flex mb-4 items-center">
 
                             <div className="flex rounded-full shadow-lg">
@@ -32,9 +32,14 @@ export default function Home() {
                                 <p className="text-xs">Fullstack Developer | PHP & JavaScript/TypeScript</p>
                             </div>
                         </div>
-                        <div className={"flex flex-col"}>
-                            <p>Interested in my CV? Generate one!</p>
-                            <Button className={"lg:w-48 text-center"} color={"success"}>Generate CV</Button>
+                        <div className={"flex flex-1 justify-center"}>
+                            <div className={"justify-center text-center"}>
+                                <p className={"mb-0.5"}>Interested in my CV?</p>
+                                <Button className={" w-64 text-center"} color={"success"}>
+                                    <div className={"flex items-center justify-center"}><p className={'mr-1'}>Generate CV</p><Pill  color={"danger"}>WIP</Pill>
+                                    </div>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -53,45 +58,13 @@ export default function Home() {
                                     <div className={"border-b border-gray-300 py-3 px-3"}>GraphQL</div>
                                     <div className={"border-b border-gray-300 py-3 px-3"}>React</div>
                                     <div className={"border-b border-gray-300 py-3 px-3"}>ExpressJS</div>
-                                    <div className={"py-3 px-3"}>NextJS</div>
-                                </div>
-                            </div>
-
-                            <div className={"transform w-full lg:w-96"}>
-                                <div
-                                    className={"flex items-center justify-center p-2 h-32  border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg"}>
-                                    <h1 className={"font-bold ml-1 text-3xl text-black"}>Languages</h1>
-                                </div>
-                                <div
-                                    className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg"}>
                                     <div className={"border-b border-gray-300 py-3 px-3"}>
                                         <p>Javascript</p>
                                         <p className={"text-xs"}>TypeScript</p>
                                     </div>
-                                    <div className={"border-b border-gray-300 py-3 px-3"}>
-                                        <p>C</p>
-                                        <p className={"text-xs"}>C# <span className="NET"></span></p>
-                                        <p className={"text-xs"}>C++</p>
-                                    </div>
-                                    <div className={"border-b border-gray-300 py-3 px-3"}>Java</div>
-                                    <div className={"py-3 px-3"}>Rust</div>
-                                </div>
-                            </div>
-
-                            <div className={"w-full lg:w-96 ml-4"}>
-                                <div
-                                    className={"flex items-center justify-center p-2 h-32  border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg"}>
-                                    <h1 className={"font-bold ml-1 text-3xl text-black"}>Frameworks</h1>
-                                </div>
-                                <div
-                                    className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg"}>
-                                    <div className={"border-b border-gray-300 py-3 px-3"}>GraphQL</div>
-                                    <div className={"border-b border-gray-300 py-3 px-3"}>React</div>
-                                    <div className={"border-b border-gray-300 py-3 px-3"}>ExpressJS</div>
                                     <div className={"py-3 px-3"}>NextJS</div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </main>
