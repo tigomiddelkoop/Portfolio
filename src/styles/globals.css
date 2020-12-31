@@ -9,6 +9,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.frameworksBackground {
+  background-image: url("https://thumbs.dreamstime.com/b/modern-computer-programming-code-screen-showing-random-scripts-113805394.jpg");
+}
+
 .test {
   background-color: #da161c
 }

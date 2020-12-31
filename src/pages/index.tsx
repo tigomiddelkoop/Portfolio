@@ -34,56 +34,61 @@ export default function Home() {
                         </div>
                         <div className={"flex flex-col"}>
                             <p>Interested in my CV? Generate one!</p>
-                            <Button className={"lg:w-32 text-center"} color={"success"}>Generate CV</Button>
+                            <Button className={"lg:w-48 text-center"} color={"success"}>Generate CV</Button>
                         </div>
                     </div>
                     <div>
                         <h1 className={"text-4xl"}>Tools and languages</h1>
                         <h2 className={"text-1xl"}>Tools I can use (and I probably use on the regular)</h2>
 
-                        <div className={"flex justify-center mb-4"}>
+                        <div className={"flex flex-col lg:flex-row justify-center mb-4"}>
 
-
-                            <div className={"w-64"}>
-                                <div className={"p-2 bg-red-600 h-32  border-l border-r border-t border-red-500 rounded-t-lg"}>
-                                    {/*<Image*/}
-                                    {/*    className={""}*/}
-                                    {/*    alt="Tigo"*/}
-                                    {/*    src={"/js-brands.svg"}*/}
-                                    {/*    height={64}*/}
-                                    {/*    width={64}*/}
-                                    {/*/>*/}
-                                    <h1 className={"font-bold ml-1 text-2xl text-white"}>Frameworks</h1>
+                            <div className={"w-full lg:w-96 mr-4"}>
+                                <div
+                                    className={"flex items-center justify-center p-2 h-32  border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg"}>
+                                    <h1 className={"font-bold ml-1 text-3xl text-black"}>Frameworks</h1>
                                 </div>
                                 <div
                                     className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg"}>
-                                    <div className={"border-b border-gray-300 py-3 px-3"} >GraphQL</div>
-                                    <div className={"border-b border-gray-300 py-3 px-3"} >React</div>
-                                    <div className={"border-b border-gray-300 py-3 px-3"} >ExpressJS</div>
-                                    <div className={"py-3 px-3"} >NextJS</div>
+                                    <div className={"border-b border-gray-300 py-3 px-3"}>GraphQL</div>
+                                    <div className={"border-b border-gray-300 py-3 px-3"}>React</div>
+                                    <div className={"border-b border-gray-300 py-3 px-3"}>ExpressJS</div>
+                                    <div className={"py-3 px-3"}>NextJS</div>
                                 </div>
                             </div>
-                            <div
-                                className={"w-64 rounded-lg"}>
-                                <h1 className={"text-center"}>Languages</h1>
-                                <div className={"border-gray-300 bg-gray-50 p-4 border"}>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
+
+                            <div className={"transform w-full lg:w-96"}>
+                                <div
+                                    className={"flex items-center justify-center p-2 h-32  border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg"}>
+                                    <h1 className={"font-bold ml-1 text-3xl text-black"}>Languages</h1>
+                                </div>
+                                <div
+                                    className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg"}>
+                                    <div className={"border-b border-gray-300 py-3 px-3"}>
+                                        <p>Javascript</p>
+                                        <p className={"text-xs"}>TypeScript</p>
+                                    </div>
+                                    <div className={"border-b border-gray-300 py-3 px-3"}>
+                                        <p>C</p>
+                                        <p className={"text-xs"}>C# <span className="NET"></span></p>
+                                        <p className={"text-xs"}>C++</p>
+                                    </div>
+                                    <div className={"border-b border-gray-300 py-3 px-3"}>Java</div>
+                                    <div className={"py-3 px-3"}>Rust</div>
                                 </div>
                             </div>
-                            <div className={"w-64 rounded-lg"}>
-                                <h1 className={"text-center"}>Tools</h1>
-                                <div className={"border-gray-300 bg-gray-50 p-4 border "}>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
+
+                            <div className={"w-full lg:w-96 ml-4"}>
+                                <div
+                                    className={"flex items-center justify-center p-2 h-32  border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg"}>
+                                    <h1 className={"font-bold ml-1 text-3xl text-black"}>Frameworks</h1>
+                                </div>
+                                <div
+                                    className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg"}>
+                                    <div className={"border-b border-gray-300 py-3 px-3"}>GraphQL</div>
+                                    <div className={"border-b border-gray-300 py-3 px-3"}>React</div>
+                                    <div className={"border-b border-gray-300 py-3 px-3"}>ExpressJS</div>
+                                    <div className={"py-3 px-3"}>NextJS</div>
                                 </div>
                             </div>
 
