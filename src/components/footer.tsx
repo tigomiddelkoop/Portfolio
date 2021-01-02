@@ -30,9 +30,9 @@ export default function Footer() {
                 <div className={"mb-2"}>
                     <p className={styles.footerCategoryTitle}>Kubernetes info</p>
                     <div className={styles.footerCategorySubTitle}>
-                        <p>Its not in kubernetes yet</p>
-                        {/*<p>That's right! It's deployed in kubernetes!</p>*/}
-                        {/*<p>I'm even learning kubernetes</p>*/}
+                        <p className={"text-xs"}>Its not in kubernetes yet</p>
+                        {/*<p className={"text-xs"}>That's right! It's deployed in kubernetes!</p>*/}
+                        {/*<p className={"text-xs"}>I'm even learning kubernetes</p>*/}
                     </div>
                     <div className={"flex items-center"}>
                         <p className={"mr-1"}>Served from node: </p>
@@ -48,6 +48,7 @@ export default function Footer() {
                 </div>
             </div>
         </div>
+        <p className={"text-xs"}>All the pictures on this site are made by Tigo and are of the code of this site and the servers it is hosted on, the site might also contain pictures of projects he has done.</p>
     </footer>
 
 }

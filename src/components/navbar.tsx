@@ -17,6 +17,7 @@ const navButton = styles.navButton + darkHover
 
 export default function Navbar(props, test) {
 
+
     const router = useRouter();
     const [navBarOpen, setNavBarOpen] = useState(false);
     const path = router.pathname;
@@ -38,7 +39,6 @@ export default function Navbar(props, test) {
                     </div>
                 </Link>
                 <div className={"flex flex-1 lg:text-xl dark:text-white items-center justify-center"}>
-                    <p className={"hidden lg:block animate-pulse text-red-500"}>Work in Progress, thought I might share the progress</p>
                 </div>
                 <div>
                     <button onClick={() => setNavBarOpen(!navBarOpen)}
@@ -79,12 +79,12 @@ export default function Navbar(props, test) {
                     <div className={"flex"}>
                         <Link href={"/login"}>
                             <div className={navButton}>
-                            <Image height={24}
-                                   width={16}
-                                   src={"/svg/user-solid.svg"}/>
+                                <Image height={24}
+                                       width={16}
+                                       src={"/svg/user-solid.svg"}/>
                             </div>
                         </Link>
-                        <button className={navButton}>
+                        <button onClick={props.changeTheme} className={navButton}>
                             <Image height={24}
                                    width={16}
                                    src={"/svg/moon-solid.svg"}/>

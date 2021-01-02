@@ -8,7 +8,9 @@ export default function index() {
         <Head>
             <title>Tigo Middelkoop - Clients</title>
         </Head>
-        <h1>The people I worked for</h1>
-        <h2 className={""}><Link href={"/"}>Back to the homepage!</Link></h2>
+        <div className={"text-center mb-4 dark:text-white"}>
+            <h1 className={"text-4xl font-semibold"}>Clients</h1>
+            <h5 className={"text-xs"}>People I have worked with</h5>
+        </div>
     </Fragment>
 }

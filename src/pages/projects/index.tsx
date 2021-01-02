@@ -13,12 +13,12 @@ export default function index({projects}) {
             <Head>
                 <title>Tigo Middelkoop - Projects</title>
             </Head>
-            <div className={"text-center"}>
+            <div className={"text-center mb-4 dark:text-white"}>
                 <h1 className={"text-4xl font-semibold"}>All of my projects</h1>
                 <h5 className={"text-xs"}>Projects I have run or whose I am currently working on</h5>
             </div>
-            <div className={"flex flex-wrap flex-auto"}>
-                {projects.map(project => <div className={"flex-1 mx-1 mb-4"}><Projectcard project={project}/></div>)}
+            <div className={"flex flex-wrap flex-col lg:flex-row flex-auto"}>
+                {projects.map(project => <div key={project.title} className={"flex-1 mx-1 mb-4"}><Projectcard project={project}/></div>)}
             </div>
         </Fragment>
     )

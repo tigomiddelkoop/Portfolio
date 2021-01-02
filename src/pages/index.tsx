@@ -3,6 +3,7 @@ import Pill from "../components/pill"
 import Button from "../components/button";
 import Image from "next/image";
 import Skillscard from "../components/home/skillscard";
+import Card from "../components/card";
 
 export default function Home({skills}) {
 
@@ -56,6 +57,14 @@ export default function Home({skills}) {
                                                             entries={card.entries}/>)}
 
                         </div>
+                        {/*<Card>*/}
+                        {/*    <div className={"flex m-1"}>*/}
+                        {/*        <div className={"w-4 mr-1 h-4 bg-red-700 rounded-full"}/>*/}
+                        {/*        <div className={"w-4 h-4 bg-yellow-500 rounded-full"}/>*/}
+                        {/*        <div className={"w-4 ml-1 h-4 bg-green-600 rounded-full"}/>*/}
+                        {/*        <div className={"flex-1 text-xs text-center"}>Tigo's Portfolio</div>*/}
+                        {/*    </div>*/}
+                        {/*</Card>*/}
                     </div>
                 </main>
             </div>
