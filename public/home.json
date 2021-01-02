@@ -1,6 +1,7 @@
 [
   {
     "name": "Languages",
+    "image": "/programming.jpg",
     "entries": [
       {
         "name": "PHP",
@@ -38,6 +39,7 @@
   },
   {
     "name": "Frameworks",
+    "image": "/ssh.jpg",
     "entries": [
       {
         "name": "Laravel",
@@ -67,6 +69,7 @@
   },
   {
     "name": "Tools",
+    "image": "/homepage.jpg",
     "entries": [
       {
         "name": "PhpStorm",

@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Pill from "../components/pill"
 import Button from "../components/button";
 import Image from "next/image";
-import {DateTime} from "luxon";
 import Skillscard from "../components/home/skillscard";
 
 export default function Home({skills}) {
@@ -52,7 +51,7 @@ export default function Home({skills}) {
 
                         <div className={"flex flex-col flex-wrap lg:flex-row justify-center mb-4"}>
 
-                            {skills.map(card => <Skillscard name={card.name} entries={card.entries}/>)}
+                            {skills.map(card => <Skillscard key={card.name} name={card.name} image={card.image} entries={card.entries}/>)}
 
                         </div>
                     </div>
