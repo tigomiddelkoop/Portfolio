@@ -7,15 +7,15 @@ import {useRouter} from 'next/router';
 import {useState} from "react";
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUser, faMoon} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faMoon, faSun, faUser} from "@fortawesome/free-solid-svg-icons/";
 
 // @TODO put more in the module.css file of this file to clean it up of css statements and easy manipulation without searching
-const darkHover = " dark:hover:bg-gray-800"
+const darkHover = " dark:hover:bg-gray-800 dark:border-white"
 const inactiveNav = styles.navItemInactive + darkHover;
 const activeNav = styles.navItemActive + darkHover;
 const navButton = styles.navButton + darkHover
 
-export default function Navbar(props, test) {
+export default function Navbar(props) {
 
 
     const router = useRouter();
@@ -23,11 +23,11 @@ export default function Navbar(props, test) {
     const path = router.pathname;
 
     return (
-        <div className={styles.navbar + " dark:bg-gray-900 dark:text-white dark:border-gray-500"}>
+        <div className={styles.navbar + " dark:bg-gray-800 dark:text-white dark:border-gray-500"}>
 
             <div className={"flex flex-1 border-b-1 border-gray-100 md:border-b-0"}>
                 <Link href={"/"}>
-                    <div className={"px-4 w-auto flex w-48 items-center cursor-pointer"}>
+                    <div className={"px-4 w-auto flex w-48 items-center  border-gray-100 cursor-pointer"}>
                         <Image
                             alt={"Picture of tigo"}
                             src={"/img/profilepicture.png"}
@@ -40,12 +40,10 @@ export default function Navbar(props, test) {
                 </Link>
                 <div className={"flex flex-1 lg:text-xl dark:text-white items-center justify-center"}>
                 </div>
-                <div>
+                <div className={"h-14"}>
                     <button onClick={() => setNavBarOpen(!navBarOpen)}
-                            className={styles.navMenuButton + " self-center"}>
-                        <Image height={24}
-                               width={16}
-                               src={"/bars-solid.svg"}/>
+                            className={styles.navMenuButton + " self-center h-14"}>
+                        <FontAwesomeIcon icon={faBars}/>
                     </button>
                 </div>
             </div>
@@ -76,18 +74,14 @@ export default function Navbar(props, test) {
                             <Pill color={"danger"}>Expected</Pill>
                         </div>
                     </Link>
-                    <div className={"flex"}>
+                    <div className={"flex h-14"}>
                         <Link href={"/login"}>
                             <div className={navButton}>
-                                <Image height={24}
-                                       width={16}
-                                       src={"/svg/user-solid.svg"}/>
+                                <FontAwesomeIcon icon={faUser}/>
                             </div>
                         </Link>
                         <button onClick={props.changeTheme} className={navButton}>
-                            <Image height={24}
-                                   width={16}
-                                   src={"/svg/moon-solid.svg"}/>
+                            { props.theme == "light" ? <FontAwesomeIcon icon={faMoon}/> : <FontAwesomeIcon icon={faSun}/>}
                         </button>
                     </div>
                 </div>

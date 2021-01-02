@@ -6,9 +6,21 @@ import {useEffect, useState} from "react";
 function MyApp({Component, pageProps}) {
 
     const [theme, setTheme] = useState("");
-
     const router = useRouter();
 
+    // Get the preference of the user or the OS
+    useEffect(() => {
+        let theme;
+
+        if ((!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || window.localStorage.theme == "dark") {
+            theme = "dark"
+        } else {
+            theme = "light"
+        }
+        setTheme(theme);
+    });
+
+    // Make the changing possible
     function changeTheme() {
 
         const currentTheme = theme
@@ -22,16 +34,7 @@ function MyApp({Component, pageProps}) {
 
     }
 
-    useEffect(() => {
-        let theme;
 
-        if ((!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || window.localStorage.theme == "dark") {
-            theme = "dark"
-        } else {
-            theme = "light"
-        }
-        setTheme(theme);
-    });
 
     if (router.pathname.includes("/login") || router.pathname.includes("/blog")) return <Component {...pageProps} />
 

@@ -4,8 +4,8 @@ import Footer from "./footer";
 
 export default function Layout({children, theme, changeTheme}) {
     return (
-        <div className={theme + " h-screen"}>
-            <Navbar changeTheme={changeTheme} />
+        <div className={theme + " transform transition-200 h-screen"}>
+            <Navbar theme={theme} changeTheme={changeTheme}/>
             <div className={"dark:bg-gray-800"}>
                 <div className={"p-4 min-h-full"}>
                     {children}
