@@ -1,6 +1,11 @@
 import Document, {Html, Head, Main, NextScript} from 'next/document'
 
 class MyDocument extends Document {
+
+    state = {
+        theme: "dark"
+    }
+
     static async getInitialProps(ctx) {
 
         const initialProps = await Document.getInitialProps(ctx)
@@ -8,8 +13,19 @@ class MyDocument extends Document {
 
     }
 
+    componentDidMount() {
+    }
+
+    componentWillMount() {
+    }
+
+    changeDarkMode() {
+        if(this.state.theme == "dark") this.setState({theme: "light"});
+        else if(this.state.theme == "light") this.setState({theme: "dark"});
+    }
 
     render() {
+
 
         // @TODO Implement dark mode here?
 

@@ -8,6 +8,8 @@ function MyApp({Component, pageProps}) {
 
     if (router.pathname.includes("/login") || router.pathname.includes("/yeet")) return <Component {...pageProps} />
 
+
+
     return <Layout><Component {...pageProps} /></Layout>
 }
 

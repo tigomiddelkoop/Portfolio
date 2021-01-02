@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Languages",
+    "entries": [
+      {
+        "name": "PHP",
+        "date": "2018",
+        "confidence": 50
+      },
+      {
+        "name": [
+          "JavaScript",
+          "TypeScript"
+        ],
+        "date": "2018",
+        "confidence": 50
+      },
+      {
+        "name": "Java",
+        "date": "2019",
+        "confidence": 10
+      },
+      {
+        "name": [
+          "C++",
+          "C#",
+          "C"
+        ],
+        "date": "2020",
+        "confidence": 0
+      },
+      {
+        "name": "Rust",
+        "date": "01/06/2020",
+        "confidence": 0
+      }
+    ]
+  },
+  {
+    "name": "Frameworks",
+    "entries": [
+      {
+        "name": "Laravel",
+        "language": "PHP",
+        "date": "2018",
+        "confidence": 75
+      },
+      {
+        "name": "NextJS",
+        "language": [
+          "JavaScript",
+          "TypeScript"
+        ],
+        "date": "12/1/2020",
+        "confidence": 20
+      },
+      {
+        "name": "ReactJS",
+        "language": [
+          "JavaScript",
+          "TypeScript"
+        ],
+        "date": "01/09/2019",
+        "confidence": 50
+      }
+    ]
+  },
+  {
+    "name": "Tools",
+    "entries": [
+      {
+        "name": "PhpStorm",
+        "date": "2017"
+      }
+    ]
+  }
+]

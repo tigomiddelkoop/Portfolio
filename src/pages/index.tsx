@@ -3,16 +3,11 @@ import Pill from "../components/pill"
 import Button from "../components/button";
 import Image from "next/image";
 import {DateTime} from "luxon";
+import Skillscard from "../components/home/skillscard";
 
-export default function Home() {
+export default function Home({skills}) {
 
-    const dateThen = DateTime.fromISO("2019");
-    const dateNow = DateTime.fromJSDate(new Date());
-
-    console.log(dateNow.year, dateThen.year)
-    const diff = dateNow.diff(dateThen, "years").toObject();
-
-        return (
+    return (
         <div>
             <div>
                 <Head>
@@ -53,36 +48,28 @@ export default function Home() {
                     </div>
                     <div>
                         <h1 className={"text-4xl"}>Tools and languages</h1>
-                        <h2 className={"text-1xl"}>Tools I can use (and those I use regularly)</h2>
+                        <h2 className={"text-1xl mb-4"}>Tools I can use (and those I use regularly)</h2>
 
-                        <div className={"flex flex-col lg:flex-row justify-center mb-4"}>
+                        <div className={"flex flex-col flex-wrap lg:flex-row justify-center mb-4"}>
 
-                            <div className={"w-full lg:w-96 mr-4"}>
-                                <div
-                                    className={"flex items-center justify-center p-2 h-32  border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg"}>
-                                    <h1 className={"font-bold ml-1 text-3xl text-black"}>Frameworks</h1>
-                                </div>
-                                <div
-                                    className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg"}>
-                                    <div className={"border-b border-gray-300 py-3 px-3"}>GraphQL</div>
-                                    <div className={"border-b border-gray-300 py-3 px-3"}>React</div>
-                                    <div className={"border-b border-gray-300 py-3 px-3"}>ExpressJS</div>
-                                    <div className={"flex border-b border-gray-300 py-3 px-3 items-center"}>
-                                        <div className={"flex-1"}>
-                                            <p>Javascript</p>
-                                            <p className={"text-xs"}>TypeScript</p>
-                                        </div>
-                                        <div className={"text-xs"}>
-                                            <p>{diff.years.toFixed()} year{diff.years.toFixed() !== '1' ? 's' : ''} experience</p>
-                                        </div>
-                                    </div>
-                                    <div className={"py-3 px-3"}>NextJS</div>
-                                </div>
-                            </div>
+                            {skills.map(card => <Skillscard name={card.name} entries={card.entries}/>)}
+
                         </div>
                     </div>
                 </main>
             </div>
         </div>
     )
+}
+
+export async function getStaticProps() {
+
+    // I want to this another way, I do not feel comfy doing it this way!
+    // Either the backend is already there or we do it with process.cwd();
+    const dev = process.env.NODE_ENV !== 'production';
+    const server = dev ? 'http://localhost:3000' : 'https://tigo.tech';
+
+    const skills = await fetch(server + "/home.json").then(response => response.json())
+    return {props: {skills}};
+
 }

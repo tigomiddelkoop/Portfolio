@@ -81,13 +81,13 @@ export default function Navbar(props, test) {
                             <div className={navButton}>
                             <Image height={24}
                                    width={16}
-                                   src={"/user-solid.svg"}/>
+                                   src={"/svg/user-solid.svg"}/>
                             </div>
                         </Link>
                         <button className={navButton}>
                             <Image height={24}
                                    width={16}
-                                   src={"/moon-solid.svg"}/>
+                                   src={"/svg/moon-solid.svg"}/>
                         </button>
                     </div>
                 </div>
