@@ -3,7 +3,7 @@ import styles from "./button.module.scss"
 interface Props {
     className?: any;
     children: any;
-    color?: "primary" | "secondary" | "danger" | "warning" | "success" | "info";
+    color?: "primary" | "secondary" | "danger" | "warning" | "success" | "info" | "purple";
     onClick?: Function;
 }
 
@@ -36,6 +36,10 @@ export default function Button(props: Props) {
         }
         case "info": {
             type = styles.info;
+            break;
+        }
+        case "purple": {
+            type = styles.purple;
             break;
         }
 

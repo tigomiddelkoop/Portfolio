@@ -37,7 +37,7 @@ export default function Home({skills}) {
                         <div className={"flex flex-1 justify-center"}>
                             <div className={"justify-center text-center"}>
                                 <p className={"mb-0.5"}>Interested in my CV?</p>
-                                <Button className={" w-64 text-center"} color={"success"}>
+                                <Button className={"w-64 text-center"} color={"success"}>
                                     <div className={"flex items-center justify-center"}><p className={'mr-1'}>Generate
                                         CV</p><Pill color={"danger"}>WIP</Pill>
                                     </div>
@@ -46,12 +46,14 @@ export default function Home({skills}) {
                         </div>
                     </div>
                     <div>
-                        <h1 className={"text-4xl"}>Tools and languages</h1>
-                        <h2 className={"text-1xl mb-4"}>Tools I can use (and those I use regularly)</h2>
-
+                        <div className={"text-center mb-4"}>
+                            <h1 className={"text-4xl font-semibold"}>Tools and languages</h1>
+                            <h5 className={"text-1xl text-xs"}>Tools I can use (and those I use regularly)</h5>
+                        </div>
                         <div className={"flex flex-col flex-wrap lg:flex-row justify-center mb-4"}>
 
-                            {skills.map(card => <Skillscard key={card.name} name={card.name} image={card.image} entries={card.entries}/>)}
+                            {skills.map(card => <Skillscard key={card.name} name={card.name} image={card.image}
+                                                            entries={card.entries}/>)}
 
                         </div>
                     </div>
