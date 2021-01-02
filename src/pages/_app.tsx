@@ -5,9 +5,8 @@ import {useRouter} from "next/router";
 function MyApp({Component, pageProps}) {
 
     const router = useRouter();
-    console.log(router);
 
-    if (router.pathname.includes("/login")) return <Component {...pageProps} />
+    if (router.pathname.includes("/login") || router.pathname.includes("/yeet")) return <Component {...pageProps} />
 
     return <Layout><Component {...pageProps} /></Layout>
 }

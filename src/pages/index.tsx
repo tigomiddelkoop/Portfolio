@@ -2,9 +2,17 @@ import Head from 'next/head';
 import Pill from "../components/pill"
 import Button from "../components/button";
 import Image from "next/image";
+import {DateTime} from "luxon";
 
 export default function Home() {
-    return (
+
+    const dateThen = DateTime.fromISO("2019");
+    const dateNow = DateTime.fromJSDate(new Date());
+
+    console.log(dateNow.year, dateThen.year)
+    const diff = dateNow.diff(dateThen, "years").toObject();
+
+        return (
         <div>
             <div>
                 <Head>
@@ -36,7 +44,8 @@ export default function Home() {
                             <div className={"justify-center text-center"}>
                                 <p className={"mb-0.5"}>Interested in my CV?</p>
                                 <Button className={" w-64 text-center"} color={"success"}>
-                                    <div className={"flex items-center justify-center"}><p className={'mr-1'}>Generate CV</p><Pill  color={"danger"}>WIP</Pill>
+                                    <div className={"flex items-center justify-center"}><p className={'mr-1'}>Generate
+                                        CV</p><Pill color={"danger"}>WIP</Pill>
                                     </div>
                                 </Button>
                             </div>
@@ -44,7 +53,7 @@ export default function Home() {
                     </div>
                     <div>
                         <h1 className={"text-4xl"}>Tools and languages</h1>
-                        <h2 className={"text-1xl"}>Tools I can use (and I probably use on the regular)</h2>
+                        <h2 className={"text-1xl"}>Tools I can use (and those I use regularly)</h2>
 
                         <div className={"flex flex-col lg:flex-row justify-center mb-4"}>
 
@@ -58,9 +67,14 @@ export default function Home() {
                                     <div className={"border-b border-gray-300 py-3 px-3"}>GraphQL</div>
                                     <div className={"border-b border-gray-300 py-3 px-3"}>React</div>
                                     <div className={"border-b border-gray-300 py-3 px-3"}>ExpressJS</div>
-                                    <div className={"border-b border-gray-300 py-3 px-3"}>
-                                        <p>Javascript</p>
-                                        <p className={"text-xs"}>TypeScript</p>
+                                    <div className={"flex border-b border-gray-300 py-3 px-3 items-center"}>
+                                        <div className={"flex-1"}>
+                                            <p>Javascript</p>
+                                            <p className={"text-xs"}>TypeScript</p>
+                                        </div>
+                                        <div className={"text-xs"}>
+                                            <p>{diff.years.toFixed()} year{diff.years.toFixed() !== '1' ? 's' : ''} experience</p>
+                                        </div>
                                     </div>
                                     <div className={"py-3 px-3"}>NextJS</div>
                                 </div>
@@ -71,17 +85,4 @@ export default function Home() {
             </div>
         </div>
     )
-}
-
-{/*<h4 className="text-sm font-light">Languages I can use: </h4>*/
-}
-{/*<h4 className="text-xs font-light mb-6">Interested in Learning: C++, C, Objective-C,*/
-}
-{/*    Java &*/
-}
-{/*    Rust</h4>*/
-}
-{/*<h1 className={"text-xl"}>Interested in my CV?</h1>*/
-}
-{/*<Button color={"success"}>Generate CV</Button>*/
 }
