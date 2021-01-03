@@ -80,6 +80,6 @@ export async function getStaticProps() {
     const server = dev ? 'http://localhost:3000' : 'https://tigo.tech';
 
     const skills = await fetch(server + "/home.json").then(response => response.json())
-    return {props: {skills}};
+    return {props: {skills}, revalidate: 1};
 
 }
