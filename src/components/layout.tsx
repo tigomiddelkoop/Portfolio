@@ -10,7 +10,7 @@ export default function Layout({children, theme, changeTheme}) {
                 <meta name="og:image" content="https://tigo.tech/img/profilepicture.png"/>
                 <meta
                     name="description"
-                    content="Fullstack Webdeveloper. Specializes in the Javascript language and C based languages. Freel free to contact me for a project to discuss options"
+                    content="Fullstack Webdeveloper. Specializes in the Javascript language and C based languages. Feel free to contact me for a project to discuss options"
                 />
             </Head>
             {/*// It might be a bit weird, but the dark:bg-gray-800 under here is just to make sure nothing weird happens*/}
