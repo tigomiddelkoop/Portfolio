@@ -20,10 +20,9 @@ export default function yeet() {
     }, [])
 
     return (
-        <div className={"bg-black text-white h-screen flex items-center text-center justify-center"}>
+        <div className={"text-black flex items-center text-center justify-center"}>
             <div>
-                <p style={{fontSize: "6em"}}>When will it be 2021?</p>
-                <p style={{fontSize: "11em"}}>{date.toString().substring(0, 16)}</p>
+                <p className={"text-3xl"}>{date.toString().substring(0, 16)}</p>
             </div>
         </div>
     )

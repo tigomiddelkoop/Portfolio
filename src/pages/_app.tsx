@@ -35,7 +35,7 @@ function MyApp({Component, pageProps}) {
     }
     
 
-    if (router.pathname.includes("/login") || router.pathname.includes("/blog")) return <Component {...pageProps} />
+    if (router.pathname.includes("/login") || router.pathname.includes("/blog") || router.pathname.includes("/yeet")) return <Component {...pageProps} />
 
 
     return <Layout changeTheme={changeTheme} theme={theme}><Component {...pageProps} /></Layout>

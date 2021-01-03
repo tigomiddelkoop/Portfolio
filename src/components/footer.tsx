@@ -49,7 +49,7 @@ export default function Footer() {
                 <div>
                     <p className={styles.footerCategoryTitle}>Site Info</p>
                     <div className={"flex items-center justify-center"}>
-                        <p className={"mr-1"}>Build id:</p>
+                        <p className={"mr-1"}>Build Id:</p>
                         <Pill>{buildId}</Pill>
                     </div>
                 </div>

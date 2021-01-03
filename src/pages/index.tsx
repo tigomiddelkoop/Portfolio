@@ -84,11 +84,34 @@ export default function Home({skills}) {
         </div>
     )
 
-    function generateCV() {
+    async function generateCV() {
         setCv({progress: "info", message: "Generating CV"})
 
-        setTimeout(() => setCv({progress: "danger", message: "Generating CV failed"}), 10000)
-        setTimeout(() => setCv({progress: "success", message: "CV generated, downloading"}), 15000)
+        fetch("/api/generatecv").then(response => {
+
+            if(response.status == 502) {
+                setCv({progress: "danger", message: "Generating CV failed"})
+                return
+            }
+            response.blob().then(pdfBlob => {
+
+                let pdf = new File([pdfBlob], "TigoMiddelkoopCV.pdf")
+
+                const objUrl = window.URL.createObjectURL(pdf);
+
+                let link = document.createElement("a")
+                link.href = objUrl;
+                link.download = "cv.pdf"
+                link.click();
+                setCv({progress: "success", message: "CV generated, downloading"})
+
+                setTimeout(() => {
+                    window.URL.revokeObjectURL(objUrl);
+                }, 250);
+            })
+        }).catch(err => {
+            setCv({progress: "danger", message: "Generating CV failed"})
+        });
     }
 
 }
