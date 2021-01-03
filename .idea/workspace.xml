@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b13bfc0-9bdb-4ec5-8437-2627290d70db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/projectcard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/projectcard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/clients/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/clients/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cardbody.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cardbody.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
@@ -57,11 +52,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\public\img" />
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\src\components" />
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\public" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\src\pages\clients" />
-      <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\src\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\public\svg" />
@@ -89,7 +84,7 @@
       <workItem from="1608901815338" duration="8610000" />
       <workItem from="1609267250011" duration="8638000" />
       <workItem from="1609366479151" duration="790000" />
-      <workItem from="1609620804715" duration="14600000" />
+      <workItem from="1609620804715" duration="14900000" />
     </task>
     <servers />
   </component>
