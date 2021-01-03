@@ -9,7 +9,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faMoon, faSun, faUser} from "@fortawesome/free-solid-svg-icons/";
 
 // @TODO put more in the module.css file of this file to clean it up of css statements and easy manipulation without searching
-const darkHover = " dark:hover:bg-gray-800 dark:border-white"
+const darkHover = " dark:hover:bg-gray-700 dark:border-white"
 const inactiveNav = styles.navItemInactive + darkHover;
 const activeNav = styles.navItemActive + darkHover;
 const navButton = styles.navButton + darkHover
@@ -76,11 +76,11 @@ export default function Navbar(props) {
                     <div className={"flex h-14"}>
                         <Link href={"/login"}>
                             <div className={navButton}>
-                                <FontAwesomeIcon icon={faUser}/>
+                                <FontAwesomeIcon className={"h-4"} icon={faUser}/>
                             </div>
                         </Link>
                         <button onClick={props.changeTheme} className={navButton}>
-                            { props.theme == "light" ? <FontAwesomeIcon icon={faMoon}/> : <FontAwesomeIcon icon={faSun}/>}
+                            { props.theme == "light" ? <FontAwesomeIcon className={"h-4"} icon={faMoon}/> : <FontAwesomeIcon className={"h-4"} icon={faSun}/> }
                         </button>
                     </div>
                 </div>
