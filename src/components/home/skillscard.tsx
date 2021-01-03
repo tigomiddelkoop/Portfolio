@@ -19,7 +19,7 @@ export default function Skillscard(props: props) {
                 <h1 className={"font-bold ml-1 text-3xl text-white"}>{props.name}</h1>
             </div>
             <div
-                className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg dark:bg-gray-700 dark:border-gray-600 shadow-lg "}>
+                className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg dark:bg-gray-700 dark:border-gray-600 shadow-lg"}>
 
                 {entries.map(entry => {
                     return renderEntry(entry)
