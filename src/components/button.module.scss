@@ -7,7 +7,7 @@
 }
 
 .secondary {
-  @apply button text-black border-gray-700 text-white bg-gray-600;
+  @apply button text-white bg-gray-500 border-gray-700 hover:border-gray-400 hover:bg-gray-400;
 }
 
 .success {

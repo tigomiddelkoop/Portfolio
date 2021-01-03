@@ -4,7 +4,7 @@ interface Props {
     className?: any;
     children: any;
     color?: "primary" | "secondary" | "danger" | "warning" | "success" | "info" | "purple";
-    onClick?: Function;
+    onClickButton?: Function;
 }
 
 
