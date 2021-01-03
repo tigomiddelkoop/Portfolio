@@ -1,7 +1,5 @@
 import {DateTime} from "luxon";
 import styles from "./skillscard.module.scss";
-import Image from "next/image"
-import {PHASE_PRODUCTION_BUILD} from "next/constants";
 
 interface props {
     entries?: any,
