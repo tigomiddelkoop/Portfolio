@@ -1,5 +1,6 @@
 import {DateTime} from "luxon";
 import styles from "./skillscard.module.scss";
+import {func} from "prop-types";
 
 interface props {
     entries?: any,
@@ -33,13 +34,20 @@ export default function Skillscard(props: props) {
 
 function renderEntry(entry) {
 
+    console.log(entry)
+
     // Get now and then via the dates
     let now = DateTime.fromJSDate(new Date());
     let then = DateTime.fromISO(entry.date);
 
     // Calculate the difference
-    let diff = now.diff(then, "years");
+    let diff = now.diff(then, ["years", "months"]);
 
+    let confidence = calculateConfidence(entry.confidence);
+
+
+    let years = diff.years.toFixed()
+    let months = diff.months.toFixed()
     // LET IT RENDER WHOOOOOOOOOOOO
     return (
         <div className={"flex border-gray-300 dark:border-gray-600 py-3 px-3 items-center"}>
@@ -51,9 +59,27 @@ function renderEntry(entry) {
                 }) : <p>{entry.name}</p>}
 
             </div>
-            <div className={"font-light text-sm"}>
-                <p>{diff.years.toFixed()} year{diff.years.toFixed() !== '1' ? 's' : ''} experience</p>
+            <div className={"font-light text-sm text-right"}>
+                <p>
+                    {years !== "0" ? <span>{years} year{years !== '1' ? 's' : ''} </span> : ""}
+                    {years !== "0" && months !== "0" ? " and " : ""}
+                    {months !== "0" ? <span>{months} month{months !== '1' ? 's' : ''} </span> : ""}
+                    experience</p>
+                {entry.confidence !== undefined ? <p>Confidence: {confidence} ({entry.confidence}%)</p> : ""}
             </div>
         </div>
     )
+}
+
+function calculateConfidence(confidencePercentage) {
+
+    let confidence;
+    if (confidencePercentage >= 0 && confidencePercentage < 10) confidence = "None"
+    else if (confidencePercentage >= 10 && confidencePercentage < 25) confidence = "A bit";
+    else if (confidencePercentage >= 25 && confidencePercentage < 50) confidence = "Getting Comfy"
+    else if (confidencePercentage >= 50 && confidencePercentage < 75) confidence = "Quite comfortable";
+    else if (confidencePercentage >= 75 && confidencePercentage < 99) confidence = "Getting skilled"
+    else if (confidencePercentage === 100) confidence = "Yes! I've done it!";
+
+    return confidence;
 }

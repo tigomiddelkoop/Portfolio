@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b13bfc0-9bdb-4ec5-8437-2627290d70db" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Portfolio/src/components/Frameworks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Portfolio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Portfolio/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Portfolio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Portfolio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Portfolio/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Portfolio/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Portfolio/src/components/ProgrammingLanguages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Portfolio/src/components/ProgrammingLanguages.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Portfolio/src/components/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Portfolio/src/components/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Portfolio/src/pages/Homepage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Portfolio/src/pages/Homepage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/portfoliov3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/portfoliov3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cardtitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cardtitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/home.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/home.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/skillscard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/skillscard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +95,7 @@
       <workItem from="1608901815338" duration="8610000" />
       <workItem from="1609267250011" duration="8638000" />
       <workItem from="1609366479151" duration="790000" />
-      <workItem from="1609620804715" duration="15044000" />
+      <workItem from="1609620804715" duration="16931000" />
     </task>
     <servers />
   </component>
