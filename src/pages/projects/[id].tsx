@@ -13,7 +13,7 @@ export default function Project({project}) {
 
     return <Fragment>
         <Head>
-            <title>Projects</title>
+            <title>Tigo Middelkoop - {project.title}</title>
         </Head>
         <h1>{project.title}</h1>
         <h2><Link href={"/"}>Back to the homepage!</Link></h2>
