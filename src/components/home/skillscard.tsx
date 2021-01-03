@@ -33,9 +33,7 @@ export default function Skillscard(props: props) {
 }
 
 function renderEntry(entry) {
-
-    console.log(entry)
-
+    
     // Get now and then via the dates
     let now = DateTime.fromJSDate(new Date());
     let then = DateTime.fromISO(entry.date);
