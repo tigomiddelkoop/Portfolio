@@ -33,8 +33,7 @@ function MyApp({Component, pageProps}) {
         }
 
     }
-
-
+    
 
     if (router.pathname.includes("/login") || router.pathname.includes("/blog")) return <Component {...pageProps} />
 

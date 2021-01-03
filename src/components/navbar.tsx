@@ -5,7 +5,6 @@ import Pill from "./pill";
 import {useRouter} from 'next/router';
 
 import {useState} from "react";
-
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faMoon, faSun, faUser} from "@fortawesome/free-solid-svg-icons/";
 

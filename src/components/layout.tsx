@@ -4,12 +4,11 @@ import Footer from "./footer";
 
 export default function Layout({children, theme, changeTheme}) {
     return (
-        <div className={theme + " transform transition-200 h-screen"}>
+        // It might be a bit weird, but the dark:bg-gray-800 under here is just to make sure nothing weird happens
+        <div className={theme + " flex flex-col min-h-screen h-screen dark:bg-gray-800"}>
             <Navbar theme={theme} changeTheme={changeTheme}/>
-            <div className={"dark:bg-gray-800"}>
-                <div className={"p-4 min-h-full"}>
-                    {children}
-                </div>
+            <div className={"flex-1 p-4 dark:bg-gray-800"}>
+                {children}
             </div>
             <Footer/>
         </div>

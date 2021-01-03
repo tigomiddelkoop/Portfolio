@@ -4,7 +4,7 @@ import styles from "./footer.module.scss"
 export default function Footer() {
 
     return <footer
-        className={"p-4 border-t border-b border-gray-100 items-center justify-center text-center dark:bg-gray-800 dark:border-gray-500 dark:text-white"}>
+        className={"align-bottom p-4 border-t border-b border-gray-100 items-center justify-center text-center dark:bg-gray-800 dark:border-gray-500 dark:text-white"}>
         <h1 className={"text-2xl"}>tigo.tech</h1>
         <div className={"flex flex-col lg:flex-row items-center justify-center text-center"}>
             <div className={styles.footerCategoryContainer}>
