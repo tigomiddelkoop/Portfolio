@@ -1,7 +1,15 @@
 import Pill from "./pill";
 import styles from "./footer.module.scss"
+import {useEffect, useState} from "react";
 
 export default function Footer() {
+
+    const [buildId, setBuildId] = useState("")
+
+    useEffect(() => {
+        setBuildId(window.__NEXT_DATA__.buildId);
+        console.log(buildId)
+    }, [buildId])
 
     return <footer
         className={"align-bottom p-4 border-t border-b border-gray-100 items-center justify-center text-center dark:bg-gray-800 dark:border-gray-500 dark:text-white"}>
@@ -34,16 +42,16 @@ export default function Footer() {
                         {/*<p className={"text-xs"}>That's right! It's deployed in kubernetes!</p>*/}
                         {/*<p className={"text-xs"}>I'm even learning kubernetes</p>*/}
                     </div>
-                    <div className={"flex items-center"}>
+                    <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Served from node: </p>
                         <Pill>unknown</Pill>
                     </div>
                 </div>
                 <div>
                     <p className={styles.footerCategoryTitle}>Site Info</p>
-                    <div className={"flex items-center"}>
+                    <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Build id:</p>
-                        <Pill>unknown</Pill>
+                        <Pill>{buildId}</Pill>
                     </div>
                 </div>
             </div>
