@@ -7,8 +7,7 @@ export default function Footer() {
     const [buildId, setBuildId] = useState("")
 
     useEffect(() => {
-        setBuildId(window.__NEXT_DATA__.buildId);
-        console.log(buildId)
+        fetch("/api/buildid").then(response => response.json().then(data => setBuildId(data.buildId)))
     }, [buildId])
 
     return <footer
@@ -56,7 +55,8 @@ export default function Footer() {
                 </div>
             </div>
         </div>
-        <p className={"text-xs"}>All the pictures on this site are made by Tigo and are of the code of this site and the servers it is hosted on, the site might also contain pictures of projects he has done.</p>
+        <p className={"text-xs"}>All the pictures on this site are made by Tigo and are of the code of this site and the
+            servers it is hosted on, the site might also contain pictures of projects he has done.</p>
     </footer>
 
 }

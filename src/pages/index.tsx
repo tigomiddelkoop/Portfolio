@@ -3,9 +3,17 @@ import Pill from "../components/pill"
 import Button from "../components/button";
 import Image from "next/image";
 import Skillscard from "../components/home/skillscard";
-import Card from "../components/card";
+import {useState} from "react";
+
+interface CVState {
+    progress: "success" | "info" | "danger";
+    message?: string;
+
+}
 
 export default function Home({skills}) {
+
+    const [cv, setCv] = useState<CVState>({progress: "success", message: "Generate CV"})
 
     return (
         <div>
@@ -38,11 +46,16 @@ export default function Home({skills}) {
                         <div className={"flex flex-1 justify-center"}>
                             <div className={"justify-center text-center"}>
                                 <p className={"mb-0.5"}>Interested in my CV?</p>
-                                <Button className={"w-64 text-center"} color={"success"}>
-                                    <div className={"flex items-center justify-center"}><p className={'mr-1'}>Generate
-                                        CV</p><Pill color={"danger"}>WIP</Pill>
-                                    </div>
-                                </Button>
+                                <div onClick={generateCV}>
+                                    <Button className={"w-64 text-center"} color={cv.progress}>
+                                        <div className={"flex items-center justify-center"}>
+                                            {cv.progress == "info" ? <div
+                                                className={"mr-1.5 h-4 w-4 bg-blue-400 rounded-full animate-pulse items-center"}/> : ""}
+                                            <div>{cv.message}</div>
+
+                                        </div>
+                                    </Button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -70,6 +83,14 @@ export default function Home({skills}) {
             </div>
         </div>
     )
+
+    function generateCV() {
+        setCv({progress: "info", message: "Generating CV"})
+
+        setTimeout(() => setCv({progress: "danger", message: "Generating CV failed"}), 10000)
+        setTimeout(() => setCv({progress: "success", message: "CV generated, downloading"}), 15000)
+    }
+
 }
 
 export async function getStaticProps() {
@@ -83,3 +104,4 @@ export async function getStaticProps() {
     return {props: {skills}, revalidate: 1};
 
 }
+

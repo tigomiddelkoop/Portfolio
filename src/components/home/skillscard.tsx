@@ -1,6 +1,5 @@
 import {DateTime} from "luxon";
 import styles from "./skillscard.module.scss";
-import {func} from "prop-types";
 
 interface props {
     entries?: any,
@@ -52,7 +51,7 @@ function renderEntry(entry) {
             <div className={"flex-1"}>
                 {Array.isArray(entry.name) ? entry.name.map(name => {
                     if (name == entry.name[0]) return <p>{name}</p>
-                    return <p className={"text-xs font-light"}>{name}</p>
+                    return <p key={name} className={"text-xs font-light"}>{name}</p>
 
                 }) : <p>{entry.name}</p>}
 
