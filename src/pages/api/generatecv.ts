@@ -19,7 +19,7 @@ export default async (req, res) => {
         },
         path: process.cwd() + "/public/cv.pdf"
     }
-    
+
     pdf.create(document, options);
 
     let file = process.cwd() + "/public/cv.pdf";

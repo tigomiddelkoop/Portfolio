@@ -73,6 +73,12 @@
         ],
         "date": "2019-09-01",
         "confidence": 50
+      },
+      {
+        "name": "Magento 2",
+        "language": "PHP",
+        "date": "2019-10-01",
+        "confidence": 20
       }
     ]
   },
