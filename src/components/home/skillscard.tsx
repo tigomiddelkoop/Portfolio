@@ -1,6 +1,7 @@
 import {DateTime} from "luxon";
 import styles from "./skillscard.module.scss";
 import Image from "next/image"
+import {PHASE_PRODUCTION_BUILD} from "next/constants";
 
 interface props {
     entries?: any,
@@ -22,7 +23,9 @@ export default function Skillscard(props: props) {
             <div
                 className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg dark:bg-gray-700 dark:border-gray-600 shadow-lg "}>
 
-                {entries.map(entry => renderEntry(entry))}
+                {entries.map(entry => {
+                    return renderEntry(entry)
+                })}
 
             </div>
         </div>
@@ -44,11 +47,13 @@ function renderEntry(entry) {
         <div className={"flex border-gray-300 dark:border-gray-600 py-3 px-3 items-center"}>
             <div className={"flex-1"}>
                 {Array.isArray(entry.name) ? entry.name.map(name => {
-                    return <p className={"text-xs"}>{name}</p>
+                    if (name == entry.name[0]) return <p>{name}</p>
+                    return <p className={"text-xs font-light"}>{name}</p>
+
                 }) : <p>{entry.name}</p>}
 
             </div>
-            <div className={"text-xs"}>
+            <div className={"font-light text-sm"}>
                 <p>{diff.years.toFixed()} year{diff.years.toFixed() !== '1' ? 's' : ''} experience</p>
             </div>
         </div>
