@@ -1,7 +1,7 @@
 [
   {
     "name": "Languages",
-    "image": "/programming.jpg",
+    "image": "/img/programming.jpg",
     "entries": [
       {
         "name": "PHP",
@@ -39,7 +39,7 @@
   },
   {
     "name": "Frameworks",
-    "image": "/ssh.jpg",
+    "image": "/img/ssh.jpg",
     "entries": [
       {
         "name": "Laravel",
@@ -77,14 +77,14 @@
       {
         "name": "Magento 2",
         "language": "PHP",
-        "date": "2019-10-01",
+        "date": "2020-10-01",
         "confidence": 20
       }
     ]
   },
   {
     "name": "Tools",
-    "image": "/homepage.jpg",
+    "image": "/img/homepage.jpg",
     "entries": [
       {
         "name": "Jetbrains PhpStorm",
