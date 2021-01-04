@@ -13,7 +13,7 @@ interface CVState {
 
 export default function Home({skills}) {
 
-    const [cv, setCv] = useState<CVState>({progress: "success", message: "Generate CV"})
+    const [cv, setCv] = useState<CVState>({progress: "success", message: "Download CV"})
 
     return (
         <div>
@@ -85,7 +85,11 @@ export default function Home({skills}) {
     )
 
     async function generateCV() {
-        setCv({progress: "info", message: "Generating CV"})
+        setCv({progress: "info", message: "Downloading CV"})
+
+        const timeGenerated = new Date();
+        console.log(timeGenerated);
+        const filename = `TigoMiddelkoop (CV) [Generated at ${timeGenerated.toLocaleString()}].pdf`
 
         fetch("/api/generatecv").then(response => {
 
@@ -95,16 +99,18 @@ export default function Home({skills}) {
             }
             response.blob().then(pdfBlob => {
 
-                let pdf = new File([pdfBlob], "TigoMiddelkoopCV.pdf")
+                let pdf = new File([pdfBlob], filename)
 
                 const objUrl = window.URL.createObjectURL(pdf);
 
                 let link = document.createElement("a")
                 link.href = objUrl;
-                link.download = "cv.pdf"
-                link.click();
-                setCv({progress: "success", message: "CV generated, downloading"})
+                link.download = filename
+                link.click()
+                setCv({progress: "success", message: "Downloaded"})
 
+
+                setTimeout(() => setCv({progress: "success", message: "Download CV"}), 5000)
                 setTimeout(() => {
                     window.URL.revokeObjectURL(objUrl);
                 }, 250);

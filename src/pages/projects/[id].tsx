@@ -15,8 +15,10 @@ export default function Project({project}) {
         <Head>
             <title>Tigo Middelkoop - {project.title}</title>
         </Head>
-        <h1>{project.title}</h1>
-        <h2><Link href={"/"}>Back to the homepage!</Link></h2>
+        <div className={"text-center mb-4 dark:text-white"}>
+            <h1 className={"text-4xl font-semibold"}>{project.title}</h1>
+            <h5 className={"text-xs"}></h5>
+        </div>
     </Fragment>
 }
 

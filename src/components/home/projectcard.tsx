@@ -19,12 +19,11 @@ interface props {
 export default function Projectcard(props: props) {
     return (
         <Card>
-            <CardTitle>{props.project.title}</CardTitle>
+            <CardTitle><Link href={"/projects/" + props.project.key}>{props.project.title}</Link></CardTitle>
             <CardBody>
                 <div>
                     <p className={"mb-4"}>{props.project.short_description}</p>
                     <div className={"flex items-center"}>
-                        <Link href={"/projects/" + props.project.key}><div className={"py-1.5 px-2"}>Project</div></Link>
                         <a href={props.project.url}><Button color={"secondary"}>Show Website</Button></a>
                         <a href={props.project.source_control.github}><Button color={"secondary"}>GitHub</Button></a>
                     </div>
