@@ -45,6 +45,7 @@ function renderEntry(entry) {
 
     let years = diff.years.toFixed()
     let months = diff.months.toFixed()
+
     // LET IT RENDER WHOOOOOOOOOOOO
     return (
         <div className={"flex border-gray-300 dark:border-gray-600 py-3 px-3 items-center"}>

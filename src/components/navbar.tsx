@@ -56,15 +56,13 @@ export default function Navbar(props) {
                         </div>
                     </Link>
                     <Link href={"/clients"}>
-                        <div className={path == "/clients" ? activeNav : inactiveNav}>
-                            <p className={"mr-1"}>Clients</p>
-                            <Pill color={"success"}>New!</Pill>
+                        <div className={path.includes("/clients") ? activeNav : inactiveNav}>
+                            <p>Clients</p>
                         </div>
                     </Link>
                     <Link href={"/projects"}>
-                        <div className={path == "/projects" ? activeNav : inactiveNav}>
-                            <p className={"mr-1"}>Projects</p>
-                            <Pill color={"success"}>New!</Pill>
+                        <div className={path.includes("/projects") ? activeNav : inactiveNav}>
+                            <p>Projects</p>
                         </div>
                     </Link>
                     <Link href={"/blog"}>
@@ -80,7 +78,8 @@ export default function Navbar(props) {
                             </div>
                         </Link>
                         <button onClick={props.changeTheme} className={navButton}>
-                            { props.theme == "light" ? <FontAwesomeIcon className={"h-4"} icon={faMoon}/> : <FontAwesomeIcon className={"h-4"} icon={faSun}/> }
+                            {props.theme == "light" ? <FontAwesomeIcon className={"h-4"} icon={faMoon}/> :
+                                <FontAwesomeIcon className={"h-4"} icon={faSun}/>}
                         </button>
                     </div>
                 </div>

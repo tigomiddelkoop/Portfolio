@@ -18,7 +18,7 @@ export default function index({projects}) {
                 <h5 className={"text-xs"}>Projects I have run or whose I am currently working on</h5>
             </div>
             <div className={"flex flex-col flex-auto"}>
-                {projects.map(project => <div key={project.title} className={"flex-1 mx-1 mb-4"}><Projectcard project={project}/></div>)}
+                {projects.map(project => <div key={project.title} className={"flex-1 mb-4"}><Projectcard project={project}/></div>)}
             </div>
         </Fragment>
     )
