@@ -55,8 +55,9 @@ export default function Footer() {
                 </div>
             </div>
         </div>
-        <p className={"text-xs"}>All the pictures on this site are made by Tigo and are of the code of this site and the
+        <p className={"text-xs font-light"}>All the pictures on this site are made by Tigo and are of the code of this site and the
             servers it is hosted on, the site might also contain pictures of projects he has done.</p>
+        <p className={"text-xs font-light"}>(I'm trying to not use any stock images, those are no fun to use. I want to make them myself)</p>
     </footer>
 
 }

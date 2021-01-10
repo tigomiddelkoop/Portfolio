@@ -3,10 +3,9 @@ import Head from "next/head";
 import Layout from "../../components/layout";
 import {Fragment} from "react";
 import Projectcard from "../../components/home/projectcard";
+import {production} from "../_app";
 
 export default function index({projects}) {
-
-    console.log(projects);
 
     return (
         <Fragment>
@@ -18,15 +17,17 @@ export default function index({projects}) {
                 <h5 className={"text-xs"}>Projects I have run or whose I am currently working on</h5>
             </div>
             <div className={"flex flex-col flex-auto"}>
-                {projects.map(project => <div key={project.title} className={"flex-1 mb-4"}><Projectcard project={project}/></div>)}
+                {projects.map(project => <div key={project.title} className={"flex-1 mb-4"}><Projectcard
+                    project={project}/></div>)}
             </div>
         </Fragment>
     )
+
 }
 
 export async function getStaticProps({params}) {
 
-    const projects = await fetch("https://genericdevelopment.nl/data/projects.json", {
+    const projects = await fetch(production + "/projects.json", {
         method: "GET"
     }).then(response => response.json());
 

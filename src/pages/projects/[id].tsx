@@ -7,6 +7,7 @@ import Card from "../../components/card";
 import CardBody from "../../components/cardbody";
 import CardTitle from "../../components/cardtitle";
 import Macwindowtitle from "../../components/os/macwindowtitle";
+import {production} from "../_app";
 
 export default function Project({project}) {
     const router = useRouter()
@@ -53,7 +54,7 @@ export default function Project({project}) {
 // : Promise<GetStaticProps>
 export async function getStaticProps({params}) {
 
-    const results = await fetch("https://tigo.tech/projects.json", {
+    const results = await fetch(production + "/projects.json", {
         method: "GET"
     }).then(response => response.json());
 
@@ -73,7 +74,7 @@ export async function getStaticProps({params}) {
 // : Promise<GetStaticPaths>
 export async function getStaticPaths() {
 
-    const results = await fetch("https://tigo.tech/projects.json", {
+    const results = await fetch(production + "/projects.json", {
         method: "GET"
     }).then(response => response.json());
 
