@@ -24,7 +24,7 @@
       {
         "name": [
           "C++",
-          "C#",
+          "C# (.NET)",
           "C"
         ],
         "date": "2020-06-01",
@@ -93,6 +93,11 @@
       {
         "name": "Jetbrains Rider",
         "date": "2020-12-01"
+      },
+      {
+        "name": "Kubernetes",
+        "date": "2020-12-01",
+        "confidence": 10
       }
     ]
   }

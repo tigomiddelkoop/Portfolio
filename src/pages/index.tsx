@@ -4,6 +4,7 @@ import Button from "../components/button";
 import Image from "next/image";
 import Skillscard from "../components/home/skillscard";
 import {useState} from "react";
+import {production} from "./_app";
 
 interface CVState {
     progress: "success" | "info" | "danger";
@@ -126,10 +127,8 @@ export async function getStaticProps() {
 
     // I want to this another way, I do not feel comfy doing it this way!
     // Either the backend is already there or we do it with process.cwd();
-    const dev = process.env.NODE_ENV !== 'production';
-    const server = dev ? 'http://localhost:3000' : 'https://tigo.tech';
 
-    const skills = await fetch(server + "/home.json").then(response => response.json())
+    const skills = await fetch(production + "/home.json").then(response => response.json())
     return {props: {skills}, revalidate: 1};
 
 }

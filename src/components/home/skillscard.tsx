@@ -51,19 +51,19 @@ function renderEntry(entry) {
         <div className={"flex border-gray-300 dark:border-gray-600 py-3 px-3 items-center"}>
             <div className={"flex-1"}>
                 {Array.isArray(entry.name) ? entry.name.map(name => {
-                    if (name == entry.name[0]) return <p>{name}</p>
+                    if (name == entry.name[0]) return <p className={"font-semibold"}>{name}</p>
                     return <p key={name} className={"text-xs font-light"}>{name}</p>
 
-                }) : <p>{entry.name}</p>}
+                }) : <p  className={"font-semibold"}>{entry.name}</p>}
 
             </div>
-            <div className={"font-light text-sm text-right"}>
-                <p>
+            <div className={"text-right font-light"}>
+                <p className={entry.confidence !== undefined ? "text-xs" : "text-sm"}>
                     {years !== "0" ? <span>{years} year{years !== '1' ? 's' : ''} </span> : ""}
                     {years !== "0" && months !== "0" ? " and " : ""}
                     {months !== "0" ? <span>{months} month{months !== '1' ? 's' : ''} </span> : ""}
                     experience</p>
-                {entry.confidence !== undefined ? <p>Confidence: {confidence} ({entry.confidence}%)</p> : ""}
+                {entry.confidence !== undefined ? <p className={"text-xs"}>Confidence: {confidence} ({entry.confidence}%)</p> : ""}
             </div>
         </div>
     )
