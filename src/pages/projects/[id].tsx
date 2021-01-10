@@ -3,6 +3,10 @@ import Head from "next/head";
 import {Fragment} from "react";
 import {useRouter} from "next/router";
 import {GetStaticPaths, GetStaticProps} from "next";
+import Card from "../../components/card";
+import CardBody from "../../components/cardbody";
+import CardTitle from "../../components/cardtitle";
+import Macwindowtitle from "../../components/os/macwindowtitle";
 
 export default function Project({project}) {
     const router = useRouter()
@@ -16,8 +20,32 @@ export default function Project({project}) {
             <title>Tigo Middelkoop - {project.title}</title>
         </Head>
         <div className={"text-center mb-4 dark:text-white"}>
-            <h1 className={"text-4xl font-semibold"}>{project.title}</h1>
-            <h5 className={"text-xs"}></h5>
+            <h1 className={"text-4xl font-semibold mb-0.5"}>{project.title}</h1>
+            <h1 className={"text-xs font-light"}>{project.short_description}</h1>
+        </div>
+        <div className={"flex"}>
+            <div className={"w-full lg:w-3/12"}>
+                <Card>
+                    <CardTitle>Project details</CardTitle>
+                    <CardBody>
+                        <div className={""}>
+                            <div className={"border-b px-2 pb-1 dark:border-gray-600"}>
+                                <p className={"font-bold"}>Programming Languages used</p>
+                            </div>
+                            <div className={""}>
+                                {project.languages.map(language => <div className={"border-b px-2 py-1 font-light dark:border-gray-600"}>{language}</div>)}
+                            </div>
+                        </div>
+                        <div>
+                            <div className={"px-2 py-1 dark:border-gray-600"}>
+                                <p className={"font-bold"}>Project Links</p>
+                            </div>
+                            <div className={""}>
+                            </div>
+                        </div>
+                    </CardBody>
+                </Card>
+            </div>
         </div>
     </Fragment>
 }
@@ -25,7 +53,7 @@ export default function Project({project}) {
 // : Promise<GetStaticProps>
 export async function getStaticProps({params}) {
 
-    const results = await fetch("https://genericdevelopment.nl/data/projects.json", {
+    const results = await fetch("https://tigo.tech/projects.json", {
         method: "GET"
     }).then(response => response.json());
 
@@ -45,7 +73,7 @@ export async function getStaticProps({params}) {
 // : Promise<GetStaticPaths>
 export async function getStaticPaths() {
 
-    const results = await fetch("https://genericdevelopment.nl/data/projects.json", {
+    const results = await fetch("https://tigo.tech/projects.json", {
         method: "GET"
     }).then(response => response.json());
 
@@ -53,7 +81,6 @@ export async function getStaticPaths() {
         return {params: {id: data.key.toString()}}
     });
 
-    console.log(pages)
     return {
         paths: pages,
         fallback: false

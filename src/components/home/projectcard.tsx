@@ -21,19 +21,19 @@ export default function Projectcard(props: props) {
         <Card>
 
             <CardBody>
-                <div className={"flex justify-between flex-col lg:flex-row items-center"}>
-                    <div>
+                <div className={"flex justify-between flex-col lg:flex-row items-center py-1 px-2"}>
+                    <div className={""}>
                         <Link href={"/projects/" + props.project.key}><h1
                             className={"text-xl mb-1 font-semibold cursor-pointer"}>{props.project.title}</h1></Link>
                         <p className={""}>{props.project.short_description}</p>
                     </div>
 
-                    <div className={"flex items-center bg-gray-800 rounded-lg border border-gray-600 shadow"}>
+                    <div className={"flex items-center bg-gray-100 border-gray-300 hover:bg-gray-200 dark:bg-gray-800 rounded-lg border dark:border-gray-600 shadow"}>
                         <a className={"py-1.5 px-2 hover:bg-gray-900 rounded-l-lg"} href={props.project.url}>
                             Show Website
                         </a>
                         <Link href={"/projects/" + props.project.key}>
-                            <div className={"py-1.5 px-2 hover:bg-gray-900 cursor-pointer"}>
+                            <div className={"py-1.5 px-2 dark:hover:bg-gray-900 cursor-pointer"}>
                                 Show Project
                             </div>
                         </Link>
