@@ -40,4 +40,8 @@ function MyApp({Component, pageProps}) {
     return <Layout changeTheme={changeTheme} theme={theme}><Component {...pageProps} /></Layout>
 }
 
+const dev = process.env.NODE_ENV !== 'production';
+export const production = dev ? 'http://localhost:3000' : 'https://tigo.tech';
+
+
 export default MyApp
