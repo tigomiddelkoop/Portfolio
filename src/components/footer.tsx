@@ -4,8 +4,8 @@ import {useEffect, useState} from "react";
 
 export default function Footer() {
 
+    // This might not be the best option, I want to look for a better option.
     const [buildId, setBuildId] = useState("")
-
     useEffect(() => {
         fetch("/api/buildid").then(response => response.json().then(data => setBuildId(data.buildId)))
     }, [buildId])

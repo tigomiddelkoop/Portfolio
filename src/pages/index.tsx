@@ -5,6 +5,7 @@ import Image from "next/image";
 import Skillscard from "../components/home/skillscard";
 import {useState} from "react";
 import {production} from "./_app";
+import {DateTime} from "luxon";
 
 interface CVState {
     progress: "success" | "info" | "danger";
@@ -88,14 +89,13 @@ export default function Home({skills}) {
     async function generateCV() {
         setCv({progress: "info", message: "Downloading CV"})
 
-        const timeGenerated = new Date();
-        console.log(timeGenerated);
-        const filename = `TigoMiddelkoop (CV) [Generated at ${timeGenerated.toLocaleString()}].pdf`
+        const timeGenerated = DateTime.local().setZone("Europe/Amsterdam");
+        const filename = `TigoMiddelkoop (CV) [Generated at ${timeGenerated.toLocaleString(DateTime.DATE_SHORT)}].pdf`
 
         fetch("/api/generatecv").then(response => {
 
             if(response.status == 502) {
-                setCv({progress: "danger", message: "Generating CV failed"})
+                setCv({progress: "danger", message: "Downloading CV failed"})
                 return
             }
             response.blob().then(pdfBlob => {
@@ -117,7 +117,7 @@ export default function Home({skills}) {
                 }, 250);
             })
         }).catch(err => {
-            setCv({progress: "danger", message: "Generating CV failed"})
+            setCv({progress: "danger", message: "Downloading CV failed"})
         });
     }
 

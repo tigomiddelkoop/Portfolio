@@ -1,12 +1,25 @@
+import Card from "../components/card";
+import CardTitle from "../components/cardtitle";
+import CardBody from "../components/cardbody";
+import Button from "../components/button";
+import Pill from "../components/pill";
+
 export default function Login() {
 
     return (
-        <div className={"dark"}>
-            <div className={"dark dark:text-white dark:bg-black h-screen flex flex-col justify-center"}>
-                <div className={"m-4"}>
-                    <h1 className={"text-6xl mb-1"}>Loginpage work in progress</h1>
-                    <p className={""}>And no. You can not register.</p>
-                </div>
+        <div className={"h-screen flex items-center justify-center dark:bg-gray-800 p-4"}>
+            <div draggable={"true"} className={"w-full lg:w-4/12"}>
+                <Card>
+                    <CardTitle><span className={"mr-1"}>You need to Login</span><Pill color={"info"}>Beta</Pill></CardTitle>
+                    <CardBody>
+                        {/* Poly fill*/}
+                        <div className={"m-2"}>
+                            <input name={"username"} placeholder={"User"} type={"text"}/>
+                            <input name={"password"} placeholder={"Password"} type={"password"}/>
+                            <Button color={"info"}>Login</Button>
+                        </div>
+                    </CardBody>
+                </Card>
             </div>
         </div>
     )

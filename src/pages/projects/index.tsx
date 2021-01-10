@@ -15,6 +15,7 @@ export default function index({projects}) {
             <div className={"text-center mb-4 dark:text-white"}>
                 <h1 className={"text-4xl font-semibold"}>All of my projects</h1>
                 <h5 className={"text-xs"}>Projects I have run or whose I am currently working on</h5>
+                <h5 className={"text-xs"}>(This page will undergo a makeover quite soon when I finished with the rest and got pictures for every project)</h5>
             </div>
             <div className={"flex flex-col flex-auto"}>
                 {projects.map(project => <div key={project.title} className={"flex-1 mb-4"}><Projectcard
