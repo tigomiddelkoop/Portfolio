@@ -17,7 +17,7 @@ export default function index(props) {
             <h5 className={"text-xs"}>People I have worked for/with</h5>
         </div>
 
-        <div className={"flex flex-wrap text-black dark:text-white  justify-center"}>
+        <div className={"flex flex-wrap text-black dark:text-white justify-center"}>
 
 
             {props.clients.map(client => <div
@@ -29,7 +29,7 @@ export default function index(props) {
                             <div>
                                 <h3 className={"font-semibold"}>{client.name}</h3>
                                 <p className={"text-xs"}>{client.about}</p>
-                                <div className={"flex justify-center my-1"}>{client.services.map(service => <div className={"mx-0.5"}>
+                                <div className={"flex flex-wrap justify-center my-1"}>{client.services.map(service => <div className={"mx-0.5 my-0.5"}>
                                     <Pill
                                         color={"info"}>{service}</Pill>
                                 </div>)}

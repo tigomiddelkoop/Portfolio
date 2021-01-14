@@ -1,0 +1,16 @@
+{
+  "title": "tigo.tech management system",
+  "slug": "tigotech",
+  "short_description": "A management system that can manage all things tigo.tech, servers and more! It'll be a system and a dashboard that can manage stuff in my house too via wrappers and raspberry pi's",
+  "long_description": [],
+  "images": {
+    "thumbnail": "",
+    "1": "",
+    "2": "",
+    "3": ""
+  },
+  "languages": ["TypeScript", "C", "C#", "and other languages"],
+  "source_control": {
+    "github": null
+  }
+}

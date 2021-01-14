@@ -72,11 +72,6 @@ export default function Navbar(props) {
                         </div>
                     </Link>
                     <div className={"flex h-14"}>
-                        <Link href={"/login"}>
-                            <div className={navButton}>
-                                <FontAwesomeIcon className={"h-4"} icon={faUser}/>
-                            </div>
-                        </Link>
                         <button onClick={props.changeTheme} className={navButton}>
                             {props.theme == "light" ? <FontAwesomeIcon className={"h-4"} icon={faMoon}/> :
                                 <FontAwesomeIcon className={"h-4"} icon={faSun}/>}

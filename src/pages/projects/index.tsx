@@ -19,9 +19,9 @@ export default function index({projects}) {
                 <h5 className={"text-xs"}>(This page will undergo a makeover quite soon when I finished with the rest
                     and got pictures for every project)</h5>
             </div>
-            <div className={"flex flex-col flex-auto"}>
-                {projects.map(project => <div key={project.title} className={"flex-1 mb-4"}><Projectcard
-                    project={project}/></div>)}
+            <div className={"flex flex-wrap text-black dark:text-white justify-center"}>
+                {projects.map(project => <Projectcard key={project.title}
+                    project={project}/>)}
             </div>
         </Fragment>
     )

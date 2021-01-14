@@ -1,4 +1,5 @@
 import * as fs from "fs";
+
 export default async (req, res) => {
 
     if (req.method === "GET") {
@@ -24,7 +25,14 @@ export async function getProjects() {
         const rawFile: string = fs.readFileSync(folderPath + projectFile, {encoding: "utf8"});
         const file = JSON.parse(rawFile);
 
-        return {id: index, title: file.title, slug: file.slug, short_description: file.short_description, github: file.source_control.github}
+        return {
+            id: index,
+            title: file.title,
+            slug: file.slug,
+            short_description: file.short_description,
+            languages: file.languages,
+            github: file.source_control.github
+        }
 
     })
 
