@@ -17,11 +17,11 @@ export default function index(props) {
             <h5 className={"text-xs"}>People I have worked for/with</h5>
         </div>
 
-        <div className={"flex flex-wrap text-black dark:text-white md:mx-12 lg:mx-72 justify-center"}>
+        <div className={"flex flex-wrap text-black dark:text-white  justify-center"}>
 
 
             {props.clients.map(client => <div
-                className={"w-full sm:w-6/12 md:w-4/12  lg:w-3/12 p-1 text-center items-center"}>
+                className={"w-full sm:w-6/12 md:w-6/12 lg:w-4/12 xl:w-2/12 p-1 text-center items-center"}>
                 <Card key={client.id}>
                     <CardBody>
                         <div className={"flex flex-col items-center"}>
@@ -60,6 +60,6 @@ export default function index(props) {
 export async function getStaticProps() {
 
     const clients = await getClients();
+    return {props: {clients}, revalidate: 1}
 
-    return {props: {clients}}
 }

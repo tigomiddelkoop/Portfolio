@@ -1,0 +1,27 @@
+{
+  "title": "SystemManager Cloud",
+  "slug": "systemmanagercloud",
+  "short_description": "The place to find your plugins/hosting for SystemManager.",
+  "long_description": [
+    {
+      "key": 1,
+      "header": "",
+      "body": "<h1>A fully customizable server monitoring and management tool</h1>"
+    }
+  ],
+  "url": "https://systemmanager.cloud",
+  "images": {
+    "thumbnail": "",
+    "1": "",
+    "2": "",
+    "3": ""
+  },
+  "languages": [
+    "PHP",
+    "TypeScript"
+  ],
+  "source_control": {
+    "github": "https://github.com/systemmanager-io/Core",
+    "gitlab": "https://git.genericdevelopment.nl/systemmanager/core"
+  }
+}

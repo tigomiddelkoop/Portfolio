@@ -13,14 +13,14 @@ export default async (req, res) => {
 
 export async function getClients() {
 
-    const folderPath = process.cwd() + "/data/clients"
+    const folderPath = process.cwd() + "/data/clients/";
     const files = fs.readdirSync(folderPath, {encoding: "utf8"});
 
     const clients = files.map((clientFile, index) => {
 
-        // console.log(folderPath + "/" + clientFile);
-        const rawFile: string = fs.readFileSync(folderPath + "/" + clientFile, {encoding: "utf8"});
-        const file = JSON.parse(rawFile)
+        const rawFile: string = fs.readFileSync(folderPath + clientFile, {encoding: "utf8"});
+        const file = JSON.parse(rawFile);
+
         return {id: index, ...file};
 
     })

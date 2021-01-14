@@ -1,0 +1,22 @@
+{
+  "title": "Portfolio",
+  "slug": "portfolio",
+  "short_description": "This portfolio, completely build in NextJS",
+  "long_description": [
+    {
+      "key": 1,
+      "header": "",
+      "body": ""
+    }
+  ],
+  "images": {
+    "thumbnail": "",
+    "1": "",
+    "2": "",
+    "3": ""
+  },
+  "languages": "TypeScript",
+  "source_control": {
+    "github": "https://github.com/tigomiddelkoop/Portfolio"
+  }
+}

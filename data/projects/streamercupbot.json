@@ -1,0 +1,16 @@
+{
+  "title": "StreamerCupBot",
+  "slug": "streamercupbot",
+  "short_description": "An multipurpose Discordbot for managing the StreamerCupNL Discord server",
+  "long_description": [],
+  "images": {
+    "thumbnail": "",
+    "1": "",
+    "2": "",
+    "3": ""
+  },
+  "languages": "C# (.NET)",
+  "source_control": {
+    "github": "----"
+  }
+}

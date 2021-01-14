@@ -1,0 +1,36 @@
+{
+  "title": "SystemManager",
+  "slug": "systemmanager",
+  "short_description": "A configurable server monitoring and management suite",
+  "long_description": [
+    {
+      "header": "What is SystemManager",
+      "body": "SystemManager "
+    },
+    {
+      "header": "Who is it for?",
+      "body": "Who is it for?"
+    },
+    {
+      "header": "Why did I build it?",
+      "body": "I started to build SystemManager because I did not find any monitoring/management software really suiting my needs. I also started working on the project so I had a goal to learn new programming languages."
+    }
+  ],
+  "url": "https://systemmanager.io",
+  "images": {
+    "thumbnail": "",
+    "1": "",
+    "2": "",
+    "3": ""
+  },
+  "languages": [
+    "TypeScript (Core, Dashboard, Chromecast)",
+    "Rust/C++ (Daemon)",
+    "Objective-C (iOS)",
+    "Java (Android)"
+  ],
+  "source_control": {
+    "github": "https://github.com/systemmanager-io/Core",
+    "gitlab": "https://git.genericdevelopment.nl/systemmanager/core"
+  }
+}

@@ -1,6 +1,7 @@
 import Pill from "./pill";
 import styles from "./footer.module.scss"
 import {useEffect, useState} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
 
@@ -43,7 +44,7 @@ export default function Footer() {
                     </div>
                     <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Served from node: </p>
-                        <Pill>unknown</Pill>
+                        <Pill color={"danger"}>Not deployed in K8s</Pill>
                     </div>
                 </div>
                 <div>
