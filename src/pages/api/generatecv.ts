@@ -1,5 +1,4 @@
 import * as fs from "fs";
-import pdf from "pdf-creator-node";
 
 export default async (req, res) => {
 
