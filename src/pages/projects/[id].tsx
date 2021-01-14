@@ -28,7 +28,7 @@ export default function Project({project}) {
             <div className={"w-full lg:w-3/12"}>
                 <Card>
                     <CardTitle>Project details</CardTitle>
-                    <CardBody>
+                    <div>
                         <div className={""}>
                             <div className={"border-b px-2 pb-1 dark:border-gray-600"}>
                                 <p className={"font-bold"}>Programming Languages used</p>
@@ -41,10 +41,8 @@ export default function Project({project}) {
                             <div className={"px-2 py-1 dark:border-gray-600"}>
                                 <p className={"font-bold"}>Project Links</p>
                             </div>
-                            <div className={""}>
-                            </div>
                         </div>
-                    </CardBody>
+                    </div>
                 </Card>
             </div>
         </div>

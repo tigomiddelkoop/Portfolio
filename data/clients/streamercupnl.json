@@ -1,0 +1,10 @@
+{
+  "name": "StreamerCupNL",
+  "logo": "/img/clients/streamercupnl.svg",
+  "about": "",
+  "website": "https://streamercup.nl",
+  "services": [
+    "Hosting",
+    "Development"
+  ]
+}

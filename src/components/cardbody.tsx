@@ -1,6 +1,6 @@
 export default function CardBody({children}) {
     return (
-        <div className={""}>
+        <div className={"m-2"}>
             {children}
         </div>
     )

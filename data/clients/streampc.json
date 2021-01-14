@@ -1,0 +1,10 @@
+{
+  "name": "StreamPC",
+  "logo": "/img/clients/streampc.svg",
+  "about": "StreamPCNL Specializes in building high-end PC's for people who might want to stream or are currently streaming",
+  "website": "https://stream-pc.nl",
+  "services": [
+    "Hosting",
+    "Development"
+  ]
+}
