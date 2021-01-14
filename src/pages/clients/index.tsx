@@ -31,7 +31,7 @@ export default function index(props) {
                                 <p className={"text-xs"}>{client.about}</p>
                                 <div className={"flex justify-center my-1"}>{client.services.map(service => <div className={"mx-0.5"}>
                                     <Pill
-                                        color={"primary"}>{service}</Pill>
+                                        color={"info"}>{service}</Pill>
                                 </div>)}
                                 </div>
                             </div>
@@ -42,7 +42,7 @@ export default function index(props) {
                         <a href={client.website} target={"_blank"} rel={"nofollow noreferrer"}
                            className={"flex-1 rounded-bl-lg border-t border-r p-2 font-semibold bg-gray-100 hover:bg-gray-200 dark:border-gray-600 cursor-pointer dark:hover:bg-gray-900 dark:bg-gray-800"}>Visit
                             site</a>
-                        <p className={"flex-1 rounded-br-lg border-t p-2 font-semibold bg-gray-100 hover:bg-gray-200 dark:border-gray-600 cursor-pointer dark:hover:bg-gray-900 dark:bg-gray-800"}>See
+                        <p className={"flex-1 rounded-br-lg border-t p-2 font-semibold bg-gray-100 hover:bg-gray-200 dark:border-gray-600 cursor-not-allowed dark:hover:bg-gray-900 dark:bg-gray-800"}>See
                             project</p>
                     </div>
 
@@ -57,7 +57,7 @@ export default function index(props) {
     </Fragment>
 }
 
-export async function getStaticProps(ctx) {
+export async function getStaticProps() {
 
     const clients = await getClients();
 
