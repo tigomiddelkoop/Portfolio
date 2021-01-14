@@ -26,7 +26,7 @@ export default function Navbar(props) {
 
             <div className={"flex flex-1 border-b-1 border-gray-100 md:border-b-0"}>
                 <Link href={"/"}>
-                    <div className={"px-4 w-auto flex w-48 items-center  border-gray-100 cursor-pointer"}>
+                    <div className={"px-4 w-auto flex w-48 items-center border-gray-100 cursor-pointer"}>
                         <Image
                             alt={"Picture of tigo"}
                             src={"/img/profilepicture.png"}
@@ -37,8 +37,7 @@ export default function Navbar(props) {
                         <p className={"ml-2"}>Tigo Middelkoop</p>
                     </div>
                 </Link>
-                <div className={"flex flex-1 lg:text-xl dark:text-white items-center justify-center"}>
-                </div>
+                <div className={"flex flex-1"}/>
                 <div className={"h-14"}>
                     <button onClick={() => setNavBarOpen(!navBarOpen)}
                             className={styles.navMenuButton + " self-center h-14"}>
@@ -48,8 +47,8 @@ export default function Navbar(props) {
             </div>
 
             <div
-                className={!navBarOpen ? "hidden lg:block" : "block"}>
-                <div className={"flex flex-col lg:flex-row lg:items-center border-red-700"}>
+                className={!navBarOpen ? "hidden md:block" : "block"}>
+                <div className={"flex flex-col md:flex-row md:items-center border-red-700"}>
                     <Link href={"/"}>
                         <div className={path == "/" ? activeNav : inactiveNav}>
                             <p>Home</p>

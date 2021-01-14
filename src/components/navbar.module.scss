@@ -15,7 +15,7 @@
 }
 
 .navMenuButton {
-  @apply p-4 w-12 justify-center block lg:hidden lg:px-2 px-4 items-center;
+  @apply p-4 w-12 justify-center block md:hidden md:px-2 px-4 items-center;
 }
 
 .navHamburger {
@@ -23,5 +23,5 @@
 }
 
 .navbar {
-  @apply flex flex-col lg:flex-row border-b border-gray-100;
+  @apply flex flex-col md:flex-row border-b border-gray-100;
 }
