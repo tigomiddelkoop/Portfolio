@@ -5,6 +5,7 @@ import Skillscard from "../components/home/skillscard";
 import {useState} from "react";
 import {production} from "./_app";
 import {DateTime} from "luxon";
+import {getData} from "./api/home";
 
 interface CVState {
     progress: "success" | "info" | "danger";
@@ -116,10 +117,7 @@ export default function Home({skills}) {
 
 export async function getStaticProps() {
 
-    // I want to this another way, I do not feel comfy doing it this way!
-    // Either the backend is already there or we do it with process.cwd();
-
-    const skills = await fetch(production + "/home.json").then(response => response.json())
+    const skills = await getData();
     return {props: {skills}, revalidate: 1};
 
 }

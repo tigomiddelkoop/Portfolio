@@ -19,7 +19,7 @@ export async function getClients() {
     const clients = files.map((clientFile, index) => {
 
         const rawFile: string = fs.readFileSync(folderPath + clientFile, {encoding: "utf8"});
-        const file = JSON.parse(rawFile);
+        const file: Object = JSON.parse(rawFile);
 
         return {id: index, ...file};
 

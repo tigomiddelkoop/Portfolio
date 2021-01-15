@@ -100,5 +100,16 @@
         "confidence": 10
       }
     ]
+  },
+  {
+    "name": "Databases",
+    "image": "",
+    "entries": [
+      {
+        "name": "MySQL",
+        "date": "2018-01-01",
+        "confidence": 552
+      }
+    ]
   }
 ]

@@ -20,7 +20,7 @@ export async function getProjects() {
     const folderPath = process.cwd() + "/data/projects/";
     const files = fs.readdirSync(folderPath, {encoding: "utf8"});
 
-    const projects = files.map((projectFile, index) => {
+    return files.map((projectFile, index) => {
 
         const rawFile: string = fs.readFileSync(folderPath + projectFile, {encoding: "utf8"});
         const file = JSON.parse(rawFile);
@@ -35,7 +35,5 @@ export async function getProjects() {
         }
 
     })
-
-    return projects;
 
 }

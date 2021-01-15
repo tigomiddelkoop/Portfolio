@@ -1,10 +1,12 @@
-import fs from "fs";
+import * as fs from "fs";
 
 export default async (req, res) => {
 
     if (req.method === "GET") {
         const project = await getProject(req.query.slug)
-        res.json({project});
+
+        res.statusCode = 200;
+        res.json(project);
     }
 
 }
