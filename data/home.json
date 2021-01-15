@@ -83,7 +83,7 @@
     ]
   },
   {
-    "name": "Tools",
+    "name": "IDEs",
     "image": "/img/homepage.jpg",
     "entries": [
       {
@@ -95,13 +95,8 @@
         "date": "2020-12-01"
       },
       {
-        "name" : "Jetbrains DataGrip",
+        "name": "Jetbrains DataGrip",
         "date": "2021-01-15"
-      },
-      {
-        "name": "Kubernetes",
-        "date": "2020-12-01",
-        "confidence": 10
       }
     ]
   },
@@ -110,7 +105,10 @@
     "image": "",
     "entries": [
       {
-        "name": ["MySQL", "Including SQL"],
+        "name": [
+          "MySQL",
+          "Including SQL"
+        ],
         "date": "2018-01-01",
         "confidence": 50
       },
@@ -121,6 +119,17 @@
         ],
         "date": "2019-06-01",
         "confidence": 50
+      }
+    ]
+  },
+  {
+    "name": "Hosting Tools",
+    "image": "",
+    "entries": [
+      {
+        "name": "Kubernetes",
+        "date": "2020-12-01",
+        "confidence": 10
       }
     ]
   }
