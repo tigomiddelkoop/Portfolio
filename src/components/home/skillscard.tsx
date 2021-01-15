@@ -18,9 +18,13 @@ export default function Skillscard(props: props) {
     return (
         <div key={props.name} className={"rounded-lg w-96 mb-4 md:mx-1"}>
             <div style={{backgroundImage: `url("${props.image}")`}}
-                 className={styles.background + " shadow-lg flex flex-col items-center justify-center p-2 h-32 border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg dark:bg-gray-900 dark:border-gray-600"}>
+                 className={styles.background + " relative shadow-lg flex flex-col items-center justify-center p-2 h-32 border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg dark:bg-gray-900 dark:border-gray-600"}>
                 <h1 className={"font-bold text-3xl text-white"}>{props.name}</h1>
                 {props.subname !== undefined ? <p className={"font-light text-xs text-white"}>{props.subname}</p> : ""}
+                {props.image == null ?
+                    <div className={"p-1 text-xs font-light absolute bottom-0 right-0 text-right"}>
+                        <p>No image available yet</p>
+                    </div> : ""}
             </div>
             <div
                 className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg dark:bg-gray-700 dark:border-gray-600 shadow-lg"}>
@@ -36,7 +40,7 @@ export default function Skillscard(props: props) {
 }
 
 function renderEntry(entry) {
-    
+
     // Get now and then via the dates
     let now = DateTime.fromJSDate(new Date());
     let then = DateTime.fromISO(entry.date);
@@ -52,7 +56,7 @@ function renderEntry(entry) {
 
     // LET IT RENDER WHOOOOOOOOOOOO
     return (
-        <div key={"entry" + entry.name}  className={"flex border-gray-300 dark:border-gray-600 py-3 px-3 items-center"}>
+        <div key={"entry" + entry.name} className={"flex border-gray-300 dark:border-gray-600 py-3 px-3 items-center"}>
             <div className={"flex-1"}>
                 {Array.isArray(entry.name) ? entry.name.map(name => {
                     if (name == entry.name[0]) return <p key={name} className={"font-semibold"}>{name}</p>
@@ -67,7 +71,8 @@ function renderEntry(entry) {
                     {years !== "0" && months !== "0" ? " and " : ""}
                     {months !== "0" ? <span>{months} month{months !== '1' ? 's' : ''} </span> : ""}
                     experience</p>
-                {entry.confidence !== undefined ? <p key={"confidence" + entry.name} className={"text-xs"}>Confidence: {confidence} ({entry.confidence}%)</p> : ""}
+                {entry.confidence !== undefined ? <p key={"confidence" + entry.name}
+                                                     className={"text-xs"}>Confidence: {confidence} ({entry.confidence}%)</p> : ""}
             </div>
         </div>
     )
