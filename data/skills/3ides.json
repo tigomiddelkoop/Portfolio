@@ -1,17 +1,18 @@
 {
   "name": "IDEs",
+  "subname": "These are the Tools I develop with",
   "image": "/img/homepage.jpg",
   "entries": [
     {
-      "name": "Jetbrains PhpStorm",
+      "name":  ["Jetbrains PhpStorm", "PHP, HTML and Javascript"],
       "date": "2017"
     },
     {
-      "name": "Jetbrains Rider",
+      "name": ["Jetbrains Rider", ".NET"],
       "date": "2020-12-01"
     },
     {
-      "name": "Jetbrains DataGrip",
+      "name": ["Jetbrains DataGrip", "Database Management"],
       "date": "2021-01-15"
     }
   ]

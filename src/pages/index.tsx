@@ -94,9 +94,10 @@ export default function Home({skills}) {
                             <h1 className={"text-4xl font-semibold"}>Tools and languages</h1>
                             <h5 className={"text-1xl text-xs"}>Tools I can use (and those I use regularly)</h5>
                         </div>
-                        <div className={"flex flex-col flex-wrap lg:flex-row justify-center mb-4 xl:mx-36"}>
+                        <div className={"flex flex-wrap lg:flex-row justify-center mb-4 2xl:mx-72"}>
 
-                            {skills.map(card => <Skillscard key={card.name} name={card.name} image={card.image}
+                            {skills.map(card => <Skillscard key={card.name} name={card.name} subname={card.subname}
+                                                            image={card.image}
                                                             entries={card.entries}/>)}
 
                         </div>
@@ -146,6 +147,9 @@ export default function Home({skills}) {
 export async function getStaticProps() {
 
     const skills = await getData();
+
+    console.log(skills);
+
     return {props: {skills}, revalidate: 1};
 
 }

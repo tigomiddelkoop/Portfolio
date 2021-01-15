@@ -4,19 +4,23 @@ import styles from "./skillscard.module.scss";
 interface props {
     entries?: any,
     image: string,
-    name: string
+    name: string,
+    subname: string
 }
 
 export default function Skillscard(props: props) {
 
+    console.log(props.subname)
     let entries = props.entries;
     if (entries == undefined) entries = []
 
+    //md:w-6/12 lg:w-4/12
     return (
-        <div key={props.name} className={"rounded-lg w-full lg:w-96 mb-4 lg:mx-1"}>
+        <div key={props.name} className={"rounded-lg w-96 mb-4 md:mx-1"}>
             <div style={{backgroundImage: `url("${props.image}")`}}
-                 className={styles.background + " shadow-lg flex items-center justify-center p-2 h-32 border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg dark:bg-gray-900 dark:border-gray-600"}>
-                <h1 className={"font-bold ml-1 text-3xl text-white"}>{props.name}</h1>
+                 className={styles.background + " shadow-lg flex flex-col items-center justify-center p-2 h-32 border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg dark:bg-gray-900 dark:border-gray-600"}>
+                <h1 className={"font-bold text-3xl text-white"}>{props.name}</h1>
+                {props.subname !== undefined ? <p className={"font-light text-xs text-white"}>{props.subname}</p> : ""}
             </div>
             <div
                 className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg dark:bg-gray-700 dark:border-gray-600 shadow-lg"}>
