@@ -1,0 +1,19 @@
+{
+  "name": "Databases",
+  "image": "",
+  "entries": [
+    {
+      "name": [
+        "MySQL",
+        "MariaDB"
+      ],
+      "date": "2018-01-01",
+      "confidence": 50
+    },
+    {
+      "name": "ArangoDB",
+      "date": "2019-06-01",
+      "confidence": 50
+    }
+  ]
+}

@@ -13,8 +13,17 @@ export default async (req, res) => {
 
 export async function getData() {
 
-    const folderPath = process.cwd() + "/data/";
-    const rawFile: string = fs.readFileSync(folderPath + "home.json", {encoding: "utf8"});
-    return JSON.parse(rawFile);
+    const folderPath = process.cwd() + "/data/skills/";
+    const files = fs.readdirSync(folderPath, {encoding: "utf8"});
+
+    const skills = files.map((entry => {
+
+        const rawFile: string = fs.readFileSync(folderPath + entry, {encoding: "utf8"})
+        return JSON.parse(rawFile);
+
+    }))
+
+
+    return skills;
 
 }

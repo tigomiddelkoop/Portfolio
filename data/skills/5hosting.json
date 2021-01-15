@@ -1,0 +1,11 @@
+{
+  "name": "Hosting Tools",
+  "image": "",
+  "entries": [
+    {
+      "name": "Kubernetes",
+      "date": "2020-12-01",
+      "confidence": 10
+    }
+  ]
+}

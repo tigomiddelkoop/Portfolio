@@ -1,0 +1,45 @@
+{
+  "name": "Frameworks",
+  "image": "/img/ssh.jpg",
+  "entries": [
+    {
+      "name": "Laravel",
+      "language": "PHP",
+      "date": "2018",
+      "confidence": 75
+    },
+    {
+      "name": "NextJS",
+      "language": [
+        "JavaScript",
+        "TypeScript"
+      ],
+      "date": "2020-12-01",
+      "confidence": 20
+    },
+    {
+      "name": "ReactJS",
+      "language": [
+        "JavaScript",
+        "TypeScript"
+      ],
+      "date": "2019-09-01",
+      "confidence": 50
+    },
+    {
+      "name": "ExpressJS",
+      "language": [
+        "JavaScript",
+        "TypeScript"
+      ],
+      "date": "2019-09-01",
+      "confidence": 50
+    },
+    {
+      "name": "Magento 2",
+      "language": "PHP",
+      "date": "2020-10-01",
+      "confidence": 20
+    }
+  ]
+}
