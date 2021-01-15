@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Pill from "../components/pill"
 import Button from "../components/button";
 import Image from "next/image";
 import Skillscard from "../components/home/skillscard";
@@ -66,20 +65,12 @@ export default function Home({skills}) {
                             <h1 className={"text-4xl font-semibold"}>Tools and languages</h1>
                             <h5 className={"text-1xl text-xs"}>Tools I can use (and those I use regularly)</h5>
                         </div>
-                        <div className={"flex flex-col flex-wrap lg:flex-row justify-center mb-4"}>
+                        <div className={"flex flex-col flex-wrap lg:flex-row justify-center mb-4 xl:mx-36"}>
 
                             {skills.map(card => <Skillscard key={card.name} name={card.name} image={card.image}
                                                             entries={card.entries}/>)}
 
                         </div>
-                        {/*<Card>*/}
-                        {/*    <div className={"flex m-1"}>*/}
-                        {/*        <div className={"w-4 mr-1 h-4 bg-red-700 rounded-full"}/>*/}
-                        {/*        <div className={"w-4 h-4 bg-yellow-500 rounded-full"}/>*/}
-                        {/*        <div className={"w-4 ml-1 h-4 bg-green-600 rounded-full"}/>*/}
-                        {/*        <div className={"flex-1 text-xs text-center"}>Tigo's Portfolio</div>*/}
-                        {/*    </div>*/}
-                        {/*</Card>*/}
                     </div>
                 </main>
             </div>
@@ -94,29 +85,29 @@ export default function Home({skills}) {
 
         fetch("/api/generatecv").then(response => {
 
-            if(response.status == 502) {
+            if (response.status == 502) {
                 setCv({progress: "danger", message: "Downloading CV failed"})
                 return
             }
             response.blob().then(pdfBlob => {
 
                 let pdf = new File([pdfBlob], filename)
-
                 const objUrl = window.URL.createObjectURL(pdf);
 
                 let link = document.createElement("a")
                 link.href = objUrl;
-                link.download = filename
-                link.click()
-                setCv({progress: "success", message: "Downloaded"})
+                link.download = filename;
+                link.click();
+                setCv({progress: "success", message: "Downloaded"});
 
 
-                setTimeout(() => setCv({progress: "success", message: "Download CV"}), 5000)
+                setTimeout(() => setCv({progress: "success", message: "Download CV"}), 5000);
                 setTimeout(() => {
                     window.URL.revokeObjectURL(objUrl);
                 }, 250);
             })
         }).catch(err => {
+            console.error(err);
             setCv({progress: "danger", message: "Downloading CV failed"})
         });
     }

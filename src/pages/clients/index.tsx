@@ -20,17 +20,17 @@ export default function index(props) {
         <div className={"flex flex-wrap text-black dark:text-white justify-center"}>
 
 
-            {props.clients.map(client => <div
+            {props.clients.map(client => <div key={client.id}
                 className={"w-full sm:w-6/12 md:w-6/12 lg:w-4/12 xl:w-2/12 p-1 text-center items-center"}>
-                <Card key={client.id}>
+                <Card >
                     <CardBody>
                         <div className={"flex flex-col items-center"}>
                             <img className={"h-32"} src={client.logo} alt={`${client.name}'s Logo`}/>
                             <div>
                                 <h3 className={"font-semibold"}>{client.name}</h3>
                                 <p className={"text-xs"}>{client.about}</p>
-                                <div className={"flex flex-wrap justify-center my-1"}>{client.services.map(service => <div className={"mx-0.5 my-0.5"}>
-                                    <Pill
+                                <div className={"flex flex-wrap justify-center my-1"}>{client.services.map(service => <div key={service} className={"mx-0.5 my-0.5"}>
+                                    <Pill key={service}
                                         color={"info"}>{service}</Pill>
                                 </div>)}
                                 </div>

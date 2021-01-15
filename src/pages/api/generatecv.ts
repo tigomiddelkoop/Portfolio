@@ -21,10 +21,10 @@ export default async (req, res) => {
     //
     // await pdf.create(document, options);
 
-    let file = process.cwd() + "/public/cv.pdf";
+    let file = process.cwd() + "/data/cv.pdf";
 
     res.setHeader("Content-type", "application/pdf");
-    res.setHeader("Content-disposition", `attachment; filename="CV Tigo Middelkoop.pdf"`);
+    res.setHeader("Content-disposition", `attachment;"`);
 
     res.statusCode = 200;
     let filestream = fs.createReadStream(file);
