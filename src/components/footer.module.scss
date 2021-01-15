@@ -1,11 +1,18 @@
-.footerCategoryContainer {
-  @apply py-2 px-8
+.categoryContainer {
+  @apply py-2 px-8;
 }
 
-.footerCategoryTitle {
+.categoryTitle {
   @apply text-lg font-bold
 }
 
-.footerCategorySubTitle {
+.categorySubTitle {
   @apply text-xs
+}
+.socialMediaLink {
+  @apply flex flex-row my-0.5;
+}
+
+.socialMediaCategory {
+  @apply flex flex-col text-center items-center justify-center;
 }
