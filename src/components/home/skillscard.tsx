@@ -18,7 +18,7 @@ export default function Skillscard(props: props) {
     return (
         <div key={props.name} className={"rounded-lg w-96 mb-4 md:mx-1"}>
             <div style={{backgroundImage: `url("${props.image}")`}}
-                 className={styles.background + " relative shadow-lg flex flex-col items-center justify-center p-2 h-32 border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg dark:bg-gray-900 dark:border-gray-600"}>
+                 className={styles.background + " relative flex flex-col items-center justify-center p-2 h-32 border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg dark:bg-gray-900 dark:border-gray-600"}>
                 <h1 className={"font-bold text-3xl text-white"}>{props.name}</h1>
                 {props.subname !== undefined ? <p className={"font-light text-xs text-white"}>{props.subname}</p> : ""}
                 {props.image == null ?
