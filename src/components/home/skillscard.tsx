@@ -10,11 +10,9 @@ interface props {
 
 export default function Skillscard(props: props) {
 
-    console.log(props.subname)
     let entries = props.entries;
     if (entries == undefined) entries = []
 
-    //md:w-6/12 lg:w-4/12
     return (
         <div key={props.name} className={"rounded-lg w-96 mb-4 md:mx-1"}>
             <div style={{backgroundImage: `url("_next/image?url=${encodeURIComponent(props.image)}&w=640&q=75")`}}
