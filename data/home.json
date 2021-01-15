@@ -95,6 +95,10 @@
         "date": "2020-12-01"
       },
       {
+        "name" : "Jetbrains DataGrip",
+        "date": "2021-01-15"
+      },
+      {
         "name": "Kubernetes",
         "date": "2020-12-01",
         "confidence": 10
@@ -106,9 +110,17 @@
     "image": "",
     "entries": [
       {
-        "name": "MySQL",
+        "name": ["MySQL", "Including SQL"],
         "date": "2018-01-01",
-        "confidence": 552
+        "confidence": 50
+      },
+      {
+        "name": [
+          "ArangoDB",
+          "Including AQL"
+        ],
+        "date": "2019-06-01",
+        "confidence": 50
       }
     ]
   }

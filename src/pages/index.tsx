@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Button from "../components/button";
 import Image from "next/image";
 import Skillscard from "../components/home/skillscard";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {production} from "./_app";
 import {DateTime} from "luxon";
 import {getData} from "./api/home";
@@ -16,6 +16,34 @@ interface CVState {
 export default function Home({skills}) {
 
     const [cv, setCv] = useState<CVState>({progress: "success", message: "Download CV"})
+
+    const downloadCVKeypress = (event: KeyboardEvent) => {
+        if (event.ctrlKey && event.code === "KeyP") {
+            event.preventDefault();
+            generateCV();
+        }
+    }
+
+    const downloadCVBeforePrint = (event: Event) => {
+        event.preventDefault();
+        generateCV();
+    }
+
+
+    useEffect(() => {
+        window.addEventListener("keydown", downloadCVKeypress)
+        return () => {
+            window.removeEventListener("keydown", downloadCVKeypress)
+        }
+    }, [])
+
+    useEffect(() => {
+        window.addEventListener("beforeprint", downloadCVBeforePrint)
+        return () => {
+            window.removeEventListener("beforeprint", downloadCVBeforePrint)
+        }
+    }, [])
+
 
     return (
         <div>
