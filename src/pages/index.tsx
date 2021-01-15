@@ -6,6 +6,7 @@ import {useEffect, useState} from "react";
 import {production} from "./_app";
 import {DateTime} from "luxon";
 import {getData} from "./api/home";
+import {useRouter} from "next/router";
 
 interface CVState {
     progress: "success" | "info" | "danger";
@@ -13,11 +14,17 @@ interface CVState {
 
 }
 
-export default function Home({skills}) {
+export default function Home({skills, }) {
 
     const [cv, setCv] = useState<CVState>({progress: "success", message: "Download CV"})
+    const router = useRouter();
 
-    const downloadCVKeypress = (event: KeyboardEvent) => {
+
+    const handleKeypress = (event: KeyboardEvent) => {
+        if(event.code === "KeyG") {
+            router.push("/games");
+        }
+
         if (event.ctrlKey && event.code === "KeyP") {
             event.preventDefault();
             generateCV();
@@ -31,9 +38,9 @@ export default function Home({skills}) {
 
 
     useEffect(() => {
-        window.addEventListener("keydown", downloadCVKeypress)
+        window.addEventListener("keydown", handleKeypress)
         return () => {
-            window.removeEventListener("keydown", downloadCVKeypress)
+            window.removeEventListener("keydown", handleKeypress)
         }
     }, [])
 

@@ -3,16 +3,16 @@
 }
 
 .categoryTitle {
-  @apply text-lg font-bold
+  @apply text-lg font-bold;
 }
 
 .categorySubTitle {
   @apply text-xs
 }
-.socialMediaLink {
-  @apply flex flex-row my-0.5;
+.link {
+  @apply flex flex-row my-0.5 w-auto px-2 py-1 rounded-lg justify-center hover:bg-gray-100;
 }
 
 .socialMediaCategory {
-  @apply flex flex-col text-center items-center justify-center;
+  @apply flex flex-col;
 }

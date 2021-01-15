@@ -8,6 +8,18 @@ function MyApp({Component, pageProps}) {
     const [theme, setTheme] = useState("");
     const router = useRouter();
 
+    const handleThemeKeypress = (event: KeyboardEvent) => {
+        if (event.code === "KeyC") changeTheme();
+    }
+
+    useEffect(() => {
+        window.addEventListener("keydown", handleThemeKeypress);
+        return () => {
+            window.removeEventListener("keydown", handleThemeKeypress)
+        }
+    })
+
+
     // Get the preference of the user or the OS
     useEffect(() => {
         let theme;
@@ -18,10 +30,11 @@ function MyApp({Component, pageProps}) {
             theme = "light"
         }
         setTheme(theme);
-    });
+    }, []);
 
     // Make the changing possible
     function changeTheme() {
+
 
         const currentTheme = theme
         if (currentTheme == "light") {
@@ -33,11 +46,9 @@ function MyApp({Component, pageProps}) {
         }
 
     }
-    
-    // This somehow feels wrong to do.
-    if (router.pathname.includes("/login")) return <div className={theme}><Component {...pageProps} /></div>
-    if (router.pathname.includes("/blog") || router.pathname.includes("/yeet")) return <Component {...pageProps} />
 
+    // This somehow feels wrong to do.
+    if (router.pathname.includes("/blog") || router.pathname.includes("/yeet")) return <Component {...pageProps} />
 
     return <Layout changeTheme={changeTheme} theme={theme}><Component {...pageProps} /></Layout>
 }

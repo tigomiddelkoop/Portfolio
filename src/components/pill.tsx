@@ -4,8 +4,9 @@ import styles from "./pill.module.scss"
 interface Props {
     children: any,
     color?: "primary" | "secondary" | "danger" | "warning" | "success" | "info";
+    className?: string,
 }
-export default function Pill(props) {
+export default function Pill(props: Props) {
 
 
     let type = styles.primary;
@@ -40,7 +41,7 @@ export default function Pill(props) {
     }
 
     return (
-        <div className={type}>
+        <div className={type + " " +  props.className}>
             {props.children}
         </div>
     )
