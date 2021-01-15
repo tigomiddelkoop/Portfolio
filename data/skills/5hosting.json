@@ -4,7 +4,7 @@
   "image": "",
   "entries": [
     {
-      "name": "Kubernetes",
+      "name": ["Kubernetes", "My portfolio should be hosted in K8s", "check the footer for its status"],
       "date": "2020-12-01",
       "confidence": 10
     }

@@ -44,7 +44,7 @@ export default function Footer() {
                     </div>
                     <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Served from node: </p>
-                        <Pill color={"danger"}>Not deployed in K8s</Pill>
+                        <Pill color={"danger"}>Not deployed in K8s, yet</Pill>
                     </div>
                 </div>
                 <div>
