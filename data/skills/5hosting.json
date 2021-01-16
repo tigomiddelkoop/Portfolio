@@ -1,7 +1,7 @@
 {
   "name": "Hosting Tools",
   "subname": "This includes all things hosting",
-  "image": null,
+  "image": "/img/kubernetes.jpg",
   "entries": [
     {
       "name": ["Kubernetes", "My portfolio should be hosted in K8s", "check the footer for its status"],

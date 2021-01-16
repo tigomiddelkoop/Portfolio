@@ -12,6 +12,10 @@
       "date": "2020-12-01"
     },
     {
+      "name": ["Jetbrains IntelliJ IDEA", "Java and more"],
+      "date": "2017"
+    },
+    {
       "name": ["Jetbrains DataGrip", "Database Management"],
       "date": "2021-01-15"
     }

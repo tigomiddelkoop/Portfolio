@@ -19,7 +19,7 @@ interface props {
 
 export default function Projectcard(props: props) {
     return (
-        <div className={"w-full sm:w-6/12 md:w-6/12 lg:w-4/12 xl:w-3/12 p-1 text-center items-center"}>
+        <div className={"w-96 p-1 text-center items-center"}>
             <Card>
                 <CardBody>
                     <Link href={"/projects/" + props.project.slug}><h1

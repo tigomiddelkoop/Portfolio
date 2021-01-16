@@ -93,6 +93,7 @@ export default function Home({skills, }) {
                                         </div>
                                     </Button>
                                 </div>
+                                <p className={"text-xs font-light text-gray-400 mt-1"}>or press CTRL + P</p>
                             </div>
                         </div>
                     </div>

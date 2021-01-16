@@ -21,7 +21,7 @@ export default function Footer() {
             <div className={styles.categoryContainer}>
                 <p className={styles.categoryTitle}>My other sites</p>
                 <a className={footerLink} href={"https://tigo.tech"}>tigo.tech <Pill className={"ml-1"} color={"info"}>You're here</Pill></a>
-                <a className={footerLink} href={"https://genericdevelopment.nl"}>GenericDevelopment</a>
+                <a className={footerLink} href={"https://genericdevelopment.nl"}>GenericDevelopment <Pill className={"ml-1"} color={"info"}>Going to be rebuild</Pill></a>
                 <a className={footerLink} href={"https://systemmanager.io"}>SystemManager Core <Pill className={"ml-1"} color={"danger"}>Currently down</Pill></a>
             </div>
 
