@@ -1,6 +1,7 @@
 {
   "title": "Portfolio",
   "slug": "portfolio",
+  "image": "/img/portfolio.jpg",
   "short_description": "This portfolio, completely build in NextJS",
   "long_description": [
     {

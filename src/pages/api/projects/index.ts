@@ -28,6 +28,7 @@ export async function getProjects() {
         return {
             id: index,
             title: file.title,
+            image: file.image || null,
             slug: file.slug,
             short_description: file.short_description,
             languages: file.languages,

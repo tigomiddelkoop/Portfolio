@@ -12,7 +12,7 @@ export default function Footer() {
         fetch("/api/buildid").then(response => response.json().then(data => setBuildId(data.buildId)))
     }, [buildId])
 
-    const footerLink = styles.link + " dark:hover:bg-gray-500 items-center"
+    const footerLink = styles.link + " dark:hover:bg-gray-700 items-center"
 
     return <footer
         className={"align-bottom p-4 border-t border-b border-gray-100 items-center justify-center text-center dark:bg-gray-800 dark:border-gray-500 dark:text-white"}>

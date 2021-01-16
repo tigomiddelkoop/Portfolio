@@ -1,4 +1,3 @@
-
 import Head from "next/head";
 import {Fragment} from "react";
 import {useRouter} from "next/router";
@@ -8,14 +7,15 @@ import CardTitle from "../../components/cardtitle";
 import {getProjects} from "../api/projects";
 import {getProject} from "../api/projects/[slug]";
 import Error from "next/error"
+import Link from "next/link"
 
 export default function Project({project}) {
     const router = useRouter()
 
-    if(!project) {
+    if (!project) {
         return <div>
 
-            <Error statusCode={404} />
+            <Error statusCode={404}/>
         </div>
     }
 
@@ -32,28 +32,40 @@ export default function Project({project}) {
             <h1 className={"text-xs font-light"}>{project.short_description}</h1>
         </div>
         <div className={"flex"}>
-            <div className={"w-full lg:w-3/12"}>
+            <div className={"w-full lg:w-3/12 "}>
                 <Card>
+                    <img className={"border-gray-300 dark:border-gray-600 rounded-t-lg border-b"}
+                         src={`/_next/image?url=${encodeURIComponent(project.image)}&w=640&q=75`}/>
                     <CardTitle>Project details</CardTitle>
+                    <p className={"border-gray-300 dark:border-gray-600 px-2 pb-1 border-b"}><span
+                        className={"font-semibold"}>Name:</span> {project.title}</p>
                     <div>
-                        <div className={""}>
-                            <div className={"border-b px-2 pb-1 dark:border-gray-600"}>
-                                <p className={"font-bold"}>Programming Language{Array.isArray(project.languages) ? "s" : ""} used</p>
-                            </div>
-                            <div className={""}>
-
-                                {Array.isArray(project.languages) ? project.languages.map(language => <div className={"border-b px-2 py-1 font-light dark:border-gray-600"}>{language}</div>) : <div className={"border-b px-2 py-1 font-light dark:border-gray-600"}>{project.languages}</div>}
-
-                            </div>
-                        </div>
                         <div>
-                            <div className={"px-2 py-1 dark:border-gray-600"}>
-                                <p className={"font-bold"}>Project Links</p>
+                            <p className={"border-gray-300 dark:border-gray-600 px-2 py-1 font-semibold"}>Programming
+                                Language{Array.isArray(project.languages) ? "s" : ""} used</p>
+                            <div>
+
+                                {Array.isArray(project.languages) ? project.languages.map(language => <div
+                                        className={"border-gray-300 dark:border-gray-600 border-b px-2 py-1 font-light"}>{language}</div>) :
+                                    <div
+                                        className={"border-gray-300 dark:border-gray-600 border-b px-2 py-1 font-light"}>{project.languages}</div>}
+
                             </div>
                         </div>
+                        <p className={"border-gray-300 dark:border-gray-600 px-2 py-1 font-semibold"}>Project
+                            Links</p>
+                        <Link href={"/projects"}><p
+                            className={"cursor-pointer px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-b-lg dark:border-gray-600 border-t font-semibold"}>Back to Projects</p>
+                        </Link>
                     </div>
                 </Card>
             </div>
+            {/*<div className={"flex justify-center w-full lg:w-9/12"}>*/
+            }
+            {/*    <img className={"h-96 rounded-lg shadow-lg"} src={project.image}/>*/
+            }
+            {/*</div>*/
+            }
         </div>
     </Fragment>
 }
