@@ -156,8 +156,6 @@ export async function getStaticProps() {
 
     const skills = await getData();
 
-    console.log(skills);
-
     return {props: {skills}, revalidate: 1};
 
 }
