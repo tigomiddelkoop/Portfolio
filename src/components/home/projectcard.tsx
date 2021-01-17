@@ -19,7 +19,7 @@ interface props {
 export default function Projectcard(props: props) {
 
     return (
-        <div key={props.project.name} className={"w-96 p-1 text-center items-center"}>
+        <div key={props.project.title} className={"w-96 p-1 text-center items-center"}>
             <Card>
                 {props.project.image !== null ? <Link href={"/projects/" + props.project.slug}>
                     <div

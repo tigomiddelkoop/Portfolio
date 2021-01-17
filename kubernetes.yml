@@ -15,7 +15,41 @@ spec:
         app: portfolio
     spec:
       containers:
-        - name: porfolio
-          image: portfolio:latest
+        - name: portfolio
+          image: rg.nl-ams.scw.cloud/genericdevelopment/portfolio:latest
           ports:
             - containerPort: 3000
+#          env:
+#            - name: POD_ID
+#              valueFrom:
+#                fieldRef:
+#                  fieldPath:
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: portfolio
+spec:
+  type: NodePort
+  selector:
+    app: portfolio
+  ports:
+    - protocol: TCP
+      port: 3000
+      nodePort: 30000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingresscontroller
+spec:
+  rules:
+    - http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: portfolio
+                port:
+                  number: 3000
