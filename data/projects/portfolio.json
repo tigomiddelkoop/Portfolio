@@ -1,7 +1,7 @@
 {
   "title": "Portfolio",
   "slug": "portfolio",
-  "image": "/img/portfolio.jpg",
+  "image": "/img/projects/portfolio.jpg",
   "website": "https://tigo.tech",
   "short_description": "This portfolio, completely build in NextJS",
   "long_description": [

@@ -1,6 +1,7 @@
 {
   "title": "SystemManager",
   "slug": "systemmanager",
+  "image": "/img/projects/systemmanagercore.jpg",
   "short_description": "A configurable server monitoring and management suite",
   "long_description": [
     {

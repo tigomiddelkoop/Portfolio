@@ -1,7 +1,7 @@
 {
   "name": "IDEs",
   "subname": "These are the Tools I develop with",
-  "image": "/img/homepage.jpg",
+  "image": "/img/skills/ide.jpg",
   "entries": [
     {
       "name":  ["Jetbrains PhpStorm", "PHP, HTML and Javascript"],

@@ -10,6 +10,8 @@ function MyApp({Component, pageProps}) {
 
     const handleThemeKeypress = (event: KeyboardEvent) => {
         if (event.code === "KeyC") changeTheme();
+        if (event.code === "KeyI") console.log("To the infra page!");
+        if (event.code === "KeyK") console.log("To the k8s info page!");
     }
 
     useEffect(() => {
