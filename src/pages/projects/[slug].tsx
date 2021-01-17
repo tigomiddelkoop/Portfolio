@@ -24,9 +24,6 @@ export default function Project({project}) {
         return <div>Loadin'</div>
     }
 
-
-    console.log(project)
-
     return <Fragment>
         <Head>
             <title>Tigo Middelkoop - {project.title}</title>
