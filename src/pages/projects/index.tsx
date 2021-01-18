@@ -29,6 +29,8 @@ export default function index({projects}) {
 
 export async function getStaticProps() {
 
+    console.log(process.env);
+
     const projects = await getProjects();
     return {props: {projects}, revalidate: 1}
 

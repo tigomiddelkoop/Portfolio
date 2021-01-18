@@ -4,7 +4,9 @@ import {useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin, faTwitter} from "@fortawesome/free-brands-svg-icons";
 
-export default function Footer() {
+export default function Footer(props, ctx) {
+
+    console.log(ctx);
 
     // This might not be the best option, I want to look for a better option.
     const [buildId, setBuildId] = useState("")
@@ -60,7 +62,7 @@ export default function Footer() {
                     </div>
                     <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Served from container: </p>
-                        <Pill color={"danger"}>Not deployed in K8s, yet</Pill>
+                        <Pill color={"info"}>{process.env.HOSTNAME}</Pill>
                     </div>
                 </div>
                 <div>
@@ -78,5 +80,13 @@ export default function Footer() {
         <p className={"text-xs font-light"}>(I'm trying to not use any stock images, those are no fun to use. I want to
             make them myself)</p>
     </footer>
+
+}
+
+export async function getStaticProps() {
+
+    console.log("Test");
+
+    return {props: {podname: process.env.HOSTNAME, nodename: process.env.NODENAME}}
 
 }
