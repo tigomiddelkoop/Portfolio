@@ -4,10 +4,15 @@ metadata:
   name: portfoliov-
 build:
   artifacts:
-  - image: portfolio
-    docker:
-      dockerfile: Dockerfile
+    - image: portfolio
+      context: .
+      sync:
+        infer:
+          - "./src/**/*.tsx"
+          - "./src/**/*.ts"
+      docker:
+        dockerfile: Dockerfile_dev
 deploy:
   kubectl:
     manifests:
-    - kubernetes-dev.yml
+      - kubernetes-dev.yml
