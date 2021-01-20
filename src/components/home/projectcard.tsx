@@ -29,7 +29,7 @@ export default function Projectcard(props: props) {
 
                 <CardBody>
                     <Link href={"/projects/" + props.project.slug}><h1
-                        className={"cursor-pointer font-semibold text-xl"}>{props.project.title}</h1>
+                        className={"jetbrains cursor-pointer font-semibold text-xl"}>{props.project.title}</h1>
                     </Link>
                     <p className={"text-xs"}>{props.project.short_description}</p>
                     <div className={"flex flex-wrap justify-center my-1"}>

@@ -4,9 +4,6 @@ import * as fs from "fs";
 import Card from "../components/card";
 
 export default function index({games}) {
-
-    console.log(games);
-
     return <Fragment>
         <Head>
             <title>Tigo Middelkoop - Games</title>

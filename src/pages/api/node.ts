@@ -1,5 +1,3 @@
-import * as fs from "fs";
-
 export default async (req, res) => {
 
     const dev = process.env.NODE_ENV !== 'production';

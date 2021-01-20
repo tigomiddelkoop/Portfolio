@@ -10,7 +10,7 @@ export default function Clientcard({client}) {
                 <div className={"flex flex-col items-center"}>
                     <img className={"h-32"} src={client.logo} alt={`${client.name}'s Logo`}/>
                     <div>
-                        <h3 className={"font-semibold"}>{client.name}</h3>
+                        <h3 className={"font-semibold jetbrains"}>{client.name}</h3>
                         <p className={"text-xs"}>{client.about}</p>
                         <div className={"flex flex-wrap justify-center my-1"}>{client.services.map(service => <div key={service} className={"mx-0.5 my-0.5"}>
                             <Pill key={service}
