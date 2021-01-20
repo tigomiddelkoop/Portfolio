@@ -61,7 +61,7 @@ export default function Home({skills, }) {
                 </Head>
                 <main className={"h-full dark:text-white"}>
                     <div className={"flex flex-col lg:flex-row mb-4 items-center"}>
-                        <div className="flex mb-4 items-center">
+                        <div className=" flex mb-4 items-center">
 
                             <div className="flex rounded-full shadow-lg">
                                 <Image
@@ -74,10 +74,10 @@ export default function Home({skills, }) {
                             </div>
                             <div className="ml-4">
                                 <div className={"mb-1"}>
-                                    <h1 className="text-4xl md:text-5xl font-light mb-0.5">Tigo</h1>
-                                    <h1 className="text-4xl md:text-5xl font-bold">Middelkoop</h1>
+                                    <h1 className="jetbrains text-4xl md:text-5xl font-light mb-0.5">Tigo</h1>
+                                    <h1 className="jetbrains text-4xl md:text-5xl font-bold">Middelkoop</h1>
                                 </div>
-                                <p className="text-xs">Fullstack Developer | PHP & JavaScript/TypeScript</p>
+                                <p className="jetbrains text-xs">Fullstack Developer | PHP & JavaScript/TypeScript</p>
                             </div>
                         </div>
                         <div className={"flex flex-1 justify-center"}>

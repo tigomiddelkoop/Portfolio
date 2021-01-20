@@ -4,9 +4,7 @@ import {useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin, faTwitter} from "@fortawesome/free-brands-svg-icons";
 
-export default function Footer(props, ctx) {
-
-    console.log(ctx);
+export default function Footer() {
 
     // This might not be the best option, I want to look for a better option.
     const [buildId, setBuildId] = useState("")
@@ -26,7 +24,7 @@ export default function Footer(props, ctx) {
 
     return <footer
         className={"align-bottom p-4 border-t border-b border-gray-100 items-center justify-center text-center dark:bg-gray-800 dark:border-gray-500 dark:text-white"}>
-        <h1 className={"text-2xl"}>tigo.tech</h1>
+        <h1 className={"jetbrains text-2xl"}>tigo.tech</h1>
         <div className={"flex flex-col lg:flex-row items-center justify-center text-center"}>
             <div className={styles.categoryContainer}>
                 <p className={styles.categoryTitle}>My other sites</p>
@@ -62,18 +60,18 @@ export default function Footer(props, ctx) {
                     <p className={styles.categoryTitle}>Kubernetes info</p>
                     <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Served from node: </p>
-                        <Pill color={"info"}>{nodeName}</Pill>
+                        <Pill color={"info"} className={"jetbrains"}>{nodeName}</Pill>
                     </div>
                     <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Served from container: </p>
-                        <Pill color={"info"}>{container}</Pill>
+                        <Pill color={"info"} className={"jetbrains"}>{container}</Pill>
                     </div>
                 </div>
                 <div>
                     <p className={styles.footerCategoryTitle}>Site Info</p>
                     <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Build Id:</p>
-                        <Pill>{buildId}</Pill>
+                        <Pill className={"jetbrains"}>{buildId}</Pill>
                     </div>
                 </div>
             </div>
@@ -84,13 +82,5 @@ export default function Footer(props, ctx) {
         <p className={"text-xs font-light"}>(I'm trying to not use any stock images, those are no fun to use. I want to
             make them myself)</p>
     </footer>
-
-}
-
-export async function getStaticProps() {
-
-    console.log("Test");
-
-    return {props: {podname: process.env.HOSTNAME, nodename: process.env.NODENAME}}
 
 }
