@@ -20,7 +20,7 @@ export default function Footer() {
 
     return <footer
         className={"align-bottom p-4 border-t border-b border-gray-100 items-center justify-center text-center dark:bg-gray-800 dark:border-gray-500 dark:text-white"}>
-        <h1 className={"text-2xl"}>tigo.tech</h1>
+        <h1 className={"jetbrains text-2xl"}>tigo.tech</h1>
         <div className={"flex flex-col lg:flex-row items-center justify-center text-center"}>
             <div className={styles.categoryContainer}>
                 <p className={styles.categoryTitle}>My other sites</p>
@@ -56,18 +56,18 @@ export default function Footer() {
                     <p className={styles.categoryTitle}>Kubernetes info</p>
                     <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Served from node: </p>
-                        <Pill color={"danger"}>Not deployed in K8s, yet</Pill>
+                        <Pill color={"danger"} className={"jetbrains"}>Not deployed in K8s</Pill>
                     </div>
                     <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Served from container: </p>
-                        <Pill color={"danger"}>Not deployed in K8s, yet</Pill>
+                        <Pill color={"danger"} className={"jetbrains"}>Not deployed in K8s</Pill>
                     </div>
                 </div>
                 <div>
                     <p className={styles.footerCategoryTitle}>Site Info</p>
                     <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Build Id:</p>
-                        <Pill>{buildId}</Pill>
+                        <Pill className={"jetbrains"}>{buildId}</Pill>
                     </div>
                 </div>
             </div>

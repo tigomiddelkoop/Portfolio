@@ -34,7 +34,7 @@ export default function Navbar(props) {
                             width={32}
                             className={"rounded-full"}
                         />
-                        <p className={"ml-2"}>Tigo Middelkoop</p>
+                        <p className={"ml-2 jetbrains"}>Tigo Middelkoop</p>
                     </div>
                 </Link>
                 <div className={"flex flex-1"}/>
