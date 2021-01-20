@@ -5,7 +5,7 @@ metadata:
   labels:
     app: portfolio
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: portfolio
@@ -16,14 +16,14 @@ spec:
     spec:
       containers:
         - name: portfolio
-          image: rg.nl-ams.scw.cloud/genericdevelopment/portfolio:nodebuild
+          image: rg.nl-ams.scw.cloud/genericdevelopment/portfolio:1.0.0
           ports:
             - containerPort: 3000
           env:
-#            - name: PODNAME
-#              valueFrom:
-#                fieldRef:
-#                  fieldPath: spec.podName
+            #            - name: PODNAME
+            #              valueFrom:
+            #                fieldRef:
+            #                  fieldPath: spec.podName
             - name: NODENAME
               valueFrom:
                 fieldRef:
@@ -42,14 +42,20 @@ spec:
 #metadata:
 #  name: portfolio
 #spec:
-#  type: NodePort
+#  type: LoadBalancer
 #  selector:
 #    app: portfolio
 #  ports:
 #    - protocol: TCP
-#      port: 3000
+#      name: http
+#      port: 80
+#      targetPort: 3000
+#    - protocol: TCP
+#      name: https
+#      port: 443
+#      targetPort: 3000
 #      nodePort: 30000
-#---
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -65,3 +71,15 @@ spec:
                 name: portfolio
                 port:
                   number: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: portfolio
+spec:
+  type: NodePort
+  selector:
+    app: portfolio
+  ports:
+    - protocol: TCP
+      port: 3000

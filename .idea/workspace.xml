@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2b13bfc0-9bdb-4ec5-8437-2627290d70db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/skillscard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/skillscard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/api/hello.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +38,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="admin@tigotech" />
+    <option name="namespace" value="default" />
+  </component>
   <component name="ProjectId" id="1lvMuLItp0T6oHiYIC4RN4n9OzY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -46,20 +53,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/api" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/api" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\public\img" />
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\src\components" />
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\public" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\src\pages\clients" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\public\svg" />
@@ -89,6 +96,9 @@
       <workItem from="1609366479151" duration="790000" />
       <workItem from="1609620804715" duration="19040000" />
       <workItem from="1609675305374" duration="2605000" />
+      <workItem from="1610374644259" duration="1696000" />
+      <workItem from="1610975942802" duration="18000" />
+      <workItem from="1610976235334" duration="10933000" />
     </task>
     <servers />
   </component>

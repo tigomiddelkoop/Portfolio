@@ -10,9 +10,13 @@ export default function Footer(props, ctx) {
 
     // This might not be the best option, I want to look for a better option.
     const [buildId, setBuildId] = useState("")
+    const [nodeName, setNodeName] = useState("")
+    const [container, setContainer] = useState("")
     const [buildIdOnce, setBuildIdOnce] = useState(false)
     useEffect(() => {
         if (!buildIdOnce) {
+            fetch("/api/node").then(response => response.json().then(data => setNodeName(data.node)))
+            fetch("/api/container").then(response => response.json().then(data => setContainer(data.container)))
             fetch("/api/buildid").then(response => response.json().then(data => setBuildId(data.buildId)))
             setBuildIdOnce(true);
         }
@@ -58,11 +62,11 @@ export default function Footer(props, ctx) {
                     <p className={styles.categoryTitle}>Kubernetes info</p>
                     <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Served from node: </p>
-                        <Pill color={"danger"}>Not deployed in K8s, yet</Pill>
+                        <Pill color={"info"}>{nodeName}</Pill>
                     </div>
                     <div className={"flex items-center justify-center"}>
                         <p className={"mr-1"}>Served from container: </p>
-                        <Pill color={"info"}>{process.env.HOSTNAME}</Pill>
+                        <Pill color={"info"}>{container}</Pill>
                     </div>
                 </div>
                 <div>
