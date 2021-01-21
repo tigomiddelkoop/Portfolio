@@ -24,7 +24,7 @@ export default function Footer() {
 
     return <footer
         className={"align-bottom p-4 border-t border-b border-gray-100 items-center justify-center text-center dark:bg-gray-800 dark:border-gray-500 dark:text-white"}>
-        <h1 className={"jetbrains py-2 text-2xl"}>tigo.tech 111</h1>
+        <h1 className={"jetbrains text-2xl py-2"}>tigo.tech</h1>
         <div className={"flex flex-col lg:flex-row items-center justify-center text-center"}>
             <div className={styles.categoryContainer}>
                 <p className={styles.categoryTitle}>My other sites</p>
