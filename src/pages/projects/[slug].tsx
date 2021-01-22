@@ -8,6 +8,7 @@ import {getProjects} from "../api/projects";
 import {getProject} from "../api/projects/[slug]";
 import Error from "next/error"
 import Link from "next/link"
+import CardBody from "../../components/cardbody";
 
 export default function Project({project}) {
     const router = useRouter()
@@ -28,45 +29,60 @@ export default function Project({project}) {
         <Head>
             <title>Tigo Middelkoop - {project.title}</title>
         </Head>
-        <div className={"text-center mb-4 dark:text-white"}>
-            <h1 className={"text-4xl font-semibold mb-0.5"}>{project.title}</h1>
-            <h1 className={"text-xs font-light"}>{project.short_description}</h1>
-        </div>
-        <div className={"flex"}>
-            <div className={"w-full lg:w-3/12 "}>
-                <Card>
-                    {project.image !== undefined ?
-                        <img className={"border-gray-300 dark:border-gray-600 rounded-t-lg border-b"}
-                             src={`/_next/image?url=${encodeURIComponent(project.image)}&w=640&q=75`}/> : ""}
-                    <CardTitle>Project details</CardTitle>
-                    <p className={"border-gray-300 dark:border-gray-600 px-2 pb-1 border-b"}><span
-                        className={"font-semibold"}>Name:</span> {project.title}</p>
-                    <div>
-                        <div className={"border-gray-300 dark:border-gray-600 border-b"}>
-                            <p className={"px-2 py-1 font-semibold"}>Programming
-                                Language{Array.isArray(project.languages) ? "s" : ""} used:</p>
-                            <div className={""}>
+        <div className={"flex flex-wrap"}>
+            <div className={"w-full lg:w-3/12 lg:pr-1"}>
+                <div className={"mb-4"}>
+                    <Card>
+                        <CardTitle>{project.title}</CardTitle>
+                        <CardBody>{project.short_description}</CardBody>
+                        {/*<div>*/}
+                        {/*<div className={"border-gray-300 dark:border-gray-600 border-b"}>*/}
+                        {/*    <p className={"px-2 py-1 font-semibold"}>Programming*/}
+                        {/*        Language{Array.isArray(project.languages) ? "s" : ""} used:</p>*/}
+                        {/*</div>*/}
 
-                                {Array.isArray(project.languages) ? project.languages.map(language => <div
-                                        className={"px-2 py-1 font-light"}>{">"} {language}</div>) :
-                                    <div
-                                        className={"px-2 py-1 font-light"}>{">"} {project.languages}</div>}
-
-                            </div>
+                        {/*<Link href={"/projects"}><p*/}
+                        {/*    className={"cursor-pointer px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-b-lg dark:border-gray-600 border-t font-semibold"}>Back*/}
+                        {/*    to Projects</p>*/}
+                        {/*</Link>*/}
+                        {/*</div>*/}
+                    </Card>
+                </div>
+                <div className={"mb-4"}>
+                    <Card>
+                        <CardTitle>Programming Languages</CardTitle>
+                        <div>
+                            {Array.isArray(project.languages) ? project.languages.map(language => <div
+                                    className={"px-2 py-1 font-light"}>{language}</div>) :
+                                <div
+                                    className={"px-2 py-1 font-light"}>{project.languages}</div>}
                         </div>
+                    </Card>
+                </div>
+                <div className={"mb-4"}>
+                    <Card>
+                        <CardTitle>Project Links</CardTitle>
                         <div className={"border-gray-300 dark:border-gray-600"}>
-                            <p className={"px-2 py-1 font-semibold"}>Project Links:</p>
                             <div className={"flex flex-col"}>
-                                <a className={"px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-600"} href={project.source_control.github}>GitHub</a>
-                                <a className={"px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-600"} href={project.website}>Website</a>
+                                <a className={"px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-600"}
+                                   href={project.source_control.github}>GitHub</a>
+                                <a className={"px-2 py-1 rounded-b-lg hover:bg-gray-100 dark:hover:bg-gray-600"}
+                                   href={project.website}>Website</a>
                             </div>
                         </div>
-                        <Link href={"/projects"}><p
-                            className={"cursor-pointer px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-b-lg dark:border-gray-600 border-t font-semibold"}>Back
-                            to Projects</p>
-                        </Link>
-                    </div>
-                </Card>
+                    </Card>
+                </div>
+            </div>
+            <div className={"w-full lg:w-9/12 lg:pl-1"}>
+
+                {project.image !== undefined ?
+                    <Card>
+                        <img
+                            className={"w-full h-72 object-cover border-gray-300 dark:border-gray-600 rounded-lg"}
+                            src={`/_next/image?url=${encodeURIComponent(project.image)}&w=640&q=75`}/>
+                    </Card>
+                    : ""}
+
             </div>
             {/*<div className={"flex justify-center w-full lg:w-9/12"}>*/
             }
