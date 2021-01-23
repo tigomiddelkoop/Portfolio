@@ -31,7 +31,7 @@ export default function Skillscard(props: props) {
             <div
                 className={"bg-gray-50 border-gray-300 border-b border-l border-r rounded-b-lg dark:bg-gray-700 dark:border-gray-600 shadow-lg"}>
 
-                {entries.map(entry => {
+                {entries.map((entry, index, array) => {
                     return renderEntry(entry)
                 })}
 
@@ -52,18 +52,15 @@ function renderEntry(entry) {
 
     let confidence = calculateConfidence(entry.confidence);
 
-
     let years = diff.years.toFixed()
-    let unFixedyears = diff.years;
     let months = diff.months.toFixed()
-    let unFixedmonths = diff.months;
 
     // LET IT RENDER WHOOOOOOOOOOOO
     return (
         <div key={"entry" + entry.name} className={"flex border-gray-300 dark:border-gray-600 py-3 px-3 items-center"}>
             <div className={"flex-1"}>
-                {Array.isArray(entry.name) ? entry.name.map(name => {
-                    if (name == entry.name[0]) return <p key={name} className={"font-semibold flex"}> {name}</p>
+                {Array.isArray(entry.name) ? entry.name.map((name, index) => {
+                    if (index == 0) return <p key={name} className={"font-semibold flex"}> {name}</p>
                     return <p key={name} className={"text-xs font-light"}>{name}</p>
 
                 }) : <p key={entry.name} className={"font-semibold"}>{entry.name}</p>}
@@ -74,7 +71,7 @@ function renderEntry(entry) {
                     {years !== "0" ? <span>{years} year{years !== '1' ? 's' : ''} </span> : ""}
                     {years !== "0" && months !== "0" ? " and " : ""}
                     {months !== "0" ? <span>{months} month{months !== '1' ? 's' : ''} </span> : ""}
-                    {months == "0" && unFixedyears == 0 ? <span>{">"}1 month </span> : ""}
+                    {months == "0" && years == "0" ? <span>{">"}1 month </span> : ""}
                      experience</p>
                 {entry.confidence !== undefined ? <p key={"confidence" + entry.name}
                                                      className={"text-xs"}>Confidence: {confidence} ({entry.confidence}%)</p> : ""}
