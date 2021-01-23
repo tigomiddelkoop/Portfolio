@@ -6,12 +6,12 @@
     {
       "name": ["Kubernetes", "My portfolio should be hosted in K8s", "check the footer for its status"],
       "date": "2020-12-01",
-      "confidence": 10
+      "confidence": 25
     },
     {
       "name": ["Docker", "For building the images", "which are going to be used in K8s"],
       "date": "2020-12-01",
-      "confidence": 10
+      "confidence": 20
     }
   ]
 }
