@@ -32,6 +32,12 @@ export default function Project({project}) {
         <div className={"flex flex-wrap"}>
             <div className={"w-full lg:w-3/12 lg:pr-1"}>
                 <div className={"mb-4"}>
+                <Card>
+                    <Link href={"/projects"}><p className={"dark:hover:bg-gray-600 hover:bg-gray-100 rounded-lg p-2 font-bold"}>Back to projects</p></Link>
+                </Card>
+
+                </div>
+                <div className={"mb-4"}>
                     <Card>
                         <CardTitle>{project.title}</CardTitle>
                         <CardBody>{project.short_description}</CardBody>
@@ -76,12 +82,20 @@ export default function Project({project}) {
             <div className={"w-full lg:w-9/12 lg:pl-1"}>
 
                 {project.image !== undefined ?
-                    <Card>
-                        <img
-                            className={"w-full h-72 object-cover border-gray-300 dark:border-gray-600 rounded-lg"}
-                            src={`/_next/image?url=${encodeURIComponent(project.image)}&w=640&q=75`}/>
-                    </Card>
+                    <div className={"mb-4"}>
+                        <Card>
+                            <img
+                                className={"w-full h-72 object-cover border-gray-300 dark:border-gray-600 rounded-lg"}
+                                src={`/_next/image?url=${encodeURIComponent(project.image)}&w=640&q=75`}/>
+                        </Card>
+                    </div>
                     : ""}
+                <Card>
+                    <CardBody>
+                        {project.long_description.map(text => <p>{text}</p>)}
+                    </CardBody>
+                </Card>
+
 
             </div>
             {/*<div className={"flex justify-center w-full lg:w-9/12"}>*/

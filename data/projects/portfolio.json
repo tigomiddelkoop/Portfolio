@@ -3,19 +3,10 @@
   "slug": "portfolio",
   "image": "/img/projects/portfolio.jpg",
   "website": "https://tigo.tech",
-  "short_description": "This portfolio, completely build in NextJS",
+  "short_description": "My portfolio, version 3 of my portfolio. Completely build in NextJS",
   "long_description": [
-    {
-      "header": "",
-      "body": ""
-    }
+    "The 3rd version in the series of my portfolio"
   ],
-  "images": {
-    "thumbnail": "",
-    "1": "",
-    "2": "",
-    "3": ""
-  },
   "languages": "TypeScript",
   "source_control": {
     "github": "https://github.com/tigomiddelkoop/Portfolio"
