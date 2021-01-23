@@ -1,15 +1,16 @@
 apiVersion: skaffold/v2beta10
 kind: Config
 metadata:
-  name: portfoliov-
+  name: portfolio
 build:
   artifacts:
     - image: portfolio
-      context: .
       sync:
-        infer:
-          - "./src/**/*.tsx"
-          - "./src/**/*.ts"
+        manual:
+          - src: "./src/**/*.tsx"
+            dest: .
+          - src: "./src/**/*.ts"
+            dest: .
       docker:
         dockerfile: Dockerfile_dev
 deploy:

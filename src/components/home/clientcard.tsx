@@ -25,8 +25,7 @@ export default function Clientcard({client}) {
                 <a href={client.website} target={"_blank"} rel={"nofollow noreferrer"}
                    className={"flex-1 rounded-bl-lg border-t border-r p-2 font-semibold bg-gray-100 hover:bg-gray-200 dark:border-gray-600 cursor-pointer dark:hover:bg-gray-900 dark:bg-gray-800"}>Visit
                     site</a>
-                <p className={"flex-1 rounded-br-lg border-t p-2 font-semibold bg-gray-100 hover:bg-gray-200 dark:border-gray-600 cursor-not-allowed dark:hover:bg-gray-900 dark:bg-gray-800"}>See
-                    project</p>
+                <p className={"flex-1 rounded-br-lg border-t p-2 font-semibold bg-gray-100 hover:bg-gray-200 dark:border-gray-600 cursor-not-allowed dark:hover:bg-gray-900 dark:bg-gray-800"}>See client</p>
             </div>
 
         </Card>

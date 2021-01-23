@@ -1,5 +1,7 @@
 import {DateTime} from "luxon";
 import styles from "./skillscard.module.scss";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faJs} from "@fortawesome/free-brands-svg-icons";
 
 interface props {
     entries?: any,
@@ -61,7 +63,7 @@ function renderEntry(entry) {
         <div key={"entry" + entry.name} className={"flex border-gray-300 dark:border-gray-600 py-3 px-3 items-center"}>
             <div className={"flex-1"}>
                 {Array.isArray(entry.name) ? entry.name.map(name => {
-                    if (name == entry.name[0]) return <p key={name} className={"font-semibold"}>{name}</p>
+                    if (name == entry.name[0]) return <p key={name} className={"font-semibold flex"}> {name}</p>
                     return <p key={name} className={"text-xs font-light"}>{name}</p>
 
                 }) : <p key={entry.name} className={"font-semibold"}>{entry.name}</p>}

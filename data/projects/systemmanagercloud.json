@@ -2,13 +2,7 @@
   "title": "SystemManager Cloud",
   "slug": "systemmanagercloud",
   "short_description": "The place to find your plugins/hosting for SystemManager.",
-  "long_description": [
-    {
-      "key": 1,
-      "header": "",
-      "body": "<h1>A fully customizable server monitoring and management tool</h1>"
-    }
-  ],
+  "long_description": [],
   "url": "https://systemmanager.cloud",
   "images": {
     "thumbnail": "",
