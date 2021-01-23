@@ -32,9 +32,11 @@ export default function Project({project}) {
         <div className={"flex flex-wrap"}>
             <div className={"w-full lg:w-3/12 lg:pr-1"}>
                 <div className={"mb-4"}>
-                <Card>
-                    <Link href={"/projects"}><p className={"dark:hover:bg-gray-600 hover:bg-gray-100 rounded-lg p-2 font-bold"}>Back to projects</p></Link>
-                </Card>
+                    <Card>
+                        <Link href={"/projects"}><p
+                            className={"dark:hover:bg-gray-600 hover:bg-gray-100 rounded-lg p-2 font-bold"}>Back to
+                            projects</p></Link>
+                    </Card>
 
                 </div>
                 <div className={"mb-4"}>
@@ -92,7 +94,9 @@ export default function Project({project}) {
                     : ""}
                 <Card>
                     <CardBody>
-                        {project.long_description.map(text => <p>{text}</p>)}
+                        {project.long_description.map((text, index, array) => {
+                            return <p className={index !== array.length - 1 ? "mb-4" : ""}>{text}</p>
+                        })}
                     </CardBody>
                 </Card>
 
