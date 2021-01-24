@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import Layout from "../components/layout";
 import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
+import {Simulate} from "react-dom/test-utils";
 
 function MyApp({Component, pageProps}) {
 
@@ -9,9 +10,30 @@ function MyApp({Component, pageProps}) {
     const router = useRouter();
 
     const handleThemeKeypress = (event: KeyboardEvent) => {
-        if (event.code === "KeyC") changeTheme();
-        if (event.code === "KeyI") console.log("To the infra page!");
-        if (event.code === "KeyK") console.log("To the k8s info page!");
+        switch (event.code) {
+            case "KeyT":
+                changeTheme()
+                break;
+            case "KeyC":
+                router.push("/clients");
+                break;
+            case "KeyH":
+                router.push("/");
+                break;
+            case "KeyP":
+                router.push("/projects");
+                break;
+            case "KeyK":
+                router.push("/kubernetes");
+                break;
+            case "KeyI":
+                router.push("https://infra.tigo.tech");
+                break;
+            case "KeyB":
+                router.push("https://blog.tigo.tech");
+                break;
+
+        }
     }
 
     useEffect(() => {

@@ -4,12 +4,7 @@
   "short_description": "The place to find your plugins/hosting for SystemManager.",
   "long_description": [],
   "url": "https://systemmanager.cloud",
-  "images": {
-    "thumbnail": "",
-    "1": "",
-    "2": "",
-    "3": ""
-  },
+  "images": [],
   "languages": [
     "PHP",
     "TypeScript"

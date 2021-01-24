@@ -6,7 +6,7 @@ import {useRouter} from 'next/router';
 
 import {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faMoon, faSun, faUser} from "@fortawesome/free-solid-svg-icons/";
+import {faBars, faExternalLinkAlt, faMoon, faSun, faUser} from "@fortawesome/free-solid-svg-icons/";
 
 // @TODO put more in the module.css file of this file to clean it up of css statements and easy manipulation without searching
 const darkHover = " dark:hover:bg-gray-700 dark:border-white"
@@ -64,10 +64,18 @@ export default function Navbar(props) {
                             <p>Projects</p>
                         </div>
                     </Link>
-                    <Link href={"/blog"}>
+                    <Link href={"https://blog.tigo.tech"}>
                         <div className={path == "/blog" ? activeNav : inactiveNav}>
                             <p className={"mr-1"}>Blog</p>
-                            <Pill color={"danger"}>Expected</Pill>
+                            <FontAwesomeIcon className={"h-3 text-gray-500"} icon={faExternalLinkAlt}/>
+                        </div>
+                    </Link>
+                    <Link href={"https://infra.tigo.tech"}>
+                        <div>
+                            <div className={`${path == "/blog" ? activeNav : inactiveNav}`}>
+                                <p className={"mr-1"}>Infrastructure</p>
+                                <FontAwesomeIcon className={"h-3 text-gray-500"} icon={faExternalLinkAlt}/>
+                            </div>
                         </div>
                     </Link>
                     <div className={"flex h-14"}>

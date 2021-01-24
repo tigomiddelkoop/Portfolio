@@ -2,15 +2,12 @@
   "title": "SystemManager",
   "slug": "systemmanager",
   "image": "/img/projects/systemmanagercore.jpg",
-  "short_description": "A configurable server monitoring and management suite",
-  "long_description": [],
+  "short_description": "A configurable server monitoring suite with server management capabilities",
+  "long_description": [
+    "SystemManager is a server monitoring tool with management capabilities"
+  ],
   "url": "https://systemmanager.io",
-  "images": {
-    "thumbnail": "",
-    "1": "",
-    "2": "",
-    "3": ""
-  },
+  "images": [],
   "languages": [
     "TypeScript (Core, Dashboard, Chromecast)",
     "Rust/C++ (Daemon)",

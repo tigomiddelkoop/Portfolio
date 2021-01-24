@@ -14,7 +14,7 @@ interface CVState {
 
 }
 
-export default function Home({skills, }) {
+export default function Home({skills}) {
 
     const [cv, setCv] = useState<CVState>({progress: "success", message: "Download CV"})
     const router = useRouter();
