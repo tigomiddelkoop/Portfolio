@@ -3,10 +3,12 @@ import Button from "../components/button";
 import Image from "next/image";
 import Skillscard from "../components/home/skillscard";
 import {useEffect, useState} from "react";
-import {production} from "./_app";
 import {DateTime} from "luxon";
 import {getData} from "./api/home";
 import {useRouter} from "next/router";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faDiscord, faGithub, faLinkedin, faTwitter} from "@fortawesome/free-brands-svg-icons";
+import {faMobile, faMobileAlt, faPhone, faPhoneAlt, faPhoneSquare} from "@fortawesome/free-solid-svg-icons";
 
 interface CVState {
     progress: "success" | "info" | "danger";
@@ -26,11 +28,12 @@ export default function Home({skills}) {
             if (event.code === "KeyG") {
                 router.push("/games");
             }
+        }
 
-            if (event.ctrlKey && event.code === "KeyP") {
-                event.preventDefault();
-                generateCV();
-            }
+        if (event.ctrlKey && event.code === "KeyP") {
+            event.preventDefault();
+            generateCV();
+
         }
     }
 
@@ -80,10 +83,46 @@ export default function Home({skills}) {
                                     <h1 className="jetbrains text-4xl md:text-5xl font-light mb-0.5">Tigo</h1>
                                     <h1 className="jetbrains text-4xl md:text-5xl font-bold">Middelkoop</h1>
                                 </div>
-                                <p className="jetbrains text-xs">Fullstack Developer | PHP & JavaScript/TypeScript</p>
+                                <div className={"flex flex-wrap items-center"}>
+                                    <p className="jetbrains text-xs mb-1 sm:border-r sm:pr-2">Fullstack Developer </p>
+                                    <p className="jetbrains text-xs mb-1 sm:pl-2">PHP, JavaScript/TypeScript & C#</p>
+                                </div>
+                                <div className={"flex mb-0.5"}>
+                                    <a rel={"noreferrer noopener _blank"}
+                                       className={"mr-1"}
+                                       href={"https://github.com/tigomiddelkoop"}>
+                                        <Button color={"primary"}>
+                                            <FontAwesomeIcon height={16} icon={faGithub}/>
+                                        </Button>
+                                    </a>
+
+                                    <a rel={"noreferrer noopener _blank"}
+                                       className={"mr-1"}
+                                       href={"https://linkedin.com/in/tigo-middelkoop-92067a15b/"}>
+                                        <Button color={"primary"}>
+                                            <FontAwesomeIcon height={16} icon={faLinkedin}/>
+                                        </Button>
+                                    </a>
+
+                                    <a rel={"noreferrer noopener _blank"}
+                                       className={"mr-1"}
+                                       href={"https://twitter.com/__Tigo__"}>
+                                        <Button color={"primary"}>
+                                            <FontAwesomeIcon height={16} icon={faTwitter}/>
+                                        </Button>
+                                    </a>
+
+                                    <a rel={"noreferrer noopener _blank"}
+                                       className={"mr-1"}
+                                       href={"https://discord.gg/Tx3CKJB2QY"}>
+                                        <Button color={"primary"}>
+                                            <FontAwesomeIcon height={16} icon={faDiscord}/>
+                                        </Button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div className={"flex flex-1 justify-center"}>
+                        <div className={"flex flex-wrap flex-1 justify-center"}>
                             <div className={"justify-center text-center"}>
                                 <p className={"mb-0.5"}>Interested in my CV?</p>
                                 <div onClick={generateCV}>
@@ -98,6 +137,19 @@ export default function Home({skills}) {
                                 </div>
                                 <p className={"text-xs font-light text-gray-400 mt-1"}>or press CTRL + P</p>
                             </div>
+
+                            {/*<div className={"justify-center text-center lg:ml-4"}>*/}
+                            {/*    <p className={"mb-0.5"}>Want to chat over phone?</p>*/}
+                            {/*    <div onClick={retrievePhone}>*/}
+                            {/*        <Button className={"text-center"} color={"info"}>*/}
+                            {/*            <div className={"flex items-center justify-center"}>*/}
+                            {/*                <div>Call me</div>*/}
+                            {/*            </div>*/}
+                            {/*        </Button>*/}
+                            {/*    </div>*/}
+                            {/*    <p className={"text-xs font-light text-gray-400 mt-1"}>If I miss the call<br />you'll be called back on a different number</p>*/}
+                            {/*</div>*/}
+
                         </div>
                     </div>
                     <div>
@@ -117,6 +169,12 @@ export default function Home({skills}) {
             </div>
         </div>
     )
+
+    async function retrievePhone() {
+
+        await router.push("tel://+31 6 14812131")
+
+    }
 
     async function generateCV() {
         setCv({progress: "info", message: "Downloading CV"})

@@ -43,24 +43,14 @@ export default function Project({project}) {
                     <Card>
                         <CardTitle>{project.title}</CardTitle>
                         <CardBody>{project.short_description}</CardBody>
-                        {/*<div>*/}
-                        {/*<div className={"border-gray-300 dark:border-gray-600 border-b"}>*/}
-                        {/*    <p className={"px-2 py-1 font-semibold"}>Programming*/}
-                        {/*        Language{Array.isArray(project.languages) ? "s" : ""} used:</p>*/}
-                        {/*</div>*/}
-
-                        {/*<Link href={"/projects"}><p*/}
-                        {/*    className={"cursor-pointer px-2 py-1 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-b-lg dark:border-gray-600 border-t font-semibold"}>Back*/}
-                        {/*    to Projects</p>*/}
-                        {/*</Link>*/}
-                        {/*</div>*/}
                     </Card>
                 </div>
                 <div className={"mb-4"}>
                     <Card>
                         <CardTitle>Programming Languages</CardTitle>
                         <div>
-                            {Array.isArray(project.languages) ? project.languages.map(language => <div
+                            {Array.isArray(project.languages) ? project.languages.map((language, index) => <div
+                                    key={index}
                                     className={"px-2 py-1 font-light"}>{language}</div>) :
                                 <div
                                     className={"px-2 py-1 font-light"}>{project.languages}</div>}
@@ -95,7 +85,7 @@ export default function Project({project}) {
                 <Card>
                     <CardBody>
                         {project.long_description.map((text, index, array) => {
-                            return <p className={index !== array.length - 1 ? "mb-4" : ""}>{text}</p>
+                            return <p key={index} className={index !== array.length - 1 ? "mb-4" : ""}>{text}</p>
                         })}
                     </CardBody>
                 </Card>
