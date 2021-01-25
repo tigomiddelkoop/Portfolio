@@ -1,7 +1,5 @@
 import {DateTime} from "luxon";
 import styles from "./skillscard.module.scss";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faJs} from "@fortawesome/free-brands-svg-icons";
 
 interface props {
     entries?: any,

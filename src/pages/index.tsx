@@ -21,13 +21,16 @@ export default function Home({skills}) {
 
 
     const handleKeypress = (event: KeyboardEvent) => {
-        if(event.code === "KeyG") {
-            router.push("/games");
-        }
 
-        if (event.ctrlKey && event.code === "KeyP") {
-            event.preventDefault();
-            generateCV();
+        if (!event.ctrlKey) {
+            if (event.code === "KeyG") {
+                router.push("/games");
+            }
+
+            if (event.ctrlKey && event.code === "KeyP") {
+                event.preventDefault();
+                generateCV();
+            }
         }
     }
 
@@ -61,7 +64,7 @@ export default function Home({skills}) {
                 </Head>
                 <main className={"h-full dark:text-white"}>
                     <div className={"flex flex-col lg:flex-row mb-4 items-center"}>
-                        <div className=" flex mb-4 items-center">
+                        <div className="flex mb-4 items-center">
 
                             <div className="flex rounded-full shadow-lg">
                                 <Image

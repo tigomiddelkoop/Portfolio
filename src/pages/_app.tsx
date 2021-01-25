@@ -10,29 +10,31 @@ function MyApp({Component, pageProps}) {
     const router = useRouter();
 
     const handleThemeKeypress = (event: KeyboardEvent) => {
-        switch (event.code) {
-            case "KeyT":
-                changeTheme()
-                break;
-            case "KeyC":
-                router.push("/clients");
-                break;
-            case "KeyH":
-                router.push("/");
-                break;
-            case "KeyP":
-                router.push("/projects");
-                break;
-            case "KeyK":
-                router.push("/kubernetes");
-                break;
-            case "KeyI":
-                router.push("https://infra.tigo.tech");
-                break;
-            case "KeyB":
-                router.push("https://blog.tigo.tech");
-                break;
+        if (!event.ctrlKey) {
+            switch (event.code) {
+                case "KeyT":
+                    changeTheme()
+                    break;
+                case "KeyC":
+                    router.push("/clients");
+                    break;
+                case "KeyH":
+                    router.push("/");
+                    break;
+                case "KeyP":
+                    router.push("/projects");
+                    break;
+                case "KeyK":
+                    router.push("/kubernetes");
+                    break;
+                case "KeyI":
+                    router.push("https://infra.tigo.tech");
+                    break;
+                case "KeyB":
+                    router.push("https://blog.tigo.tech");
+                    break;
 
+            }
         }
     }
 
