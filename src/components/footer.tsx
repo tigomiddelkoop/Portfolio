@@ -2,7 +2,7 @@ import Pill from "./pill";
 import styles from "./footer.module.scss"
 import {useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGithub, faLinkedin, faTwitter} from "@fortawesome/free-brands-svg-icons";
+import {faDiscord, faGithub, faLinkedin, faTwitter} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
 
@@ -52,6 +52,11 @@ export default function Footer() {
                        href={"https://twitter.com/__Tigo__"}><FontAwesomeIcon width={16}
                                                                               className={"mr-1"}
                                                                               icon={faTwitter}/> Twitter</a>
+                    <a className={footerLink} rel={"noreferrer noopener _blank"}
+                       href={"https://discord.gg/Tx3CKJB2QY"}><FontAwesomeIcon width={16}
+                                                                              className={"mr-1"}
+                                                                              icon={faDiscord
+                                                                              }/> Discord</a>
                 </div>
             </div>
 

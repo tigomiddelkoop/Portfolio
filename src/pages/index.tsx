@@ -3,10 +3,11 @@ import Button from "../components/button";
 import Image from "next/image";
 import Skillscard from "../components/home/skillscard";
 import {useEffect, useState} from "react";
-import {production} from "./_app";
 import {DateTime} from "luxon";
 import {getData} from "./api/home";
 import {useRouter} from "next/router";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faDiscord, faGithub, faLinkedin, faTwitter} from "@fortawesome/free-brands-svg-icons";
 
 interface CVState {
     progress: "success" | "info" | "danger";
@@ -21,7 +22,7 @@ export default function Home({skills}) {
 
 
     const handleKeypress = (event: KeyboardEvent) => {
-        if(event.code === "KeyG") {
+        if (event.code === "KeyG") {
             router.push("/games");
         }
 
@@ -77,7 +78,43 @@ export default function Home({skills}) {
                                     <h1 className="jetbrains text-4xl md:text-5xl font-light mb-0.5">Tigo</h1>
                                     <h1 className="jetbrains text-4xl md:text-5xl font-bold">Middelkoop</h1>
                                 </div>
-                                <p className="jetbrains text-xs">Fullstack Developer | PHP & JavaScript/TypeScript</p>
+                                <div className={"flex flex-wrap items-center"}>
+                                    <p className="jetbrains text-xs mb-1 sm:border-r sm:pr-2">Fullstack Developer </p>
+                                    <p className="jetbrains text-xs mb-1 sm:pl-2">PHP, JavaScript/TypeScript & C#</p>
+                                </div>
+                                <div className={"flex"}>
+                                    <a rel={"noreferrer noopener _blank"}
+                                       className={"mr-1"}
+                                       href={"https://github.com/tigomiddelkoop"}>
+                                        <Button color={"primary"}>
+                                            <FontAwesomeIcon height={16} icon={faGithub}/>
+                                        </Button>
+                                    </a>
+
+                                    <a rel={"noreferrer noopener _blank"}
+                                       className={"mr-1"}
+                                       href={"https://linkedin.com/in/tigo-middelkoop-92067a15b/"}>
+                                        <Button color={"primary"}>
+                                            <FontAwesomeIcon height={16} icon={faLinkedin}/>
+                                        </Button>
+                                    </a>
+
+                                    <a rel={"noreferrer noopener _blank"}
+                                       className={"mr-1"}
+                                       href={"https://twitter.com/__Tigo__"}>
+                                        <Button color={"primary"}>
+                                            <FontAwesomeIcon height={16} icon={faTwitter}/>
+                                        </Button>
+                                    </a>
+
+                                    <a rel={"noreferrer noopener _blank"}
+                                       className={"mr-1"}
+                                       href={"https://discord.gg/Tx3CKJB2QY"}>
+                                        <Button color={"primary"}>
+                                            <FontAwesomeIcon height={16} icon={faDiscord}/>
+                                        </Button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div className={"flex flex-1 justify-center"}>

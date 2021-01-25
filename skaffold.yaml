@@ -12,8 +12,8 @@ build:
           - src: "./src/**/*.ts"
             dest: .
       docker:
-        dockerfile: Dockerfile_dev
+        dockerfile: Dockerfile
 deploy:
   kubectl:
     manifests:
-      - kubernetes-dev.yml
+      - kubernetes-prod.yml
