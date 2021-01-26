@@ -85,19 +85,13 @@ export default function Project({project}) {
                 <Card>
                     <CardBody>
                         {project.long_description.map((text, index, array) => {
-                            return <p key={index} className={index !== array.length - 1 ? "mb-4" : ""}>{text}</p>
+                            return <p key={index} className={index !== array.length - 1 ? "mb-4" : ""}>{text !== "" ? text : <span>&nbsp;</span>}</p>
                         })}
                     </CardBody>
                 </Card>
 
 
             </div>
-            {/*<div className={"flex justify-center w-full lg:w-9/12"}>*/
-            }
-            {/*    <img className={"h-96 rounded-lg shadow-lg"} src={project.image}/>*/
-            }
-            {/*</div>*/
-            }
         </div>
     </Fragment>
 }

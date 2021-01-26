@@ -2,7 +2,13 @@
   "title": "tigo.tech management system",
   "slug": "tigotech",
   "short_description": "A management system that can manage all things tigo.tech sites, servers (Using SystemManager) and more",
-  "long_description": [],
+  "long_description": [
+    "As the tigo.tech domain space consists of multiple websites I needed a general place to manage all the websites and as I wanted to add more to that management system so it eventually grows as one massive personal data management system",
+    "The site will contain multitude of features such as todo lists and notifications for these. This system would also feed raspberry Pis data which can be used around the house for things like a calendar or todo list.",
+    "I will also make multiple integrations for example with Google and Microsoft to pull calendars from their sites to display these",
+    "",
+    "Everything in this project should be able to be hosted in kubernetes but should also be able to be hosted alone."
+  ],
   "images": [],
   "languages": [
     "TypeScript",
