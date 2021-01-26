@@ -82,7 +82,7 @@ function calculateConfidence(confidencePercentage) {
 
     let confidence;
     if (confidencePercentage >= 0 && confidencePercentage < 10) confidence = "None"
-    else if (confidencePercentage >= 10 && confidencePercentage < 25) confidence = "A bit";
+    else if (confidencePercentage >= 10 && confidencePercentage < 25) confidence = "Just started";
     else if (confidencePercentage >= 25 && confidencePercentage < 50) confidence = "Getting comfy"
     else if (confidencePercentage >= 50 && confidencePercentage < 75) confidence = "Quite comfortable";
     else if (confidencePercentage >= 75 && confidencePercentage < 99) confidence = "Really comfy "

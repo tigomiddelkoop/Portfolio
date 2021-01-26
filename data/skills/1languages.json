@@ -13,7 +13,7 @@
         "TypeScript"
       ],
       "date": "2018",
-      "confidence": 50
+      "confidence": 75
     },
     {
       "name": "Java",
@@ -27,12 +27,12 @@
         "C"
       ],
       "date": "2020-06-01",
-      "confidence": 0
+      "confidence": 10
     },
     {
       "name": "Rust",
       "date": "2020-06-01",
-      "confidence": 0
+      "confidence": 10
     }
   ]
 }
