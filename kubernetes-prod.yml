@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: portfolio
-          image: rg.nl-ams.scw.cloud/genericdevelopment/portfolio:1.0.0
+          image: rg.nl-ams.scw.cloud/genericdevelopment/portfolio:3.0.0
           ports:
             - containerPort: 3000
           env:
