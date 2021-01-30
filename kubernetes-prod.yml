@@ -17,13 +17,16 @@ spec:
       containers:
         - name: portfolio
           image: rg.nl-ams.scw.cloud/genericdevelopment/portfolio:3.0.0
+#          resources:
+#            requests:
+#              memory: "64Mi"
+#              cpu: "100m"
+#            limits:
+#              memory: "128Mi"
+#              cpu: "250m"
           ports:
             - containerPort: 3000
           env:
-            #            - name: PODNAME
-            #              valueFrom:
-            #                fieldRef:
-            #                  fieldPath: spec.podName
             - name: NODENAME
               valueFrom:
                 fieldRef:
@@ -35,25 +38,8 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 10
             failureThreshold: 600
-
----
-#apiVersion: v1
-#kind: Service
-#metadata:
-#  name: portfolio-loadbalancer
-#spec:
-#  type: LoadBalancer
-#  selector:
-#    app: portfolio
-#  ports:
-#    - appProtocol: http
-#      name: http
-#      port: 80
-#      targetPort: 3000
-#    - appProtocol: https
-#      name: https
-#      port: 443
-#      targetPort: 3000
+      imagePullSecrets:
+        - name: regcred
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -110,4 +96,4 @@ spec:
     solvers:
       - http01:
           ingress:
-            class:  nginx
+            class: nginx
