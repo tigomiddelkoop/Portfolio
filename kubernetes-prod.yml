@@ -51,7 +51,6 @@ spec:
   tls:
     - hosts:
         - tigo.tech
-        - infra.tigo.tech
       secretName: echo-tls
   rules:
     - host: tigo.tech

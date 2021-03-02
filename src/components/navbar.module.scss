@@ -7,15 +7,15 @@
 }
 
 .navItemActive {
-  @apply pb-3 pt-4 border-b-4 border-red-700 navItem ;
+  @apply pb-3 pt-4 border-b-4 border-red-700 navItem;
 }
 
 .navButton {
-  @apply p-4 navItem w-12 justify-center h-14;
+  @apply p-4 navItem w-full lg:w-12 lg:justify-center h-14;
 }
 
 .navMenuButton {
-  @apply p-4 w-12 justify-center block md:hidden md:px-2 px-4 items-center;
+  @apply p-4 w-12 justify-center block lg:hidden lg:px-2 px-4 items-center;
 }
 
 .navHamburger {
@@ -23,5 +23,5 @@
 }
 
 .navbar {
-  @apply flex flex-col md:flex-row border-b border-gray-100;
+  @apply flex flex-col lg:flex-row border-b border-gray-100;
 }

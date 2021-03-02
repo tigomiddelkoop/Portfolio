@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b13bfc0-9bdb-4ec5-8437-2627290d70db" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../infra/kubernetes-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../infra/kubernetes-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../infra/public/img/scaleway.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes-prod.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/api/container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/api/container.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/api/node.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/api/node.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,27 +52,27 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tigotechmanagement/backend" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="ts.external.directory.path" value="D:\Users\tigog\Documents\Projects\portfoliov3\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\data" />
       <recent name="$PROJECT_DIR$/src/pages/api" />
       <recent name="$PROJECT_DIR$" />
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\public\img" />
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\src\components" />
-      <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\data" />
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\public\svg" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\public\img" />
-      <recent name="D:\Users\tigog\Documents\Projects\portfoliov3\src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -99,6 +98,28 @@
       <workItem from="1610374644259" duration="1696000" />
       <workItem from="1610975942802" duration="18000" />
       <workItem from="1610976235334" duration="10933000" />
+      <workItem from="1611428016367" duration="8736000" />
+      <workItem from="1611490880929" duration="277000" />
+      <workItem from="1611520910694" duration="49000" />
+      <workItem from="1611522003175" duration="1411000" />
+      <workItem from="1611586629064" duration="5909000" />
+      <workItem from="1611678553188" duration="2182000" />
+      <workItem from="1611704378262" duration="3387000" />
+      <workItem from="1611760587036" duration="9000" />
+      <workItem from="1611778806406" duration="1126000" />
+      <workItem from="1611835586221" duration="1198000" />
+      <workItem from="1611854540128" duration="8411000" />
+      <workItem from="1611925259729" duration="5845000" />
+      <workItem from="1612006743871" duration="93000" />
+      <workItem from="1612006861344" duration="1379000" />
+      <workItem from="1612028823182" duration="3554000" />
+      <workItem from="1612091221652" duration="1171000" />
+      <workItem from="1612125336400" duration="598000" />
+      <workItem from="1612280093568" duration="597000" />
+      <workItem from="1612550147254" duration="1188000" />
+      <workItem from="1612627787071" duration="1188000" />
+      <workItem from="1613216225189" duration="598000" />
+      <workItem from="1613420831958" duration="1203000" />
     </task>
     <servers />
   </component>

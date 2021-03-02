@@ -63,11 +63,11 @@ export default function Footer() {
             <div className={styles.categoryContainer}>
                 <div className={"mb-2"}>
                     <p className={styles.categoryTitle}>Kubernetes info</p>
-                    <div className={"flex items-center justify-center"}>
+                    <div className={"flex flex-col md:flex-row mb-1 md:mb-0 items-center justify-center"}>
                         <p className={"mr-1"}>Served from node: </p>
                         <Pill color={"info"} className={"jetbrains"}>{nodeName}</Pill>
                     </div>
-                    <div className={"flex items-center justify-center"}>
+                    <div className={"flex flex-col md:flex-row items-center justify-center"}>
                         <p className={"mr-1"}>Served from container: </p>
                         <Pill color={"info"} className={"jetbrains"}>{container}</Pill>
                     </div>
