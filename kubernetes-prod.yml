@@ -17,6 +17,7 @@ spec:
       containers:
         - name: portfolio
           image: rg.nl-ams.scw.cloud/genericdevelopment/portfolio:3.0.1
+          imagePullPolicy: Always
 #          resources:
 #            requests:
 #              memory: "64Mi"
