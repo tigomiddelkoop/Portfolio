@@ -1,10 +1,10 @@
 import Head from 'next/head';
 import Button from "../components/button";
 import Image from "next/image";
-import Skillscard from "../components/home/skillscard";
+import SkillsCard from "../components/home/skillscard";
 import {getData} from "./api/home";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faDiscord, faGithub, faLinkedin, faTwitter} from "@fortawesome/free-brands-svg-icons";
+import {faDiscord, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
 interface CVState {
     progress: "success" | "info" | "danger";
@@ -46,7 +46,8 @@ export default function Home({skills}) {
                         {/* Job function and quick summary of languages */
                         }
                         <div className={"items-start space-y-1 text-xs sm:text-left"}>
-                            <p className="jetbrains border-l-4 pl-2">Occupation: Fullstack Developer and Cloud Engineer</p>
+                            <p className="jetbrains border-l-4 pl-2">Occupation: Fullstack Developer and Cloud
+                                Engineer</p>
                             <p className="jetbrains border-l-4 pl-2">Languages: PHP, JavaScript/TypeScript & Rust</p>
                             <p className="jetbrains border-l-4 pl-2">Hosting: Kubernetes & Docker</p>
                         </div>
@@ -90,15 +91,20 @@ export default function Home({skills}) {
                         <div className={"space-y-1 text-center mb-4"}>
                             <h1 className={"jetbrains text-4xl font-bold"}>Tools<span
                                 className={"jetbrains font-light"}>&</span>Languages</h1>
-                            <h5 className={"jetbrains text-xs"}>Tools I can use (and those I use
-                                regularly)</h5>
+                            <h5 className={"jetbrains text-xs"}>
+                                Tools & Languages I know
+                            </h5>
                         </div>
                         <div
-                            className={"2xl:mx-80 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-items-center"}>
+                            className={"2xl:mx-80 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-items-center"}
+                        >
 
-                            {skills.map(card => <Skillscard key={card.name} name={card.name} subname={card.subname}
+                            {skills.map(card => <SkillsCard key={card.name}
+                                                            name={card.name}
+                                                            subname={card.subname}
                                                             image={card.image}
-                                                            entries={card.entries}/>)}
+                                                            entries={card.entries}/>
+                            )}
 
                         </div>
                     </div>

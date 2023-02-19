@@ -1,4 +1,4 @@
-import {DateTime} from "luxon";
+import {DateTime, Duration} from "luxon";
 import styles from "./skillscard.module.scss";
 
 interface props {
@@ -8,10 +8,9 @@ interface props {
     subname: string
 }
 
-export default function Skillscard(props: props) {
+export default function SkillsCard(props: props) {
 
-    let entries = props.entries;
-    if (entries == undefined) entries = []
+    const entries: any = props.entries || [];
 
     return (
         <div key={props.name} className={"rounded-lg w-full sm:w-96 p-0 mb-4 md:mx-1"}>
@@ -42,25 +41,25 @@ export default function Skillscard(props: props) {
 function renderEntry(entry) {
 
     // Get now and then via the dates
-    let now = DateTime.fromJSDate(new Date());
-    let then = DateTime.fromISO(entry.date);
+    const now: DateTime = DateTime.fromJSDate(new Date());
+    const then: DateTime = DateTime.fromISO(entry.date);
 
     // Calculate the difference
-    let diff = now.diff(then, ["years", "months"]);
+    const diff: Duration = now.diff(then, ["years", "months"]);
 
-    let confidence = calculateConfidence(entry.confidence);
+    const confidence: string = calculateConfidence(entry.confidence);
 
-    let years = diff.years.toFixed()
-    let months = diff.months.toFixed()
+    const years: string = diff.years.toFixed()
+    const months: string = diff.months.toFixed()
 
     return (
-        <div key={"entry" + entry.name} className={"flex border-gray-300 dark:border-gray-600 py-3 px-3 items-center"}>
+        <div key={"entry" + entry.name} className={"flex py-3 px-3 items-center"}>
 
             <div className={"flex-1"}>
                 {Array.isArray(entry.name) ?
                     entry.name.map((name, index) => {
-                        if (index == 0) return <p key={name} className={"jetbrains font-semibold"}>{name}</p>
-                        return <p key={name} className={"jetbrains font-light text-xs"}>{name}</p>
+                        if (index == 0) return <p key={name} className={"jetbrains font-bold text-xs"}>{name}</p> // Make first name bold
+                        return <p key={name} className={"jetbrains font-light text-xs"}>{name}</p> // Make other names smaller and lighter
                     }) :
                     <p key={entry.name} className={"jetbrains font-semibold"}>{entry.name}</p>}
             </div>
@@ -73,13 +72,13 @@ function renderEntry(entry) {
                     {months !== "0" ?
                         <span className={"jetbrains"}>{months} month{months !== '1' ? 's' : ''} </span> : ""}
                     {months == "0" && years == "0" ? <span>{">"}1 month </span> : ""}
-                    experience
                 </p>
 
                 {entry.confidence !== undefined ?
                     <p key={"confidence" + entry.name} className={"jetbrains text-xs"}>Confidence: {confidence}</p>
                     :
-                    ""
+                    null
+
                 }
             </div>
 

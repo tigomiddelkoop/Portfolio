@@ -2,7 +2,6 @@ import '../styles/globals.css'
 import Layout from "../components/layout";
 import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
-import {Simulate} from "react-dom/test-utils";
 
 function MyApp({Component, pageProps}) {
 
@@ -53,7 +52,7 @@ function MyApp({Component, pageProps}) {
         if ((!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || window.localStorage.theme == "dark") {
             theme = "dark"
         }
-        
+
         setTheme(theme);
     }, []);
 
@@ -71,7 +70,11 @@ function MyApp({Component, pageProps}) {
 
     }
 
-    return <Layout changeTheme={changeTheme} theme={theme}><Component {...pageProps} /></Layout>
+    return (
+        <Layout changeTheme={changeTheme} theme={theme}>
+            <Component {...pageProps} />
+        </Layout>
+    )
 }
 
 const dev = process.env.NODE_ENV !== 'production';
