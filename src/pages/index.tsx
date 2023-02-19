@@ -45,10 +45,10 @@ export default function Home({skills}) {
 
                         {/* Job function and quick summary of languages */
                         }
-                        <div className={"items-start space-y-1 text-xs text-center sm:text-left"}>
-                            <p className="jetbrains sm:border-l-4 sm:pl-2">Occupation: Fullstack Developer and Cloud Engineer</p>
-                            <p className="jetbrains sm:border-l-4 sm:pl-2">Languages: PHP, JavaScript/TypeScript & Rust</p>
-                            <p className="jetbrains sm:border-l-4 sm:pl-2">Hosting: Kubernetes & Docker</p>
+                        <div className={"items-start space-y-1 text-xs sm:text-left"}>
+                            <p className="jetbrains border-l-4 pl-2">Occupation: Fullstack Developer and Cloud Engineer</p>
+                            <p className="jetbrains border-l-4 pl-2">Languages: PHP, JavaScript/TypeScript & Rust</p>
+                            <p className="jetbrains border-l-4 pl-2">Hosting: Kubernetes & Docker</p>
                         </div>
 
                         {/* Some socials */}
