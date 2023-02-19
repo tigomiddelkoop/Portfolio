@@ -59,7 +59,7 @@ export default function Home({skills}) {
                                 <Button color={"primary"}>
                                     <div className={"flex items-center space-x-2"}>
                                         <FontAwesomeIcon height={16} icon={faGithub}/>
-                                        <span>GitHub</span>
+                                        <span>Github</span>
                                     </div>
                                 </Button>
                             </a>
