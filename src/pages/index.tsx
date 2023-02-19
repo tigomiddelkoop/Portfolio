@@ -46,14 +46,15 @@ export default function Home({skills}) {
                         {/* Job function and quick summary of languages */
                         }
                         <div className={"items-start space-y-1 text-xs sm:text-left"}>
-                            <p className="jetbrains border-l-4 pl-2">Occupation: Fullstack Developer and Cloud
-                                Engineer</p>
-                            <p className="jetbrains border-l-4 pl-2">Languages: PHP, JavaScript/TypeScript & Rust</p>
-                            <p className="jetbrains border-l-4 pl-2">Hosting: Kubernetes & Docker</p>
+                            <p className="jetbrains dark:border-white border-red-700 border-l-4 pl-2">
+                                Occupation: Fullstack Developer and Cloud Engineer
+                            </p>
+                            <p className="jetbrains dark:border-white border-red-700 border-l-4 pl-2">Languages: PHP, JavaScript/TypeScript & Rust</p>
+                            <p className="jetbrains dark:border-white border-red-700 border-l-4 pl-2">Hosting: Kubernetes & Docker</p>
                         </div>
 
                         {/* Some socials */}
-                        <div className={"flex space-x-1 mb-0.5"}>
+                        <div className={"flex flex-wrap space-x-1"}>
                             <a rel={"noreferrer noopener _blank"}
                                href={"https://github.com/tigomiddelkoop"}>
                                 <Button color={"primary"}>
