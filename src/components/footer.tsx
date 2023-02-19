@@ -63,7 +63,7 @@ export default function Footer() {
                 <div>
                     <p className={styles.categoryTitle + " jetbrains"}>Site Build Info</p>
                     <div className={"flex items-center justify-center"}>
-                        <p className={"mr-1 jetbrains"}>Build Id:</p>
+                        <p className={"mr-1 jetbrains"}>Build ID:</p>
                         <Pill className={"jetbrains"}>{buildId}</Pill>
                     </div>
                 </div>
