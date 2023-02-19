@@ -4,14 +4,6 @@
   "entries": [
     {
       "name": [
-        "Kubernetes",
-        "Container Orchestration"
-      ],
-      "date": "2020-12-01",
-      "confidence": 70
-    },
-    {
-      "name": [
         "Google Cloud"
       ],
       "date": "2021-06-01",
