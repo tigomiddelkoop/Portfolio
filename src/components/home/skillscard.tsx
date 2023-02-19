@@ -15,17 +15,6 @@ export default function Skillscard(props: props) {
 
     return (
         <div key={props.name} className={"rounded-lg w-full sm:w-96 p-0 mb-4 md:mx-1"}>
-            {/*Fun window close buttons*/}
-            {/*<div*/}
-            {/*    className={"flex u h-6 justify-center bg-gray-50 border-gray-300 border rounded-t-lg dark:bg-gray-700 dark:border-gray-600 shadow-lg"}>*/}
-            {/*    <div className={"jetbrains flex-1 font-light"}>{props.name}</div>*/}
-            {/*    <div className={"justify-end flex"}>*/}
-            {/*        <div className={"mx-0.5 bg-gray-500 h-4 w-4 rounded-lg"}></div>*/}
-            {/*        <div className={"mx-0.5 bg-gray-500 h-4 w-4 rounded-lg"}></div>*/}
-            {/*        <div className={"mx-0.5 bg-gray-500 h-4 w-4 rounded-lg"}></div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-
             <div style={{backgroundImage: `url("_next/image?url=${encodeURIComponent(props.image)}&w=640&q=75")`}}
                  className={styles.background + " text-white relative flex flex-col items-center justify-center p-2 h-32 border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg dark:bg-gray-900 dark:border-gray-600"}>
 
@@ -68,11 +57,12 @@ function renderEntry(entry) {
         <div key={"entry" + entry.name} className={"flex border-gray-300 dark:border-gray-600 py-3 px-3 items-center"}>
 
             <div className={"flex-1"}>
-                {Array.isArray(entry.name) ? entry.name.map((name, index) => {
-                    if (index == 0) return <p key={name} className={"font-semibold flex"}>{name}</p>
-                    return <p key={name} className={"text-xs font-light"}>{name}</p>
-
-                }) : <p key={entry.name} className={"font-semibold"}>{entry.name}</p>}
+                {Array.isArray(entry.name) ?
+                    entry.name.map((name, index) => {
+                        if (index == 0) return <p key={name} className={"jetbrains font-semibold"}>{name}</p>
+                        return <p key={name} className={"jetbrains font-light text-xs"}>{name}</p>
+                    }) :
+                    <p key={entry.name} className={"jetbrains font-semibold"}>{entry.name}</p>}
             </div>
 
             <div className={"text-right font-light"}>
