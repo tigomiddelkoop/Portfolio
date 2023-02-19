@@ -13,7 +13,7 @@ import React, {Fragment} from "react";
 // @TODO put more in the module.css file of this file to clean it up of css statements and easy manipulation without searching
 const darkHover = " dark:hover:bg-gray-700 dark:border-white"
 const inactiveNav = styles.navItemInactive + darkHover;
-const activeNav = styles.navItemActive + darkHover;
+const activeNav = styles.navItemActive + darkHover + " dark:bg-gray-700";
 const navButton = styles.navButton + darkHover
 
 interface CVState {
@@ -68,9 +68,10 @@ export default function Navbar(props) {
     return (
         <div className={styles.navbar + " dark:bg-gray-800 dark:text-white dark:border-gray-500"}>
 
-            <div className={"flex flex-1 border-b-1 border-gray-100 lg:border-b-0"}>
+            <div className={"flex flex-1 items-center border-gray-100 lg:border-b-0"}>
                 <Link href={"/"}>
-                    <div className={"px-4 w-auto flex w-48 items-center border-gray-100 cursor-pointer"}>
+                    <div
+                        className={path == "/" ? "hidden" : "flex mx-4 w-48 items-center border-gray-100 cursor-pointer"}>
                         <Image
                             alt={"Picture of tigo"}
                             src={"/img/profilepicture.png"}
@@ -78,67 +79,61 @@ export default function Navbar(props) {
                             width={32}
                             className={"rounded-full"}
                         />
-                        <p className={"ml-2 jetbrains"}>Tigo Middelkoop</p>
+                        <p className={"pl-2 jetbrains font-light"}>
+                            <span className={"font-bold jetbrains"}>Tigo</span>Middelkoop
+                        </p>
                     </div>
                 </Link>
                 <div className={"flex flex-1"}/>
-                <div className={"h-14"}>
-                    <button onClick={() => setNavBarOpen(!navBarOpen)}
-                            className={styles.navMenuButton + " self-center h-14"}>
-                        <FontAwesomeIcon icon={faBars}/>
-                    </button>
-                </div>
+                <button onClick={() => setNavBarOpen(!navBarOpen)}
+                        className={styles.navMenuButton + " self-center "}>
+                    <FontAwesomeIcon icon={faBars}/>
+                </button>
             </div>
+
             <div className={!navBarOpen ? "hidden lg:block" : "block"}>
                 <div className={"flex flex-col lg:flex-row lg:items-center border-red-700"}>
                     <Link href={"/"}>
                         <div className={path == "/" ? activeNav : inactiveNav}>
-                            <p>Home</p>
+                            <p className={"jetbrains"}>Home</p>
                         </div>
                     </Link>
                     <Link href={"/clients"}>
                         <div className={path.includes("/clients") ? activeNav : inactiveNav}>
-                            <p>Clients</p>
+                            <p className={"jetbrains"}>Clients</p>
                         </div>
                     </Link>
                     <Link href={"/projects"}>
                         <div className={path.includes("/projects") ? activeNav : inactiveNav}>
-                            <p>Projects</p>
+                            <p className={"jetbrains"}>Projects</p>
                         </div>
                     </Link>
-                    <Link href={"https://blog.tigo.tech"}>
-                        <div className={path == "/blog" ? activeNav : inactiveNav}>
-                            <p className={"mr-1"}>Blog</p>
-                            <FontAwesomeIcon className={"h-3 text-gray-500"} icon={faExternalLinkAlt}/>
-                        </div>
-                    </Link>
-                    <Link href={"https://infra.tigo.tech"}>
-                        <div>
-                            <div className={`${path == "/blog" ? activeNav : inactiveNav}`}>
-                                <p className={"mr-1"}>Infrastructure</p>
-                                <FontAwesomeIcon className={"h-3 text-gray-500"} icon={faExternalLinkAlt}/>
-                            </div>
-                        </div>
-                    </Link>
-                    <div>
-                        <div onClick={generateCV}>
-                            <Button className={"w-auto mx-2 my-2 lg:my-0 lg:w-48 text-center"} color={cv.progress}>
-                                <div className={"flex items-center justify-center"}>
-                                    {cv.progress == "info" ? <div
-                                        className={"mr-1.5 h-4 w-4 bg-blue-400 rounded-full animate-pulse items-center"}/> : ""}
-                                    <div>{cv.message}</div>
 
-                                </div>
-                            </Button>
-                        </div>
+                    <div onClick={generateCV}>
+                        <Button className={"w-auto mx-2 my-2 lg:my-0 lg:w-48 text-center"} color={cv.progress}>
+                            <div className={"flex items-center justify-center"}>
+                                {cv.progress == "info" ? <div
+                                    className={"mr-1.5 h-4 w-4 bg-blue-400 rounded-full animate-pulse items-center"}/> : ""}
+                                <p className={"jetbrains"}>{cv.message}</p>
+                            </div>
+                        </Button>
                     </div>
-                    <div className={"flex h-14"}>
-                        <button onClick={props.changeTheme} className={navButton}>
-                            {props.theme == "light" ?
-                                <Fragment><FontAwesomeIcon className={"h-4"} icon={faMoon}/><span className={"ml-2 lg:hidden"}>Toggle Darkmode</span></Fragment> :
-                                <Fragment><FontAwesomeIcon className={"h-4"} icon={faSun}/><span className={"ml-2 lg:hidden"}>Toggle Lightmode</span></Fragment>}
-                        </button>
-                    </div>
+
+                    {/*<div onClick={generateCV}>*/}
+                    {/*    <div className={inactiveNav + " flex items-center justify-center"}>*/}
+                    {/*        {cv.progress == "info" ? <div*/}
+                    {/*            className={"mr-1.5 h-4 w-4 bg-blue-400 rounded-full animate-pulse items-center"}/> : ""}*/}
+                    {/*        <p className={"jetbrains"}>{cv.message}</p>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+
+                    <button onClick={props.changeTheme} className={navButton}>
+                        {props.theme == "light" ?
+                            <Fragment><FontAwesomeIcon className={"h-4"} icon={faMoon}/><span
+                                className={"ml-2 lg:hidden"}>Toggle Darkmode</span></Fragment> :
+                            <Fragment><FontAwesomeIcon className={"h-4"} icon={faSun}/><span
+                                className={"ml-2 lg:hidden"}>Toggle Lightmode</span></Fragment>}
+                    </button>
                 </div>
             </div>
         </div>

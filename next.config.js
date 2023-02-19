@@ -1,4 +1,4 @@
 module.exports = {
-    target: 'server',
+    // target: 'server',
     poweredByHeader: false,
 }

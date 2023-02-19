@@ -14,7 +14,17 @@ export default function Skillscard(props: props) {
     if (entries == undefined) entries = []
 
     return (
-        <div key={props.name} className={"rounded-lg w-96 mb-4 md:mx-1"}>
+        <div key={props.name} className={"rounded-lg w-full sm:w-96 p-0 mb-4 md:mx-1"}>
+            <div
+                className={"hidden flex u h-6 justify-center bg-gray-50 border-gray-300 border rounded-t-lg dark:bg-gray-700 dark:border-gray-600 shadow-lg"}>
+                <div className={"jetbrains flex-1 font-light"}>{props.name}</div>
+                <div className={"justify-end flex"}>
+                    <div className={"mx-0.5 bg-gray-500 h-4 w-4 rounded-lg"}></div>
+                    <div className={"mx-0.5 bg-gray-500 h-4 w-4 rounded-lg"}></div>
+                    <div className={"mx-0.5 bg-gray-500 h-4 w-4 rounded-lg"}></div>
+                </div>
+            </div>
+
             <div style={{backgroundImage: `url("_next/image?url=${encodeURIComponent(props.image)}&w=640&q=75")`}}
                  className={styles.background + " text-white relative flex flex-col items-center justify-center p-2 h-32 border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg dark:bg-gray-900 dark:border-gray-600"}>
 
@@ -70,7 +80,7 @@ function renderEntry(entry) {
                     {years !== "0" && months !== "0" ? " and " : ""}
                     {months !== "0" ? <span>{months} month{months !== '1' ? 's' : ''} </span> : ""}
                     {months == "0" && years == "0" ? <span>{">"}1 month </span> : ""}
-                     experience</p>
+                    experience</p>
                 {entry.confidence !== undefined ? <p key={"confidence" + entry.name}
                                                      className={"text-xs"}>Confidence: {confidence} ({entry.confidence}%)</p> : ""}
             </div>

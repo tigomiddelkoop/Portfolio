@@ -20,12 +20,12 @@ export default function index({games}) {
                         <div className={"w-full sm:w-64 p-1"}>
                             <Card>
                                 <img className={"p-2"} src={game.image} alt={game.name + " icon"} />
-
                                 <p className={"font-semibold m-1 border-t border-gray-300 dark:border-gray-600 text-xl"}>{game.name}</p>
                             </Card>
                         </div>
                     )
                 })}
+
             </div>
         </div>
     </Fragment>

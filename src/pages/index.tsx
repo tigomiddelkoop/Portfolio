@@ -22,33 +22,37 @@ export default function Home({skills}) {
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
                 <main className={"h-full dark:text-white"}>
-                    <div className={"flex flex-col lg:flex-row mb-4 items-center"}>
-                        <div className="flex mb-4 items-center">
+                    <div className={"flex flex-col lg:flex-row mb-4 items-center "}>
+                        <div className="flex mb-4 items-cente rounded-lg">
+                            <div className="">
+                                <div className={"flex flex-col sm:flex-row items-center mb-1"}>
+                                    <div className="rounded-full mr-2">
+                                        <Image
+                                            className={"rounded-full shadow-lg h-16 w-16"}
+                                            alt="Tigo"
+                                            src={"/img/profilepicture.png"}
+                                            height={64}
+                                            width={64}
+                                        />
+                                    </div>
+                                    <h1 className="jetbrains text-4xl font-light md:text-5xl items-center">
+                                        <span className={"jetbrains font-bold"}>Tigo</span>Middelkoop
+                                    </h1>
+                                </div>
 
-                            <div className="flex rounded-full shadow-lg">
-                                <Image
-                                    className={"rounded-full"}
-                                    alt="Tigo"
-                                    src={"/img/profilepicture.png"}
-                                    height={192}
-                                    width={192}
-                                />
-                            </div>
-                            <div className="ml-4">
-                                <div className={"mb-1"}>
-                                    <h1 className="jetbrains text-4xl md:text-5xl font-light mb-0.5">Tigo</h1>
-                                    <h1 className="jetbrains text-4xl md:text-5xl font-bold">Middelkoop</h1>
+                                <div className={"items-center text-center sm:text-left"}>
+                                    <p className="jetbrains text-xs mb-1">Fullstack Developer and Cloud Engineer</p>
+                                    <p className="jetbrains text-xs mb-1">PHP, JavaScript/TypeScript & Rust</p>
                                 </div>
-                                <div className={"flex flex-wrap items-center"}>
-                                    <p className="jetbrains text-xs mb-1 sm:border-r sm:pr-2">Fullstack Developer </p>
-                                    <p className="jetbrains text-xs mb-1 sm:pl-2">PHP, JavaScript/TypeScript & C#</p>
-                                </div>
+
                                 <div className={"flex mb-0.5"}>
+
                                     <a rel={"noreferrer noopener _blank"}
                                        className={"mr-1"}
                                        href={"https://github.com/tigomiddelkoop"}>
                                         <Button color={"primary"}>
                                             <FontAwesomeIcon height={16} icon={faGithub}/>
+                                            <span>GitHub</span>
                                         </Button>
                                     </a>
 
@@ -57,14 +61,7 @@ export default function Home({skills}) {
                                        href={"https://linkedin.com/in/tigo-middelkoop-92067a15b/"}>
                                         <Button color={"primary"}>
                                             <FontAwesomeIcon height={16} icon={faLinkedin}/>
-                                        </Button>
-                                    </a>
-
-                                    <a rel={"noreferrer noopener _blank"}
-                                       className={"mr-1"}
-                                       href={"https://twitter.com/__Tigo__"}>
-                                        <Button color={"primary"}>
-                                            <FontAwesomeIcon height={16} icon={faTwitter}/>
+                                            <span>LinkedIn</span>
                                         </Button>
                                     </a>
 
@@ -73,18 +70,22 @@ export default function Home({skills}) {
                                        href={"https://discord.gg/Tx3CKJB2QY"}>
                                         <Button color={"primary"}>
                                             <FontAwesomeIcon height={16} icon={faDiscord}/>
+                                            <span>Discord</span>
                                         </Button>
                                     </a>
+
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div>
                         <div className={"text-center mb-4"}>
-                            <h1 className={"text-4xl font-semibold"}>Tools and languages</h1>
-                            <h5 className={"text-1xl text-xs"}>Tools I can use (and those I use regularly)</h5>
+                            <h1 className={"jetbrains text-4xl font-bold"}>Tools<span className={"jetbrains font-light"}>&</span>Languages</h1>
+                            <h5 className={"jetbrains text-1xl text-xs"}>Tools I can use (and those I use regularly)</h5>
                         </div>
-                        <div className={"flex flex-wrap lg:flex-row justify-center mb-4 xl:mx-6 2xl:mx-24 3xl:mx-48"}>
+                        {/*<div className={"flex flex-wrap mx-auto justify-center 2xl:w-3/4 "}>*/}
+                        <div className={"grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-items-center grid-"}>
 
                             {skills.map(card => <Skillscard key={card.name} name={card.name} subname={card.subname}
                                                             image={card.image}

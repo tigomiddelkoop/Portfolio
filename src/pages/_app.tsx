@@ -27,12 +27,12 @@ function MyApp({Component, pageProps}) {
                 case "KeyK":
                     router.push("/kubernetes");
                     break;
-                case "KeyI":
-                    router.push("https://infra.tigo.tech");
-                    break;
-                case "KeyB":
-                    router.push("https://blog.tigo.tech");
-                    break;
+                // case "KeyI":
+                //     router.push("https://infra.tigo.tech");
+                //     break;
+                // case "KeyB":
+                //     router.push("https://blog.tigo.tech");
+                //     break;
 
             }
         }
@@ -48,19 +48,17 @@ function MyApp({Component, pageProps}) {
 
     // Get the preference of the user or the OS
     useEffect(() => {
-        let theme;
+        let theme = "light";
 
         if ((!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || window.localStorage.theme == "dark") {
             theme = "dark"
-        } else {
-            theme = "light"
         }
+        
         setTheme(theme);
     }, []);
 
     // Make the changing possible
     function changeTheme() {
-
 
         const currentTheme = theme
         if (currentTheme == "light") {
@@ -73,12 +71,9 @@ function MyApp({Component, pageProps}) {
 
     }
 
-
     return <Layout changeTheme={changeTheme} theme={theme}><Component {...pageProps} /></Layout>
 }
 
 const dev = process.env.NODE_ENV !== 'production';
 export const production = dev ? 'http://localhost:3000' : 'https://tigo.tech';
-
-
 export default MyApp

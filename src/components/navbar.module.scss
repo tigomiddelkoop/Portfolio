@@ -7,7 +7,7 @@
 }
 
 .navItemActive {
-  @apply pb-3 pt-4 border-b-4 border-red-700 navItem;
+  @apply pb-3 pt-4 sm:border-b-4 sm:border-l-0 border-l-4 bg-red-100 border-red-700 navItem;
 }
 
 .navButton {

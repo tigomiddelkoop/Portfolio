@@ -25,19 +25,19 @@ export default function Footer() {
     return <footer
         className={"align-bottom p-4 border-t border-b border-gray-100 items-center justify-center text-center dark:bg-gray-800 dark:border-gray-500 dark:text-white"}>
         <h1 className={"jetbrains text-2xl py-2"}>tigo.tech</h1>
-        <div className={"flex flex-col lg:flex-row items-center justify-center text-center"}>
+        <div className={"flex jetbrains flex-col lg:flex-row items-center justify-center text-center"}>
             <div className={styles.categoryContainer}>
                 <p className={styles.categoryTitle}>My other sites</p>
                 <a className={footerLink} href={"https://tigo.tech"}>tigo.tech <Pill className={"ml-1"} color={"info"}>You're
                     here</Pill></a>
                 <a className={footerLink} href={"https://genericdevelopment.nl"}>GenericDevelopment <Pill
-                    className={"ml-1"} color={"info"}>Going to be rebuild</Pill></a>
+                    className={"ml-1"} color={"secondary"}>Going to be rebuild</Pill></a>
                 <a className={footerLink} href={"https://systemmanager.io"}>SystemManager Core</a>
             </div>
 
             <div className={styles.categoryContainer}>
                 <div>
-                    <p className={styles.categoryTitle}>Socials</p>
+                    <p className={styles.categoryTitle + " jetbrains"}>Socials</p>
                 </div>
                 <div className={styles.socialMediaCategory}>
                     <a className={footerLink} rel={"noreferrer noopener _blank"}
@@ -48,10 +48,6 @@ export default function Footer() {
                        href={"https://www.linkedin.com/in/tigo-middelkoop-92067a15b/"}><FontAwesomeIcon width={16}
                                                                                                         className={"mr-1"}
                                                                                                         icon={faLinkedin}/> LinkedIn</a>
-                    <a className={footerLink} rel={"noreferrer noopener _blank"}
-                       href={"https://twitter.com/__Tigo__"}><FontAwesomeIcon width={16}
-                                                                              className={"mr-1"}
-                                                                              icon={faTwitter}/> Twitter</a>
                     <a className={footerLink} rel={"noreferrer noopener _blank"}
                        href={"https://discord.gg/Tx3CKJB2QY"}><FontAwesomeIcon width={16}
                                                                               className={"mr-1"}

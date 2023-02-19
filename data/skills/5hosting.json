@@ -1,17 +1,30 @@
 {
   "name": "Hosting Tools",
   "subname": "This includes all things hosting",
-  "image": "/img/skills/kubernetes.jpg",
   "entries": [
     {
-      "name": ["Kubernetes", "My portfolio should be hosted in K8s", "check the footer for its status"],
+      "name": [
+        "Kubernetes",
+        "Container Orchestration"
+      ],
       "date": "2020-12-01",
-      "confidence": 25
+      "confidence": 70
     },
     {
-      "name": ["Docker", "For building the images", "which are going to be used in K8s"],
+      "name": [
+        "Docker",
+        "Containerized Applications"
+      ],
       "date": "2020-12-01",
-      "confidence": 20
+      "confidence": 60
+    },
+    {
+      "name": [
+        "Terraform",
+        "My infra as code!"
+      ],
+      "date": "2022-03-01",
+      "confidence": 75
     }
   ]
 }
