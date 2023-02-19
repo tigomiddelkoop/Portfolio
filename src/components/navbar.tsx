@@ -69,6 +69,7 @@ export default function Navbar(props) {
         <div className={styles.navbar + " dark:bg-gray-800 dark:text-white dark:border-gray-500"}>
 
             <div className={"flex flex-1 items-center border-gray-100 lg:border-b-0"}>
+                
                 <Link href={"/"}>
                     <div
                         className={path == "/" ? "hidden" : "flex mx-4 w-48 items-center border-gray-100 cursor-pointer"}>
@@ -84,9 +85,14 @@ export default function Navbar(props) {
                         </p>
                     </div>
                 </Link>
+
+                {/* This is merely a spacer */}
                 <div className={"flex flex-1"}/>
-                <button onClick={() => setNavBarOpen(!navBarOpen)}
-                        className={styles.navMenuButton + " self-center "}>
+
+                <button
+                    onClick={() => setNavBarOpen(!navBarOpen)}
+                    className={styles.navMenuButton + " self-center"}
+                >
                     <FontAwesomeIcon icon={faBars}/>
                 </button>
             </div>
@@ -98,16 +104,16 @@ export default function Navbar(props) {
                             <p className={"jetbrains"}>Home</p>
                         </div>
                     </Link>
-                    <Link href={"/clients"}>
-                        <div className={path.includes("/clients") ? activeNav : inactiveNav}>
-                            <p className={"jetbrains"}>Clients</p>
-                        </div>
-                    </Link>
                     <Link href={"/projects"}>
                         <div className={path.includes("/projects") ? activeNav : inactiveNav}>
                             <p className={"jetbrains"}>Projects</p>
                         </div>
                     </Link>
+                    {/*<Link href={"/clients"}>*/}
+                    {/*    <div className={path.includes("/clients") ? activeNav : inactiveNav}>*/}
+                    {/*        <p className={"jetbrains"}>Clients</p>*/}
+                    {/*    </div>*/}
+                    {/*</Link>*/}
 
                     <div onClick={generateCV}>
                         <Button className={"w-auto mx-2 my-2 lg:my-0 lg:w-48 text-center"} color={cv.progress}>
@@ -129,10 +135,16 @@ export default function Navbar(props) {
 
                     <button onClick={props.changeTheme} className={navButton}>
                         {props.theme == "light" ?
-                            <Fragment><FontAwesomeIcon className={"h-4"} icon={faMoon}/><span
-                                className={"ml-2 lg:hidden"}>Toggle Darkmode</span></Fragment> :
-                            <Fragment><FontAwesomeIcon className={"h-4"} icon={faSun}/><span
-                                className={"ml-2 lg:hidden"}>Toggle Lightmode</span></Fragment>}
+                            <Fragment>
+                                <FontAwesomeIcon className={"h-4"} icon={faMoon}/>
+                                <span className={"ml-2 lg:hidden"}>Toggle darkmode</span>
+                            </Fragment>
+                            :
+                            <Fragment>
+                                <FontAwesomeIcon className={"h-4"} icon={faSun}/>
+                                <span className={"ml-2 lg:hidden"}>Toggle lightmode</span>
+                            </Fragment>
+                        }
                     </button>
                 </div>
             </div>
