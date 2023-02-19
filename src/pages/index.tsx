@@ -28,7 +28,7 @@ export default function Home({skills}) {
                     <div className={"flex flex-col space-y-2 mb-16"}>
                         {/* Name part */}
 
-                        <div className={"items-start flex flex-col space-x-2 sm:flex-row items-center mb-1 w-auto"}>
+                        <div className={"flex space-x-2 sm:flex-row items-center mb-1 w-auto"}>
                             <div className="rounded-full">
                                 <Image
                                     className={"rounded-full border border-gray-700 shadow-lg h-16 w-16"}
@@ -53,7 +53,7 @@ export default function Home({skills}) {
                         </div>
 
                         {/* Some socials */}
-                        <div className={"flex space-x-1 justify-center sm:justify-start mb-0.5"}>
+                        <div className={"flex space-x-1 mb-0.5"}>
                             <a rel={"noreferrer noopener _blank"}
                                href={"https://github.com/tigomiddelkoop"}>
                                 <Button color={"primary"}>
