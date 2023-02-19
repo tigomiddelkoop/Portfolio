@@ -6,11 +6,11 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faExclamationTriangle} from "@fortawesome/free-solid-svg-icons/faExclamationTriangle";
 
 
-// The relation has ended so let me put the end date here, I do still love the girl! And I genuinly hope I never lose these feelings!
+// The relation has ended so let me put the end date here, I do still love the girl! And I genuinely hope I never lose these feelings!
 // This page will not be available, but will remain in the sourcecode until I eventually switch from framework?
 
 // Start 13-03-2020
-//  End  04-09-2020
+// End  04-09-2020
 
 export default class Easteregg extends React.Component<{}, EastereggState> {
 
