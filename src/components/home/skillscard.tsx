@@ -11,10 +11,11 @@ interface props {
 export default function SkillsCard(props: props) {
 
     const entries: any = props.entries || [];
+    const image: string = `_next/image?url=${encodeURIComponent(props.image)}&w=640&q=75`
 
     return (
-        <div key={props.name} className={"rounded-lg w-full sm:w-96 p-0 mb-4 md:mx-1"}>
-            <div style={{backgroundImage: `url("_next/image?url=${encodeURIComponent(props.image)}&w=640&q=75")`}}
+        <div key={props.name} className={"rounded-lg w-full sm:w-96"}>
+            <div style={{backgroundImage: `url("${image}")`}}
                  className={styles.background + " text-white relative flex flex-col items-center justify-center p-2 h-32 border-l border-r border-t border-gray-300 border-b bg-gray-400 rounded-t-lg dark:bg-gray-900 dark:border-gray-600"}>
 
                 <h1 className={"font-bold text-3xl jetbrains"}>{props.name}</h1>
@@ -22,7 +23,7 @@ export default function SkillsCard(props: props) {
                 {props.subname !== undefined ? <p className={"font-light text-xs jetbrains"}>{props.subname}</p> : ""}
                 {props.image == null ?
                     <div className={"p-1 text-xs font-light absolute bottom-0 right-0 text-right"}>
-                        <p>No image available yet</p>
+                        <p>tigo.tech</p>
                     </div> : ""}
             </div>
             <div

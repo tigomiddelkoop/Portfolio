@@ -1,9 +1,6 @@
-import Link from "next/link";
 import Head from "next/head";
-import Layout from "../../components/layout";
 import {Fragment} from "react";
 import Projectcard from "../../components/home/projectcard";
-import {production} from "../_app";
 import {getProjects} from "../api/projects";
 
 export default function index({projects}) {
@@ -16,7 +13,7 @@ export default function index({projects}) {
             </Head>
 
             <div className={"flex flex-col space-y-2 mb-4 dark:text-white"}>
-                <h1 className={"jetbrains text-4xl md:text-5xl items-center"}>Projects</h1>
+                <h1 className={"jetbrains text-4xl md:text-5xl font-bold items-center"}>Projects</h1>
                 <h5 className={"jetbrains text-xs"}>My projects, either finished or not.</h5>
             </div>
 

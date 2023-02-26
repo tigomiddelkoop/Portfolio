@@ -5,6 +5,7 @@ import SkillsCard from "../components/home/skillscard";
 import {getData} from "./api/home";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDiscord, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {Fragment} from "react";
 
 interface CVState {
     progress: "success" | "info" | "danger";
@@ -49,8 +50,10 @@ export default function Home({skills}) {
                             <p className="jetbrains dark:border-white border-red-700 border-l-4 pl-2">
                                 Occupation: Fullstack Developer and Cloud Engineer
                             </p>
-                            <p className="jetbrains dark:border-white border-red-700 border-l-4 pl-2">Languages: PHP, JavaScript/TypeScript & Rust</p>
-                            <p className="jetbrains dark:border-white border-red-700 border-l-4 pl-2">Hosting: Kubernetes & Docker</p>
+                            <p className="jetbrains dark:border-white border-red-700 border-l-4 pl-2">Languages: PHP,
+                                JavaScript/TypeScript & Rust</p>
+                            <p className="jetbrains dark:border-white border-red-700 border-l-4 pl-2">Hosting:
+                                Kubernetes & Docker</p>
                         </div>
 
                         {/* Some socials */}
@@ -90,22 +93,30 @@ export default function Home({skills}) {
                     {/* Skills section */}
                     <div>
                         <div className={"space-y-1 text-center mb-4"}>
-                            <h1 className={"jetbrains text-4xl font-bold"}>Tools<span
-                                className={"jetbrains font-light"}>&</span>Languages</h1>
+                            <h1 className={"jetbrains text-4xl font-light"}>Tools<span
+                                className={"jetbrains font-bold"}>&</span>Languages</h1>
                             <h5 className={"jetbrains text-xs"}>
-                                Tools & Languages I know
+                                Tools & Languages I have experience with.
                             </h5>
                         </div>
                         <div
-                            className={"2xl:mx-80 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 justify-items-center"}
+                            className={"flex gap-2 flex-row flex-wrap justify-center"}
                         >
 
-                            {skills.map(card => <SkillsCard key={card.name}
-                                                            name={card.name}
-                                                            subname={card.subname}
-                                                            image={card.image}
-                                                            entries={card.entries}/>
+                            {skills.map(card =>
+                                <Fragment>
+
+                                    <SkillsCard
+                                        key={card.name}
+                                        name={card.name}
+                                        subname={card.subname}
+                                        image={card.image}
+                                        entries={card.entries}
+                                    />
+
+                                </Fragment>
                             )}
+
 
                         </div>
                     </div>

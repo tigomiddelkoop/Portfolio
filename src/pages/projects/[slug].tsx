@@ -22,7 +22,7 @@ export default function Project({project}) {
     }
 
     if (router.isFallback) {
-        return <div>Loadin'</div>
+        return <div>Loading</div>
     }
 
     return <Fragment>

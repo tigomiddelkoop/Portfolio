@@ -7,7 +7,7 @@ export default function Kubernetes() {
             <Head>
                 <title>Tigo Middelkoop - Kubernetes</title>
             </Head>
-            <p>Work in Progress</p>
+            <p className={"text-white jetbrains"}>Work in Progress</p>
         </div>
     )
 
