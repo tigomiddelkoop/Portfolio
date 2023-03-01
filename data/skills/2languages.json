@@ -8,9 +8,9 @@
       "confidence": 50
     },
     {
-      "name": [
-        "JavaScript",
-        "TypeScript"
+      "name": "TypeScript",
+      "extras": [
+        "Also JavaScript"
       ],
       "date": "2018",
       "confidence": 75
@@ -21,11 +21,8 @@
       "confidence": 10
     },
     {
-      "name": [
-        "C++",
-        "C# (.NET)",
-        "C"
-      ],
+      "enabled": true,
+      "name": "C++, C#, C",
       "date": "2020-06-01",
       "confidence": 10
     },

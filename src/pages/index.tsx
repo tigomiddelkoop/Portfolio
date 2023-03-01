@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Button from "../components/button";
 import Image from "next/image";
-import SkillsCard from "../components/home/skillscard";
+import SkillsCard from "../components/home/skillcard";
 import {getData} from "./api/home";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDiscord, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
@@ -29,7 +29,8 @@ export default function Home({skills}) {
                     <div className={"flex flex-col space-y-2 mb-16"}>
                         {/* Name part */}
 
-                        <div className={"flex space-x-2 sm:flex-row items-center mb-1 w-auto"}>
+                        <div
+                            className={"flex flex-wrap justify-center sm:justify-start space-x-2 sm:flex-row items-center mb-1 w-auto"}>
                             <div className="rounded-full">
                                 <Image
                                     className={"rounded-full border border-gray-700 shadow-lg h-16 w-16"}
@@ -93,8 +94,11 @@ export default function Home({skills}) {
                     {/* Skills section */}
                     <div>
                         <div className={"space-y-1 text-center mb-4"}>
-                            <h1 className={"jetbrains text-4xl font-light"}>Tools<span
-                                className={"jetbrains font-bold"}>&</span>Languages</h1>
+                            <h1 className={"jetbrains text-4xl font-light"}>
+                                Tools
+                                <span className={"jetbrains font-bold text-red-700"}>&</span>
+                                Languages
+                            </h1>
                             <h5 className={"jetbrains text-xs"}>
                                 Tools & Languages I have experience with.
                             </h5>
@@ -104,19 +108,14 @@ export default function Home({skills}) {
                         >
 
                             {skills.map(card =>
-                                <Fragment>
-
-                                    <SkillsCard
-                                        key={card.name}
-                                        name={card.name}
-                                        subname={card.subname}
-                                        image={card.image}
-                                        entries={card.entries}
-                                    />
-
-                                </Fragment>
+                                <SkillsCard
+                                    key={card.name}
+                                    name={card.name}
+                                    subname={card.subname}
+                                    image={card.image}
+                                    entries={card.entries}
+                                />
                             )}
-
 
                         </div>
                     </div>

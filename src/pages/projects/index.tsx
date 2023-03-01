@@ -12,9 +12,10 @@ export default function index({projects}) {
                 <title>Tigo Middelkoop - Projects</title>
             </Head>
 
-            <div className={"flex flex-col space-y-2 mb-4 dark:text-white"}>
-                <h1 className={"jetbrains text-4xl md:text-5xl font-bold items-center"}>Projects</h1>
+            <div className={"flex flex-col space-y-2 mb-4 dark:text-white items-center"}>
+                <h1 className={"jetbrains font-light text-4xl items-center"}>Projects</h1>
                 <h5 className={"jetbrains text-xs"}>My projects, either finished or not.</h5>
+                <h5 className={"jetbrains text-xs"}>Not much at the moment, working on some other stuff</h5>
             </div>
 
             <div className={"flex flex-wrap justify-center"}>

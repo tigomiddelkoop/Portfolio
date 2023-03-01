@@ -4,19 +4,31 @@
   "image": "/img/skills/ide.jpg",
   "entries": [
     {
-      "name":  ["Jetbrains PhpStorm", "PHP, HTML and Javascript"],
+      "name": "Jetbrains PhpStorm",
+      "extras": [
+        "PHP, HTML and Javascript"
+      ],
       "date": "2017"
     },
     {
-      "name": ["Jetbrains Rider", ".NET"],
+      "name": "Jetbrains Rider",
+      "extras": [
+        ".NET"
+      ],
       "date": "2020-12-01"
     },
     {
-      "name": ["Jetbrains IntelliJ IDEA", "Java and more"],
+      "name": "Jetbrains IntelliJ",
+      "extras": [
+        "Java and more"
+      ],
       "date": "2017"
     },
     {
-      "name": ["Jetbrains DataGrip", "Database Management"],
+      "name": "Jetbrains DataGrip",
+      "extras": [
+        "Database Management"
+      ],
       "date": "2021-01-15"
     }
   ]

@@ -8,30 +8,24 @@ export default function Footer() {
 
     // This might not be the best option, I want to look for a better option.
     const [buildId, setBuildId] = useState("")
-    const [nodeName, setNodeName] = useState("")
-    const [container, setContainer] = useState("")
-    const [buildIdOnce, setBuildIdOnce] = useState(false)
     useEffect(() => {
-        if (!buildIdOnce) {
-            // fetch("/api/node").then(response => response.json().then(data => setNodeName(data.node)))
-            // fetch("/api/container").then(response => response.json().then(data => setContainer(data.container)))
+        if (buildId == "") {
             fetch("/api/buildid").then(response => response.json().then(data => setBuildId(data.buildId)))
-            setBuildIdOnce(true);
         }
     }, [buildId])
 
     const footerLink = styles.link + " dark:hover:bg-gray-700 items-center"
+    const footerLinkActive = styles.link + " dark:hover:bg-gray-700 items-center bg-gray-200 dark:bg-gray-900"
 
     return <footer
         className={"align-bottom p-4 border-t border-b border-gray-100 items-center justify-center text-center dark:bg-gray-800 dark:border-gray-500 dark:text-white"}>
-        <h1 className={"jetbrains text-2xl py-2"}>tigo.tech</h1>
-        <div className={"flex jetbrains flex-col lg:flex-row items-center justify-center text-center"}>
-            <div className={styles.categoryContainer }>
-                <p className={styles.categoryTitle + " jetbrains"}>My other sites</p>
-                <a className={footerLink + " jetbrains"} href={"https://tigo.tech"}>tigo.tech <Pill className={"ml-1"} color={"info"}>You're
-                    here</Pill></a>
-                <a className={footerLink + " jetbrains"} href={"https://genericdevelopment.nl"}>GenericDevelopment <Pill
-                    className={"ml-1"} color={"secondary"}>Going to be rebuild</Pill></a>
+        <h1 className={"jetbrains text-2xl py-2"}>tigo<span className={"text-red-700"}>.</span>tech</h1>
+
+        <div className={"flex jetbrains flex-col lg:flex-row  justify-center text-center"}>
+            <div className={styles.categoryContainer}>
+                <p className={styles.categoryTitle + " jetbrains"}>My other projects</p>
+                <a className={footerLinkActive + " jetbrains"} href={"https://tigo.tech"}>tigo<span className={"text-red-700"}>.</span>tech</a>
+                <a className={footerLink + " jetbrains"} href={"https://genericdevelopment.nl"}>GenericDevelopment</a>
                 <a className={footerLink + " jetbrains"} href={"https://systemmanager.io"}>SystemManager Core</a>
             </div>
 
@@ -50,9 +44,9 @@ export default function Footer() {
                                                                                                         icon={faLinkedin}/> LinkedIn</a>
                     <a className={footerLink + " jetbrains"} rel={"noreferrer noopener _blank"}
                        href={"https://discord.gg/Tx3CKJB2QY"}><FontAwesomeIcon width={16}
-                                                                              className={"mr-1"}
-                                                                              icon={faDiscord
-                                                                              }/> Discord</a>
+                                                                               className={"mr-1"}
+                                                                               icon={faDiscord
+                                                                               }/> Discord</a>
                 </div>
             </div>
 
@@ -69,10 +63,12 @@ export default function Footer() {
                 </div>
             </div>
         </div>
-        <p className={"text-xs font-light jetbrains"}>All the pictures on this site are made by Tigo and are of the code of this
+        <p className={"text-xs font-light jetbrains"}>All the pictures on this site are made by Tigo and are of the code
+            of this
             site and the
             servers it is hosted on, the site might also contain pictures of projects he has done.</p>
-        <p className={"text-xs font-light jetbrains"}>(I'm trying to not use any stock images, those are no fun to use. I want to
+        <p className={"text-xs font-light jetbrains"}>(I'm trying to not use any stock images, those are no fun to use.
+            I want to
             make them myself)</p>
     </footer>
 

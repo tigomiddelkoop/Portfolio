@@ -4,42 +4,43 @@
   "entries": [
     {
       "name": "Laravel",
-      "language": "PHP",
+      "extras": [
+        "PHP"
+      ],
       "date": "2018",
       "confidence": 75
     },
     {
       "name": "NextJS",
-      "language": [
-        "JavaScript",
+      "extras": [
         "TypeScript"
       ],
       "date": "2020-12-01",
       "confidence": 25
     },
     {
-      "name": "ReactJS",
-      "language": [
-        "JavaScript",
+      "name": "React",
+      "extras": [
         "TypeScript"
       ],
       "date": "2019-09-01",
+      "confidence": 50
+    },
+    {
+      "name": "Vue",
+      "extras": [
+        "TypeScript"
+      ],
+      "date": "2021-02-09",
       "confidence": 50
     },
     {
       "name": "ExpressJS",
-      "language": [
-        "JavaScript",
+      "extras": [
         "TypeScript"
       ],
       "date": "2019-09-01",
       "confidence": 50
-    },
-    {
-      "name": "Magento 2",
-      "language": "PHP",
-      "date": "2020-10-01",
-      "confidence": 20
     }
   ]
 }

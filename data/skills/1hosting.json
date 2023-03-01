@@ -3,24 +3,24 @@
   "subname": "This includes all things hosting",
   "entries": [
     {
-      "name": [
-        "Kubernetes",
+      "name": "Kubernetes",
+      "extras": [
         "Container Orchestration"
       ],
       "date": "2020-12-01",
       "confidence": 70
     },
     {
-      "name": [
-        "Docker",
+      "name": "Docker",
+      "extras": [
         "Containerized Applications"
       ],
       "date": "2020-12-01",
       "confidence": 60
     },
     {
-      "name": [
-        "Terraform",
+      "name": "Terraform",
+      "extras": [
         "My infra as code!"
       ],
       "date": "2022-03-01",
