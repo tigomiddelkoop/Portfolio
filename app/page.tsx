@@ -90,11 +90,11 @@ export default function Home() {
             <div>
                 <div className={"text-center mb-2"}>
                     <h1 className={"text-4xl"}>
-                        <span className={"font-bold"}>E</span>xperience
+                        My <span className={"font-bold"}>E</span>xperience
                     </h1>
-                    <h5 className={"text-xs"}>
-                        Stuff I have experience with.
-                    </h5>
+                    {/*<h5 className={"text-xs"}>*/}
+                    {/*    The stuff I have experience with.*/}
+                    {/*</h5>*/}
                 </div>
                 <div
                     className={"flex gap-2 flex-row flex-wrap justify-center"}
