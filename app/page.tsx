@@ -37,8 +37,8 @@ export default function Home() {
                         className={"rounded-full border dark:border-gray-700 shadow-lg xl:h-32 xl:w-32 h-24 w-24 mr-4"}
                         alt="Tigo"
                         src={"/img/profilepicture.png"}
-                        height={64}
-                        width={64}
+                        height={256}
+                        width={256}
                     />
 
                     <div>
