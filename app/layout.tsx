@@ -34,8 +34,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <html className={`${fonts.variable} dark`} lang="en">
-        <body className={"bg-fixed overflow-y-scroll h-screen bg-gradient-to-br dark:from-gray-700 dark:to-black to-purple-800 from-pink-600"}>
+        <html className={`${fonts.variable}`} lang="en">
+        <body className={"bg-fixed h-screen bg-gradient-to-br dark:from-gray-600 dark:to-black to-purple-800 from-pink-600"}>
         {children}
         </body>
         </html>
