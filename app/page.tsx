@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Button from "../components/button";
+import Button from "./components/button";
 import Image from "next/image";
-import SkillsCard from "./components/home/skillcard";
+// import SkillsCard from "./components/home/skillcard";
 // import {getData} from "./api/home";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDiscord, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
@@ -90,7 +90,7 @@ export default function Home() {
             <div>
                 <div className={"text-center mb-2"}>
                     <h1 className={"text-4xl"}>
-                        My <span className={"font-bold"}>E</span>xperience
+                        My Experience
                     </h1>
                     {/*<h5 className={"text-xs"}>*/}
                     {/*    The stuff I have experience with.*/}
@@ -99,15 +99,15 @@ export default function Home() {
                 <div
                     className={"flex gap-2 flex-row flex-wrap justify-center"}
                 >
-                    {skills.map(card =>
-                        <SkillsCard
-                            key={card.name}
-                            name={card.name}
-                            subname={card.subname}
-                            image={card.image}
-                            entries={card.entries}
-                        />
-                    )}
+                    {/*{skills.map(card =>*/}
+                    {/*    <SkillsCard*/}
+                    {/*        key={card.name}*/}
+                    {/*        name={card.name}*/}
+                    {/*        subname={card.subname}*/}
+                    {/*        image={card.image}*/}
+                    {/*        entries={card.entries}*/}
+                    {/*    />*/}
+                    {/*)}*/}
                 </div>
             </div>
         </div>
