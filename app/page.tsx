@@ -32,14 +32,14 @@ export default function Home() {
             {/* Name part */}
             <div
                 className={"border-b-2 dark:border-gray-500 mb-4 px-4 py-6 xl:px-12 xl:py-10 w-full xl:w-auto"}>
-                <div className="flex flex-row rounded-full mx-auto mb-3 justify-center items-center">
-                    {/*<Image*/}
-                    {/*    className={"rounded-full border border-gray-700 shadow-lg xl:h-32 xl:w-32 h-24 w-24 mr-4"}*/}
-                    {/*    alt="Tigo"*/}
-                    {/*    src={"/img/profilepicture.png"}*/}
-                    {/*    height={64}*/}
-                    {/*    width={64}*/}
-                    {/*/>*/}
+                <div className="flex flex-row  mb-3 justify-center items-center">
+                    <Image
+                        className={"rounded-full border dark:border-gray-700 shadow-lg xl:h-32 xl:w-32 h-24 w-24 mr-4"}
+                        alt="Tigo"
+                        src={"/img/profilepicture.png"}
+                        height={64}
+                        width={64}
+                    />
 
                     <div>
                         <h1
