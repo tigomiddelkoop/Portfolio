@@ -31,10 +31,10 @@ export default function Home() {
 
             {/* Name part */}
             <div
-                className={"border-b-2 dark:border-gray-500 mb-4 px-4 py-6 xl:px-12 xl:py-10 w-full xl:w-auto"}>
+                className={"border-b-2 dark:border-gray-600 mb-4 px-4 py-6 xl:px-12 xl:py-10 w-full xl:w-auto"}>
                 <div className="flex flex-row  mb-3 justify-center items-center">
                     <Image
-                        className={"rounded-full border dark:border-gray-700 shadow-lg xl:h-32 xl:w-32 h-24 w-24 mr-4"}
+                        className={"rounded-full border-2 dark:border-gray-400 shadow-lg xl:h-32 xl:w-32 h-24 w-24 mr-4"}
                         alt="Tigo"
                         src={"/img/profilepicture.png"}
                         height={256}
@@ -55,7 +55,7 @@ export default function Home() {
 
                 {/* Job function and quick summary of languages */}
                 <div
-                    className={"mb-2 p-0 h-auto text-s border-l-0 text-center dark:border-white border-red-700 text-wrap"}>
+                    className={"mb-2 p-0 h-auto text-s text-center text-wrap"}>
                     <p>
                         <span className={"font-bold"}>Languages: </span> PHP, JavaScript/TypeScript & Rust
                     </p>
@@ -87,19 +87,19 @@ export default function Home() {
                 </div>
             </div>
             {/* Skills section */}
-            <div className={"space-y-2"}>
-                <div className={"text-center space-y-1"}>
-                    <h1 className={"text-4xl"}>
-                        My Experience
-                    </h1>
-                    <h5 className={"text-xs"}>
-                        The stuff I have experience with.
-                    </h5>
-                </div>
-                <div className={"flex gap-2 flex-row flex-wrap justify-center"}>
-                    {/* cards */}
-                </div>
-            </div>
+            {/*<div className={"space-y-2"}>*/}
+            {/*    <div className={"text-center space-y-1"}>*/}
+            {/*        <h1 className={"text-4xl"}>*/}
+            {/*            My Experience*/}
+            {/*        </h1>*/}
+            {/*        <h5 className={"text-xs"}>*/}
+            {/*            The stuff I have experience with.*/}
+            {/*        </h5>*/}
+            {/*    </div>*/}
+            {/*    <div className={"flex gap-2 flex-row flex-wrap justify-center"}>*/}
+            {/*         cards*/}
+                {/*</div>*/}
+            {/*</div>*/}
 
             {/*<div className={"text-center mb-2"}>*/}
             {/*    <h1 className={"text-4xl"}>*/}

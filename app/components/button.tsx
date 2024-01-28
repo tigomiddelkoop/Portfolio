@@ -15,7 +15,7 @@ export default function Button(props: Props) {
     switch (props.color) {
         default: // default to primary colors when no color has been given
         case "primary": {
-            type = styles.primary + " dark:border-gray-600 dark:text-white dark:hover:bg-gray-500 dark:bg-gray-700";
+            type = styles.primary + " dark:border-gray-700 dark:text-white dark:hover:bg-gray-400 dark:hover:bg-gray-400 dark:bg-gray-700";
             break;
         }
         case "secondary": {
