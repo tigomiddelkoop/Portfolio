@@ -1,4 +1,4 @@
-import styles from "./skillcard.module.scss";
+import styles from "../skillcard.module.scss";
 import React from "react";
 import SkillsCardEntry from "./SkillsCardEntry";
 

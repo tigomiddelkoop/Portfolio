@@ -6,7 +6,7 @@ import Image from "next/image";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDiscord, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import React, {Fragment} from "react";
-import SkillsCard from "@/app/components/SkillsCard";
+import SkillsCard from "@/app/components/home/SkillsCard";
 
 export default function Home() {
 
