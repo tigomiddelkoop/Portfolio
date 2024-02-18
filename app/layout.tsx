@@ -3,7 +3,7 @@ import type {Metadata} from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import {NextFontWithVariable} from "next/dist/compiled/@next/font";
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Footer from "@/app/components/footer";
 import Navbar from "@/app/components/navbar";
 
@@ -40,10 +40,12 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
 
     function getTheme() {
         let theme = "";
-        if ((!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || window.localStorage.theme == "dark") {
-            theme = "dark"
-        } else {
-            theme = "light"
+        if (typeof window !== 'undefined') {
+            if ((!('theme' in window.localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || window.localStorage.theme == "dark") {
+                theme = "dark"
+            } else {
+                theme = "light"
+            }
         }
 
         return theme
