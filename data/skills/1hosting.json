@@ -11,6 +11,14 @@
       "confidence": 70
     },
     {
+      "name": "Google Cloud Run",
+      "extras": [
+        "Knative hosting"
+      ],
+      "date": "2024-01-01",
+      "confidence": 40
+    },
+    {
       "name": "Docker",
       "extras": [
         "Containerized Applications"
