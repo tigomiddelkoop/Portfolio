@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import styles from "./navbar.module.scss"
 import {useRouter} from 'next/navigation';
 
 import {useEffect, useState} from "react";
@@ -8,12 +7,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faExternalLinkAlt, faMoon, faSun, faUser} from "@fortawesome/free-solid-svg-icons";
 import React, {Fragment} from "react";
 import Link from "next/link";
-
-// @TODO put more in the module.css file of this file to clean it up of css statements and easy manipulation without searching
-const darkHover = " dark:hover:bg-gray-700 dark:border-white"
-const inactiveNav = styles.navItemInactive + darkHover;
-const activeNav = styles.navItemActive + darkHover + " dark:bg-gray-700";
-const navButton = styles.navButton + darkHover
 
 export default function Navbar(props: { changeTheme?: any, theme: "dark" | "light" }) {
 
@@ -38,43 +31,49 @@ export default function Navbar(props: { changeTheme?: any, theme: "dark" | "ligh
     }, [])
 
     return (
-        <div className={"fixed top-5 flex items-center"}>
-            <div className={"h-10 flex items-center"}>
-                <Image
-                    className={"rounded-full border-2 shadow-lg border-purple-600 dark:border-slate-700 h-10 w-10"}
-                    alt="Tigo"
-                    src={"/img/pf_new.jpg"}
-                    style={{objectFit: "cover"}}
-                    height={64}
-                    width={64}
-                />
-                {/*<div className={"text-2xl hidden xl:flex"}>*/}
-                {/*    <h1><span className={"font-black"}>Tigo</span></h1>*/}
-                {/*    <h1><span className={"font-light"}>Middelkoop</span></h1>*/}
-                {/*</div>*/}
-            </div>
+        <div className={"fixed top-0 w-full xl:w-3/4 backdrop-blur border-b border-purple-600 dark:border-slate-600"}>
+            <div className={"px-4 grid grid-cols-4 justify-between h-16 items-center"}>
+                <div className={"h-10 flex items-center"}>
+                    <Image
+                        className={"rounded-full border border-purple-600 dark:border-slate-600 shadow-lg h-10 w-10"}
+                        alt="Tigo"
+                        src={"/img/pf_new.jpg"}
+                        style={{objectFit: "cover"}}
+                        height={64}
+                        width={64}
+                    />
+                    <div className={"text-2xl hidden xl:flex ml-2"}>
+                        <h1><span className={"font-black"}>Tigo</span></h1>
+                        <h1><span className={"font-light"}>Middelkoop</span></h1>
+                    </div>
+                </div>
 
-            <div
-                className={"h-10 text-md mx-2 flex justify-center items-center border-2 py-2 px-4 rounded-full border-purple-600 dark:border-slate-700 shadow-lg space-x-2"}>
-                <Link href={"/"} className={"hover:text-purple-600 dark:hover:text-slate-600"}>Experiences</Link>
-                <Link href={"/"} className={"hover:text-purple-600 dark:hover:text-slate-600"}>Projects</Link>
-                <Link href={"/"} className={"hover:text-purple-600 dark:hover:text-slate-600"}>Socials</Link>
+                <div
+                    className={"col-span-2 flex justify-center items-center "}>
+                    <div className={"flex py-2 px-6 text-md bg-black/[0.2] border border-purple-600 dark:border-slate-600 rounded-full shadow-lg space-x-2 overflow-auto xl:overflow-none scroll-hidden"}>
+                        <Link href={"/"}
+                              className={"hover:text-purple-600 dark:hover:text-slate-600"}>Experiences</Link>
+                        <Link href={"/"} className={"hover:text-purple-600 dark:hover:text-slate-600"}>Projects</Link>
+                        <Link href={"/"} className={"hover:text-purple-600 dark:hover:text-slate-600"}>Socials</Link>
+                    </div>
+                </div>
+                {/*<button onClick={props.changeTheme} className={navButton}>*/}
+                <div
+                    className={"flex justify-end"}>
+                    <button
+                        className={"h-10 w-10 border border-purple-600  dark:border-slate-600 rounded-full shadow-lg"}>
+                        {props.theme == "light" ?
+                            <Fragment>
+                                <FontAwesomeIcon className={"h-4"} icon={faMoon}/>
+                            </Fragment>
+                            :
+                            <Fragment>
+                                <FontAwesomeIcon className={"h-4"} icon={faSun}/>
+                            </Fragment>
+                        }
+                    </button>
+                </div>
             </div>
-            {/*<button onClick={props.changeTheme} className={navButton}>*/}
-            <div className={"h-10 w-10 border-2 flex justify-center items-center rounded-full shadow-lg border-purple-600 dark:border-slate-600"}>
-                <button>
-                    {props.theme == "light" ?
-                        <Fragment>
-                            <FontAwesomeIcon className={"h-4"} icon={faMoon}/>
-                        </Fragment>
-                        :
-                        <Fragment>
-                            <FontAwesomeIcon className={"h-4"} icon={faSun}/>
-                        </Fragment>
-                    }
-                </button>
-            </div>
-
         </div>
     )
 }
