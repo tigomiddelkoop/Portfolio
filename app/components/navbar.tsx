@@ -14,6 +14,7 @@ export default function Navbar(props: { changeTheme?: any, theme: "dark" | "ligh
     const [navBarOpen, setNavBarOpen] = useState(false);
 
 
+
     const handleKeypress = (event: KeyboardEvent) => {
         if (!event.ctrlKey) {
             if (event.code === "KeyG") {
@@ -21,7 +22,6 @@ export default function Navbar(props: { changeTheme?: any, theme: "dark" | "ligh
             }
         }
     }
-
 
     useEffect(() => {
         window.addEventListener("keydown", handleKeypress)
@@ -35,7 +35,7 @@ export default function Navbar(props: { changeTheme?: any, theme: "dark" | "ligh
             <div className={"px-4 grid grid-cols-4 justify-between h-16 items-center"}>
                 <div className={"h-10 flex items-center"}>
                     <Image
-                        className={"rounded-full border border-purple-600 dark:border-slate-600 shadow-lg h-10 w-10"}
+                        className={"rounded-full bg-black/[0.2] border border-purple-600 dark:border-slate-600 shadow-lg h-10 w-10"}
                         alt="Tigo"
                         src={"/img/pf_new.jpg"}
                         style={{objectFit: "cover"}}
@@ -61,15 +61,17 @@ export default function Navbar(props: { changeTheme?: any, theme: "dark" | "ligh
                 <div
                     className={"flex justify-end"}>
                     <button
-                        className={"h-10 w-10 border border-purple-600  dark:border-slate-600 rounded-full shadow-lg"}>
+                        className={"h-10 min-w-10 xl:px-4 bg-black/[0.2] border border-purple-600 items-center justify-center  dark:border-slate-600 rounded-full shadow-lg"}>
                         {props.theme == "light" ?
-                            <Fragment>
+                            <div className={"block xl:min-w-32  xl:flex xl:items-center xl:justify-center"}>
                                 <FontAwesomeIcon className={"h-4"} icon={faMoon}/>
-                            </Fragment>
+                                <p className={"hidden xl:block ml-2"}>Activate Night</p>
+                            </div>
                             :
-                            <Fragment>
+                            <div className={"block xl:min-w-32 xl:flex  xl:items-center xl:justify-center"}>
                                 <FontAwesomeIcon className={"h-4"} icon={faSun}/>
-                            </Fragment>
+                                <p className={"hidden xl:block ml-2"}>Activate Day</p>
+                            </div>
                         }
                     </button>
                 </div>

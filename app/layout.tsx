@@ -42,7 +42,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         >
         <div className={"w-full h-full"}>
             <div className={"m-4 flex items-center justify-center"}>
-                <Navbar theme={"dark"}></Navbar>
+                <Navbar theme={"light"}></Navbar>
             </div>
             {children}
             <div className={""}>
