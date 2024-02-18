@@ -7,6 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faExternalLinkAlt, faMoon, faSun, faUser} from "@fortawesome/free-solid-svg-icons";
 import React, {Fragment} from "react";
 import Link from "next/link";
+import Button from "@/app/components/button";
 
 export default function Navbar(props: { changeTheme?: any, theme: string}) {
 
@@ -63,21 +64,22 @@ export default function Navbar(props: { changeTheme?: any, theme: string}) {
 
                 <div
                     className={"flex justify-end"}>
-                    <button
+                    <Button
                         onClick={props.changeTheme}
-                        className={"h-10 min-w-10 xl:px-4 bg-black/[0.2] border border-purple-600 items-center justify-center  dark:border-slate-600 rounded-full shadow-lg"}>
+                        className={"xl:min-w-32"}
+                        >
                         {props.theme == "light" ?
-                            <div className={"block xl:min-w-32  xl:flex xl:items-center xl:justify-center"}>
+                            <div className={"block xl:min-w-32 xl:flex xl:items-center xl:justify-center"}>
                                 <FontAwesomeIcon className={"h-4"} icon={faMoon}/>
                                 <p className={"hidden xl:block ml-2"}>Activate Night</p>
                             </div>
                             :
-                            <div className={"block xl:min-w-32 xl:flex  xl:items-center xl:justify-center"}>
+                            <div className={"block xl:min-w-32 xl:flex xl:items-center xl:justify-center"}>
                                 <FontAwesomeIcon className={"h-4"} icon={faSun}/>
                                 <p className={"hidden xl:block ml-2"}>Activate Day</p>
                             </div>
                         }
-                    </button>
+                    </Button>
                 </div>
             </div>
         </div>

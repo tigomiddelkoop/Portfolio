@@ -1,6 +1,7 @@
 import styles from "./button.module.scss"
 
 interface Props {
+    onClick?: any
     className?: any;
     children: any;
     color?: "primary" | "secondary" | "danger" | "warning" | "success" | "info" | "purple";
@@ -15,34 +16,9 @@ export default function Button(props: Props) {
     switch (props.color) {
         default: // default to primary colors when no color has been given
         case "primary": {
-            type = styles.primary + " dark:border-gray-700 dark:text-white dark:hover:bg-gray-400 dark:hover:bg-gray-400 dark:bg-gray-700";
+            type = styles.primary + " dark:border-slate-600 dark:text-white dark:hover:bg-white/[0.2]";
             break;
         }
-        case "secondary": {
-            type = styles.secondary;
-            break;
-        }
-        case "danger": {
-            type = styles.danger
-            break;
-        }
-        case "warning": {
-            type = styles.warning;
-            break;
-        }
-        case "success": {
-            type = styles.success;
-            break;
-        }
-        case "info": {
-            type = styles.info;
-            break;
-        }
-        case "purple": {
-            type = styles.purple;
-            break;
-        }
-
     }
 
     let classNames = ""
@@ -50,7 +26,7 @@ export default function Button(props: Props) {
 
 
     return (
-        <div className={type + " " + classNames}>
+        <div onClick={props.onClick} className={`${type} ${classNames}`}>
             {props.children}
         </div>
     )
