@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import {NextFontWithVariable} from "next/dist/compiled/@next/font";
 import React from "react";
+import Footer from "@/app/components/footer";
+import Navbar from "@/app/components/navbar";
 
 const fonts: NextFontWithVariable = localFont({
     src: [
@@ -34,19 +36,28 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <html className={`${fonts.variable}`} lang="en">
+        <html className={`${fonts.variable} dark`} lang="en">
         <body
-            className={"bg-fixed h-screen bg-gradient-to-br dark:from-gray-600 dark:to-black to-purple-800 from-pink-700"}
+            className={"text-white bg-fixed h-screen bg-gradient-to-br dark:from-slate-950 dark:via-slate-800 dark:to-slate-950 to-purple-950 via-purple-800 from-purple-950"}
         >
-        {children}
-        </body>
-        <footer>
-            - Pink and purple are one of my favorite colors, so I will reflect that here
-            - All pictures shown are self made, no stock pictures are used
-            - Build version
+        <div className={"w-full h-full"}>
+            <div className={"m-4 flex items-center justify-center"}>
+                <Navbar theme={"dark"}></Navbar>
+            </div>
+            {children}
+            <div className={""}>
+                <Footer/>
+            </div>
+        </div>
 
-            - Auto switch to darkmode when at night (can be forced to either one ofc)
-        </footer>
+        {/*<footer>*/}
+        {/*    - Pink and purple are one of my favorite colors, so I will reflect that here*/}
+        {/*    - All pictures shown are self made, no stock pictures are used*/}
+        {/*    - Build version*/}
+        {/**/}
+        {/*    - Auto switch to darkmode when at night (can be forced to either one ofc)*/}
+        {/*</footer>*/}
+        </body>
         </html>
     );
 }

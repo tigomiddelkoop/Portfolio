@@ -1,6 +1,6 @@
 // import styles from "./skillcard.module.scss";
 // import React from "react";
-// import SkillcardEntry from "./skillcardEntry";
+// import SkillsCardEntry from "./skillcardEntry";
 //
 // interface props {
 //     entries?: {
@@ -44,7 +44,7 @@
 //                 {/*    const lastEntry: boolean = entries.length == (index + 1);*/}
 //                 {/**/}
 //                 {/*    return (*/}
-//                 {/*        <SkillcardEntry entry={entry} lastEntry={lastEntry}/>*/}
+//                 {/*        <SkillsCardEntry entry={entry} lastEntry={lastEntry}/>*/}
 //                 {/*    )*/}
 //                 {/**/}
 //                 {/*})}*/}

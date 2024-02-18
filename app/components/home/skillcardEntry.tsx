@@ -2,7 +2,7 @@
 // import {DateTime, Duration} from "luxon";
 // import {number} from "prop-types";
 //
-// export default function SkillcardEntry(props: {
+// export default function SkillsCardEntry(props: {
 //     entry: {
 //         enabled: boolean
 //         name: string
