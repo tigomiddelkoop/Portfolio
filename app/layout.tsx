@@ -3,7 +3,7 @@ import type {Metadata} from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import {NextFontWithVariable} from "next/dist/compiled/@next/font";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Footer from "@/app/components/footer";
 import Navbar from "@/app/components/navbar";
 
@@ -36,18 +36,19 @@ const fonts: NextFontWithVariable = localFont({
 // };
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
-    const [theme, setTheme] = useState(getTheme);
+    const [theme, setTheme] = useState("light");
+
+    useEffect(() => {
+        setTheme(getTheme());
+    }, []);
 
     function getTheme() {
         let theme = "";
-        if (typeof window !== 'undefined') {
-            if ((!('theme' in window.localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || window.localStorage.theme == "dark") {
-                theme = "dark"
-            } else {
-                theme = "light"
-            }
+        if ((!('theme' in window.localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || window.localStorage.theme == "dark") {
+            theme = "dark"
+        } else {
+            theme = "light"
         }
-
         return theme
     }
 
@@ -65,7 +66,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
     return (
         <html className={`${fonts.variable} ${theme}`} lang="en">
         <body
-            className={"duration-1000 text-white bg-fixed h-screen bg-gradient-to-br dark:from-slate-950 dark:via-slate-800 dark:to-slate-950 to-purple-950 via-purple-800 from-purple-950"}
+            className={`duration-1000 text-white bg-fixed h-screen bg-gradient-to-br dark:from-slate-950 dark:via-slate-800 dark:to-slate-950 to-purple-950 via-purple-800 from-purple-950`}
         >
         <div className={"w-full h-full "}>
             <div className={"m-4 flex items-center justify-center"}>
