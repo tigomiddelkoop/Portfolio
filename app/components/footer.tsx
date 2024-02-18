@@ -44,11 +44,6 @@ export default function Footer() {
                        href={"https://www.linkedin.com/in/tigo-middelkoop-92067a15b/"}><FontAwesomeIcon width={16}
                                                                                                         className={"mr-1"}
                                                                                                         icon={faLinkedin}/> LinkedIn</a>
-                    <a className={footerLink} rel={"noreferrer noopener _blank"}
-                       href={"https://discord.gg/Tx3CKJB2QY"}><FontAwesomeIcon width={16}
-                                                                               className={"mr-1"}
-                                                                               icon={faDiscord
-                                                                               }/> Discord</a>
                 </div>
             </div>
 
