@@ -44,8 +44,8 @@ export default function Home() {
 
             {/* Name part */}
             <div
-                className={"h-screen flex flex-col justify-center items-center border-b-2 dark:border-gray-600 mb-4 px-4 py-6 xl:px-12 xl:py-10 w-full xl:w-auto"}>
-                <div className="flex flex-row  mb-3 justify-center items-center">
+                className={"h-screen flex flex-col justify-center items-center dark:border-gray-600 mb-4 px-4 py-6 xl:px-12 xl:py-10 w-full xl:w-auto"}>
+                <div className="flex flex-row mb-3 justify-center items-center">
                     <Image
                         className={"rounded-full border-2 dark:border-gray-400 shadow-lg xl:h-32 xl:w-32 h-24 w-24 mr-4"}
                         alt="Tigo"
@@ -101,16 +101,16 @@ export default function Home() {
                 </div>
             </div>
             {/*Skills section*/}
-            <div className={"space-y-2"}>
-                <div className={"text-center space-y-1"}>
-                    <h1 className={"text-4xl"}>
-                        My Experience
-                    </h1>
-                    <h5 className={"text-xs"}>
-                        The stuff I have experience with.
-                    </h5>
-                </div>
-                <div className={"flex  gap-2 flex-wrap justify-center"}>
+            {/*<div className={"space-y-2"}>*/}
+            {/*    <div className={"text-center space-y-1"}>*/}
+            {/*        <h1 className={"text-4xl"}>*/}
+            {/*            My skills*/}
+            {/*        </h1>*/}
+            {/*        <h5 className={"text-xs"}>*/}
+            {/*            The tooling and programming languages I have experience in*/}
+            {/*        </h5>*/}
+            {/*    </div>*/}
+            {/*    <div className={"flex  gap-2 flex-wrap justify-center"}>*/}
                     {/*{skills.map(card =>*/}
                     {/*    <SkillsCard*/}
                     {/*        key={card.name}*/}
@@ -120,8 +120,8 @@ export default function Home() {
                     {/*        entries={card.entries}*/}
                     {/*    />*/}
                     {/*)}*/}
-                </div>
-            </div>
+                {/*</div>*/}
+            {/*</div>*/}
         </div>
     )
 }
