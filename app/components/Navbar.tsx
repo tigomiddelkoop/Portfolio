@@ -18,7 +18,7 @@ export default function Navbar(props: { changeTheme?: any, theme: string }): Rea
     return (
         <div className={"fixed top-0 w-full backdrop-blur-3xl"}>
             <div className={"flex w-full justify-center items-center"}>
-                <div className={"px-4 w-3/4 grid grid-cols-4 justify-between h-16 items-center"}>
+                <div className={"px-4 w-full lg:w-3/4 grid grid-cols-4 justify-between h-16 items-center"}>
                     <Link href={"/"}>
                         <div className={"h-10 flex items-center"}>
 
