@@ -16,7 +16,7 @@ export default function Navbar(props: { changeTheme?: any, theme: string }): Rea
     const [navBarOpen, setNavBarOpen] = useState(false);
 
     return (
-        <div className={"fixed top-0 w-full lg:w-3/4 backdrop-blur"}>
+        <div className={"fixed top-0 w-full lg:w-3/4 backdrop-blur-3xl"}>
             <div className={"px-4 grid grid-cols-4 justify-between h-16 items-center"}>
                 <Link href={"/"}>
                     <div className={"h-10 flex items-center"}>
@@ -42,7 +42,7 @@ export default function Navbar(props: { changeTheme?: any, theme: string }): Rea
                     <div
                         className={"flex py-2 px-6 xl:px-8 text-md bg-black/[0.2] border border-purple-600 dark:border-slate-600 rounded-full shadow-lg space-x-2 xl:space-x-6 overflow-auto xl:overflow-none scroll-hidden"}>
                         <Link href={"/"}
-                              className={"hover:text-purple-600 dark:hover:text-slate-600"}>Skills</Link>
+                              className={"hover:text-purple-600 dark:hover:text-slate-600"}>Experiences</Link>
                         <Link href={"/"} className={"hover:text-purple-600 dark:hover:text-slate-600"}>Projects</Link>
                         <Link href={"/"} className={"hover:text-purple-600 dark:hover:text-slate-600"}>Socials</Link>
                     </div>

@@ -1,5 +1,5 @@
 .pill {
-  @apply rounded px-1 font-light text-xs cursor-default;
+  @apply rounded-full px-1 text-xs cursor-default;
 }
 
 .primary {
@@ -7,7 +7,7 @@
 }
 
 .secondary {
-  @apply pill text-black border-gray-700 text-white bg-pink-600;
+  @apply pill text-white border-gray-700 bg-pink-600;
 }
 
 .danger {

@@ -23,7 +23,7 @@ export default function Footer(): React.JSX.Element  {
     return <footer>
         <Separator classNames={"mt-2"}/>
         <div className={"backdrop-blur-3xl text-white align-bottom p-4 border-gray-100 items-center justify-center text-center dark:border-gray-500"}>
-            <h1 className={"text-2xl py-2 font-bold"}>tigo<span className={"text-700"}>.</span>tech</h1>
+            <h1 className={"text-2xl py-2 font-bold bg-clip-text text-transparent bg-gradient-to-br from-white dark:to-slate-600 to-purple-600"}>tigo.tech</h1>
 
             <div className={"flex flex-col lg:flex-row justify-center text-center"}>
                 <div className={styles.categoryContainer}>

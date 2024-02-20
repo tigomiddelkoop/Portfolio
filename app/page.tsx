@@ -69,12 +69,6 @@ export default function Home() {
                 <div
                     className={"mb-2 p-0 h-auto text-wrap dark:text-slate-300 text-purple-300 font-black text-center"}>
                     <p>PHP, JavaScript/TypeScript, Rust, Kubernetes & Docker</p>
-                    {/*<p>*/}
-                    {/*    <span className={"font-bold"}>Languages: </span>*/}
-                    {/*</p>*/}
-                    {/*<p>*/}
-                    {/*    <span className={"font-bold"}>Hosting: </span> Kubernetes & Docker*/}
-                    {/*</p>*/}
                 </div>
 
                 <div className={"flex justify-center space-x-1"}>
@@ -99,40 +93,36 @@ export default function Home() {
                     </a>
                 </div>
             </div>
-            <div className={"absolute flex flex-col bottom-5 animate-bounce"}>
+
+            <div className={"absolute flex flex-col bottom-5 animate-bounce dark:text-slate-300 text-purple-300"}>
                 <p className={"text-xs font-bold mb-2"}>Skills, Projects & Socials</p>
                 <FontAwesomeIcon height={16} icon={faAnglesDown}/>
             </div>
 
             <Separator classNames={"mb-2"}/>
 
-            <div className={"w-full flex flex-col items-center"}>
-                <div className={"text-center space-y-1"}>
-                    <h1 className={"text-4xl font-normal"}>
-                        My skills
+            <div className={"w-full flex flex-col items-center my-2"}>
+                <div className={"text-center"}>
+                    <h1 className={"text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white dark:to-slate-600 to-purple-600 text-center"}>
+                        Experiences
                     </h1>
-                    <h5 className={"text-xs"}>
-                        The tooling and programming languages I have experience in
-                    </h5>
+                    <h5 className={"text-xl font-bold dark:text-slate-300 text-purple-300"}>The tooling and programming languages I have experience in</h5>
                 </div>
-                <div className={"w-1/2 grid grid-flow-dense grid-cols-1 xl:grid-cols-3 gap-4"}>
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>1</div>
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>2</div>
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>2</div>
 
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>3</div>
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-2"}>4</div>
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-2"}>5</div>
-
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>5</div>
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-2"}>7</div>
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-2"}>8</div>
-
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>9</div>
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>10</div>
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-2"}>11</div>
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-2"}>12</div>
-                    <div className={"border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>13</div>
+                <div className={"p-2 xl:p-0 w-full md:w-3/4 lg:w-5/6 xl:w-7/8 2xl:w-4/6 grid grid-flow-dense grid-cols-1 lg:grid-cols-3 gap-4 mt-5 text-center"}>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 1</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 2</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 3</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>Experience 4</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 5</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 6</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>Experience 7</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>Experience 8</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 9</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 10</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>Experience 11</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>Experience 12</div>
+                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 13</div>
                 </div>
             </div>
         </div>
