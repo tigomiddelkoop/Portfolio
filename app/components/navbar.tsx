@@ -83,7 +83,7 @@ export default function Navbar(props: { changeTheme?: any, theme: string }) {
                     </Button>
                 </div>
             </div>
-            <div className={"h-0.5 bg-gradient-to-r from-transparent via-purple-600 to-transparent dark:via-slate-600 "}/>
+            <div className={"h-px bg-gradient-to-r from-transparent via-purple-600 to-transparent dark:via-slate-600 "}/>
         </div>
 
     )
