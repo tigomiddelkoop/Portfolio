@@ -9,7 +9,7 @@ import React, {Fragment} from "react";
 import Link from "next/link";
 import Button from "@/app/components/button";
 
-export default function Navbar(props: { changeTheme?: any, theme: string}) {
+export default function Navbar(props: { changeTheme?: any, theme: string }) {
 
     const router = useRouter();
     const [navBarOpen, setNavBarOpen] = useState(false);
@@ -31,7 +31,7 @@ export default function Navbar(props: { changeTheme?: any, theme: string}) {
     }, [])
 
     return (
-        <div className={"fixed top-0 w-full xl:w-3/4 backdrop-blur border-b border-purple-600 dark:border-slate-600"}>
+        <div className={"fixed top-0 w-full lg:w-3/4 backdrop-blur"}>
             <div className={"px-4 grid grid-cols-4 justify-between h-16 items-center"}>
                 <Link href={"/"}>
                     <div className={"h-10 flex items-center"}>
@@ -44,9 +44,10 @@ export default function Navbar(props: { changeTheme?: any, theme: string}) {
                             height={64}
                             width={64}
                         />
-                        <div className={"text-2xl hidden xl:flex ml-2"}>
+                        <div
+                            className={"text-2xl hidden xl:flex ml-2 bg-clip-text text-transparent bg-gradient-to-br from-white dark:to-slate-600 to-purple-600"}>
                             <h1><span className={"font-black"}>Tigo</span></h1>
-                            <h1><span className={"font-light"}>Middelkoop</span></h1>
+                            <h1><span className={"font-normal"}>Middelkoop</span></h1>
                         </div>
                     </div>
                 </Link>
@@ -67,7 +68,7 @@ export default function Navbar(props: { changeTheme?: any, theme: string}) {
                     <Button
                         onClick={props.changeTheme}
                         className={"xl:min-w-32"}
-                        >
+                    >
                         {props.theme == "light" ?
                             <div className={"block xl:min-w-32 xl:flex xl:items-center xl:justify-center"}>
                                 <FontAwesomeIcon className={"h-4"} icon={faMoon}/>
@@ -82,7 +83,9 @@ export default function Navbar(props: { changeTheme?: any, theme: string}) {
                     </Button>
                 </div>
             </div>
+            <div className={"h-0.5 bg-gradient-to-r from-transparent via-purple-600 to-transparent dark:via-slate-600 "}/>
         </div>
+
     )
 }
 

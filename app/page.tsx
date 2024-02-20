@@ -1,12 +1,9 @@
-import Head from 'next/head';
 import Button from "./components/button";
 import Image from "next/image";
-// import SkillsCard from "./components/home/skillcard";
-// import {getData} from "./api/home";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faDiscord, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
-import React, {Fragment} from "react";
-import SkillsCard from "@/app/components/home/SkillsCard";
+import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faAnglesDown} from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 export default function Home() {
 
@@ -47,7 +44,7 @@ export default function Home() {
                 className={"h-screen flex flex-col justify-center items-center dark:border-gray-600 mb-4 px-4 py-6 xl:px-12 xl:py-10 w-full xl:w-auto"}>
                 <div className="flex flex-row mb-3 justify-center items-center">
                     <Image
-                        className={"rounded-full border-2 dark:border-gray-400 shadow-lg xl:h-32 xl:w-32 h-24 w-24 mr-4"}
+                        className={"rounded-full border-2 border-purple-900 dark:border-slate-900 shadow-lg xl:h-32 xl:w-32 h-24 w-24 mr-4"}
                         alt="Tigo"
                         src={"/img/pf_new.jpg"}
                         style={{objectFit: "cover"}}
@@ -55,21 +52,22 @@ export default function Home() {
                         width={256}
                     />
 
-                    <div className={"bg-clip-text text-transparent bg-gradient-to-br from-white dark:to-slate-500 to-purple-500 text-center"}>
+                    <div
+                        className={"bg-clip-text text-transparent bg-gradient-to-br from-white dark:to-slate-600 to-purple-600 text-center"}>
                         <h1
-                            className="text-4xl md:text-6xl font-light mb-1">
+                            className="text-4xl md:text-6xl mb-1">
                             <span className={"font-bold"}>Tigo</span>Middelkoop
                         </h1>
                         <h4
-                            className="text-1xl md:text-2xl">
+                            className="text-1xl md:text-2xl font-normal">
                             Cloud Engineer & Fullstack Developer
                         </h4>
                     </div>
                 </div>
 
-                 {/*Job function and quick summary of languages*/}
+                {/*Job function and quick summary of languages*/}
                 <div
-                    className={"mb-2 p-0 h-auto text-s text-center text-wrap"}>
+                    className={"mb-2 p-0 h-auto text-wrap dark:text-slate-300 text-purple-300 text-center"}>
                     <p>
                         <span className={"font-bold"}>Languages: </span> PHP, JavaScript/TypeScript & Rust
                     </p>
@@ -100,6 +98,10 @@ export default function Home() {
                     </a>
                 </div>
             </div>
+            <div className={"absolute flex flex-col bottom-5 animate-bounce"}>
+                <p className={"text-xs font-bold mb-2"}>Skills, Projects & Socials</p>
+                <FontAwesomeIcon height={16} icon={faAnglesDown}/>
+            </div>
             {/*Skills section*/}
             {/*<div className={"space-y-2"}>*/}
             {/*    <div className={"text-center space-y-1"}>*/}
@@ -111,16 +113,16 @@ export default function Home() {
             {/*        </h5>*/}
             {/*    </div>*/}
             {/*    <div className={"flex  gap-2 flex-wrap justify-center"}>*/}
-                    {/*{skills.map(card =>*/}
-                    {/*    <SkillsCard*/}
-                    {/*        key={card.name}*/}
-                    {/*        name={card.name}*/}
-                    {/*        subname={card.subname}*/}
-                    {/*        image={card.image}*/}
-                    {/*        entries={card.entries}*/}
-                    {/*    />*/}
-                    {/*)}*/}
-                {/*</div>*/}
+            {/*{skills.map(card =>*/}
+            {/*    <SkillsCard*/}
+            {/*        key={card.name}*/}
+            {/*        name={card.name}*/}
+            {/*        subname={card.subname}*/}
+            {/*        image={card.image}*/}
+            {/*        entries={card.entries}*/}
+            {/*    />*/}
+            {/*)}*/}
+            {/*</div>*/}
             {/*</div>*/}
         </div>
     )

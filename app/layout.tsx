@@ -68,7 +68,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         <body
             className={`duration-1000 text-white bg-fixed h-screen bg-gradient-to-br dark:from-slate-950 dark:via-slate-800 dark:to-slate-950 to-purple-950 via-purple-800 from-purple-950`}
         >
-        <div className={"w-full h-full "}>
+        <div className={"w-full h-full"}>
             <div className={"m-4 flex items-center justify-center"}>
                 <Navbar changeTheme={changeTheme} theme={theme}></Navbar>
             </div>

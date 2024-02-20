@@ -33,7 +33,7 @@ export default function Footer() {
 
             <div className={styles.categoryContainer}>
                 <div>
-                    <p className={styles.categoryTitle}>Socials</p>
+                    <p className={styles.categoryTitle}>Find me here</p>
                 </div>
                 <div className={styles.socialMediaCategory}>
                     <a className={footerLink} rel={"noreferrer noopener _blank"}

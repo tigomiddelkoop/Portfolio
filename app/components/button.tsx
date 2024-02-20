@@ -16,7 +16,7 @@ export default function Button(props: Props) {
     switch (props.color) {
         default: // default to primary colors when no color has been given
         case "primary": {
-            type = styles.primary + " dark:border-slate-600 dark:text-white dark:hover:bg-white/[0.2]";
+            type = styles.primary + " dark:border-slate-600 dark:text-white dark:hover:bg-white/[0.1]";
             break;
         }
     }
