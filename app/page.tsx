@@ -106,23 +106,101 @@ export default function Home() {
                     <h1 className={"text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white dark:to-slate-600 to-purple-600 text-center"}>
                         Experiences
                     </h1>
-                    <h5 className={"text-xl font-bold dark:text-slate-300 text-purple-300"}>The tooling and programming languages I have experience in</h5>
+                    <h5 className={"text-xl font-bold dark:text-slate-300 text-purple-300"}>The tooling and programming
+                        languages I have experience in</h5>
                 </div>
 
-                <div className={"p-2 xl:p-0 w-full md:w-3/4 lg:w-5/6 xl:w-7/8 2xl:w-4/6 grid grid-flow-dense grid-cols-1 lg:grid-cols-3 gap-4 mt-5 text-center"}>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 1</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 2</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 3</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>Experience 4</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 5</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 6</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>Experience 7</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>Experience 8</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 9</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 10</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>Experience 11</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>Experience 12</div>
-                    <div className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>Experience 13</div>
+                <div
+                    className={"p-2 xl:p-0 w-full md:w-3/4 lg:w-5/6 xl:w-7/8 2xl:w-4/6 grid grid-flow-dense grid-cols-1 lg:grid-cols-3 gap-4 mt-5 text-center"}>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Experience 1
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Experience 2
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Experience 3
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>
+                        Experience 4
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Experience 5
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Experience 6
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>
+                        Experience 7
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>
+                        Experience 8
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Experience 9
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Experience 10
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>
+                        Experience 11
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>
+                        Experience 12
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Experience 13
+                    </div>
+                </div>
+            </div>
+
+            <div className={"w-full flex flex-col items-center my-2"}>
+                <div className={"text-center"}>
+                    <h1 className={"text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white dark:to-slate-600 to-purple-600 text-center"}>
+                        Projects
+                    </h1>
+                    <h5 className={"text-xl font-bold dark:text-slate-300 text-purple-300"}>Projects i've built</h5>
+                </div>
+
+                <div
+                    className={"p-2 xl:p-0 w-full md:w-3/4 lg:w-5/6 xl:w-7/8 2xl:w-4/6 grid grid-flow-dense grid-cols-1 lg:grid-cols-3 gap-4 mt-5 text-center"}>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Project 1
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Project 2
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Project 3
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Project 4
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Project 5
+                    </div>
+                    <div
+                        className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        Project 6
+                    </div>
                 </div>
             </div>
         </div>
