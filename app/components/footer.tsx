@@ -20,7 +20,7 @@ export default function Footer() {
     const footerLinkActive = styles.link + " dark:hover:bg-pink-700 items-center border border-rounded border-white"
 
     return <footer
-        className={"text-white align-bottom p-4 border-t-2 border-gray-100 items-center justify-center text-center dark:bg-gray-800 dark:border-gray-500"}>
+        className={"backdrop-blur-3xl text-white align-bottom p-4 border-t-2 border-gray-100 items-center justify-center text-center dark:bg-gray-800 dark:border-gray-500"}>
         <h1 className={"text-2xl py-2 font-bold"}>tigo<span className={"text-700"}>.</span>tech</h1>
 
         <div className={"flex flex-col lg:flex-row justify-center text-center"}>

@@ -68,12 +68,13 @@ export default function Home() {
                 {/*Job function and quick summary of languages*/}
                 <div
                     className={"mb-2 p-0 h-auto text-wrap dark:text-slate-300 text-purple-300 text-center"}>
-                    <p>
-                        <span className={"font-bold"}>Languages: </span> PHP, JavaScript/TypeScript & Rust
-                    </p>
-                    <p>
-                        <span className={"font-bold"}>Hosting: </span> Kubernetes & Docker
-                    </p>
+                    <p>PHP, JavaScript/TypeScript, Rust, Kubernetes & Docker</p>
+                    {/*<p>*/}
+                    {/*    <span className={"font-bold"}>Languages: </span>*/}
+                    {/*</p>*/}
+                    {/*<p>*/}
+                    {/*    <span className={"font-bold"}>Hosting: </span> Kubernetes & Docker*/}
+                    {/*</p>*/}
                 </div>
 
                 <div className={"flex justify-center space-x-1"}>
