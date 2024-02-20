@@ -4,8 +4,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import {NextFontWithVariable} from "next/dist/compiled/@next/font";
 import React, {useEffect, useState} from "react";
-import Footer from "@/app/components/footer";
-import Navbar from "@/app/components/navbar";
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
 
 const fonts: NextFontWithVariable = localFont({
     src: [
@@ -21,7 +21,12 @@ const fonts: NextFontWithVariable = localFont({
         },
         {
             path: './fonts/Satoshi-Bold.woff2',
-            weight: '600',
+            weight: '700',
+            style: 'normal'
+        },
+        {
+            path: './fonts/Satoshi-Black.woff2',
+            weight: '900',
             style: 'normal'
         }
     ],

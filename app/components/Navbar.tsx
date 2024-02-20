@@ -7,28 +7,13 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faExternalLinkAlt, faMoon, faSun, faUser} from "@fortawesome/free-solid-svg-icons";
 import React, {Fragment} from "react";
 import Link from "next/link";
-import Button from "@/app/components/button";
+import Button from "@/app/components/Button";
+import Separator from "@/app/components/Separator";
 
-export default function Navbar(props: { changeTheme?: any, theme: string }) {
+export default function Navbar(props: { changeTheme?: any, theme: string }): React.JSX.Element {
 
     const router = useRouter();
     const [navBarOpen, setNavBarOpen] = useState(false);
-
-
-    const handleKeypress = (event: KeyboardEvent) => {
-        if (!event.ctrlKey) {
-            if (event.code === "KeyG") {
-                router.push("/games");
-            }
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener("keydown", handleKeypress)
-        return () => {
-            window.removeEventListener("keydown", handleKeypress)
-        }
-    }, [])
 
     return (
         <div className={"fixed top-0 w-full lg:w-3/4 backdrop-blur"}>
@@ -64,7 +49,7 @@ export default function Navbar(props: { changeTheme?: any, theme: string }) {
                 </div>
 
                 <div
-                    className={"flex justify-end"}>
+                    className={"flex justify-end space-x-2"}>
                     <Button
                         onClick={props.changeTheme}
                         className={"xl:min-w-32"}
@@ -81,11 +66,17 @@ export default function Navbar(props: { changeTheme?: any, theme: string }) {
                             </div>
                         }
                     </Button>
+                    {/*<Button*/}
+                    {/*    onClick={props.changeTheme}*/}
+                    {/*    className={"block xl:flex xl:items-center xl:justify-center"}*/}
+                    {/*>*/}
+                    {/*    <FontAwesomeIcon className={"h-4"} icon={faUser}/>*/}
+                    {/*    <p className={"hidden xl:block ml-2"}>Sign In</p>*/}
+                    {/*</Button>*/}
                 </div>
             </div>
-            <div className={"h-px bg-gradient-to-r from-transparent via-purple-600 to-transparent dark:via-slate-600 "}/>
+            <Separator/>
         </div>
-
     )
 }
 

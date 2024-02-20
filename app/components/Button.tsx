@@ -1,4 +1,5 @@
 import styles from "./button.module.scss"
+import React from "react";
 
 interface Props {
     onClick?: any
@@ -9,7 +10,7 @@ interface Props {
 }
 
 
-export default function Button(props: Props) {
+export default function Button(props: Props): React.JSX.Element  {
 
     let type = styles.primary;
 
