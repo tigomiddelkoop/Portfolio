@@ -109,11 +109,26 @@ export default function Home() {
                 <div className={"w-full flex flex-col items-center my-2"}>
                     <div className={"text-center"}>
                         <h1 className={"text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white dark:to-slate-600 to-purple-600 text-center"}>
+                            About me
+                        </h1>
+                        <h5 className={"text-xl font-bold dark:text-slate-300 text-purple-300"}>WHO AM I?!?!?!?!?!</h5>
+
+                </div>
+                <p className={"font-normal"}>Hi! I'm, as you have probably seen up top, Tigo. I specialise in building Clouds using mostly Kubernetes.</p>
+            {/*
+            Talk about yourself a bit more, what you do, your hobbies and your current work. Might also be intresting to show of your home setup using TALOS,
+            Maybe run this whole site on there including SystemManager and everything else :)
+            */}
+            </div>
+
+                <Separator classNames={"w-1/2 my-2"}/>
+
+                <div className={"w-full flex flex-col items-center my-2"}>
+                    <div className={"text-center"}>
+                        <h1 className={"text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white dark:to-slate-600 to-purple-600 text-center"}>
                             Experiences
                         </h1>
-                        <h5 className={"text-xl font-bold dark:text-slate-300 text-purple-300"}>The tooling and
-                            programming
-                            languages I have experience in</h5>
+                        <h5 className={"text-xl font-bold dark:text-slate-300 text-purple-300"}>The stuff I have experience in</h5>
                     </div>
 
                     <div
@@ -172,6 +187,9 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+
+                <Separator classNames={"w-1/2 my-2"}/>
+
 
                 <div className={"w-full flex flex-col items-center my-2"}>
                     <div className={"text-center"}>
