@@ -20,7 +20,7 @@ export default function SkillCard(props: Props): React.JSX.Element {
 
     return (
         <div
-            className={"flex m-2 border-2 dark:border-slate-600 border-purple-600 rounded-lg col-span-1 flex-col bg-opacity-25 bg-black"}>
+            className={"backdrop-blur-3xl flex m-2 border-2 dark:border-slate-600 border-purple-600 rounded-lg col-span-1 flex-col bg-opacity-25 bg-black"}>
             <div className={"flex flex-col h-32 justify-center rounded-t-lg border-b-2 dark:border-slate-600 border-purple-600"}>
                 <h1 className={"font-bold text-4xl"}>{props.data.name}</h1>
                 <p className={"font-bold text-sm"}>{props.data.description}</p>

@@ -10,7 +10,7 @@ import Separator from "@/app/components/Separator";
 export default function Footer(): React.JSX.Element  {
 
     // This might not be the best option, I want to look for a better option.
-    const [buildId, setBuildId] = useState("DEVELOPMENT")
+    const [buildId, setBuildId] = useState("Production")
     // useEffect(() => {
     //     if (buildId == "") {
     //         fetch("/api/buildid").then(response => response.json().then(data => setBuildId(data.buildId)))
