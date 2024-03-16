@@ -1,17 +1,17 @@
 {
-  "title": "Portfolio",
-  "slug": "portfolio",
-  "image": "/img/projects/portfolio.jpg",
-  "website": "https://tigo.tech",
-  "short_description": "My portfolio, version 3 of my portfolio. Completely build in NextJS",
-  "long_description": [
-    "The 3rd version in the series of my portfolio",
-    "The first version in this lineup was built in PHP and used laravel as its base, As time went along I discovered ReactJS and decided that is was time to revamp my portfolio.",
-    "The second version of my portfolio was bases upon react and used no database. It used flatfile to retrieve information that was going to be displayed. As time went, this got out of hand. Flat file isnt really maintainable, since you needed to login into the server to make changes.",
-    "This version of my portfolio uses NextJS (Which is based upon React) It still uses flatfile but this is temporary to get the website up and running. When I start on the tigo.tech management system I will also link this site to that system."
-  ],
-  "languages": "TypeScript",
-  "source_control": {
-    "github": "https://github.com/tigomiddelkoop/portfolio"
-  }
+    "title": "Portfolio",
+    "slug": "portfolio",
+    "image": "/img/projects/portfolio.jpg",
+    "website": "https://tigo.tech",
+    "short_description": "My portfolio, version 3 of my portfolio. Completely build in NextJS",
+    "long_description": [
+        "The 3rd version in the series of my portfolio",
+        "The first version in this lineup was built in PHP and used laravel as its base, As time went along I discovered ReactJS and decided that is was time to revamp my portfolio.",
+        "The second version of my portfolio was bases upon react and used no database. It used flatfile to retrieve information that was going to be displayed. As time went, this got out of hand. Flat file isnt really maintainable, since you needed to login into the server to make changes.",
+        "This version of my portfolio uses NextJS (Which is based upon React) It still uses flatfile but this is temporary to get the website up and running. When I start on the tigo.tech management system I will also link this site to that system."
+    ],
+    "languages": "TypeScript",
+    "source_control": {
+        "github": "https://github.com/tigomiddelkoop/portfolio"
+    }
 }

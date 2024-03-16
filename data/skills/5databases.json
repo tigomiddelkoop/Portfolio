@@ -1,21 +1,22 @@
 {
-  "name": "Databases",
-  "image": "/img/skills/databases.jpg",
-  "entries": [
-    {
-      "name": "MySQL/MariaDB",
-      "date": "2018-01-01",
-      "confidence": 50
-    },
-    {
-      "name": "PostgreSQL",
-      "date": "2022-06-01",
-      "confidence": 50
-    },
-    {
-      "name": "ArangoDB",
-      "date": "2019-06-01",
-      "confidence": 50
-    }
-  ]
+    "name": "Databases",
+    "description": "Should we store data?",
+    "image": "/img/skills/databases.jpg",
+    "entries": [
+        {
+            "name": "MySQL/MariaDB",
+            "date": "2018-01-01",
+            "confidence": 50
+        },
+        {
+            "name": "PostgreSQL",
+            "date": "2022-06-01",
+            "confidence": 50
+        },
+        {
+            "name": "ArangoDB",
+            "date": "2019-06-01",
+            "confidence": 50
+        }
+    ]
 }

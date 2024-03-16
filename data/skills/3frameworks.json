@@ -1,46 +1,36 @@
 {
-  "name": "Frameworks",
-  "image": "/img/skills/ssh.jpg",
-  "entries": [
-    {
-      "name": "Laravel",
-      "extras": [
-        "PHP"
-      ],
-      "date": "2018",
-      "confidence": 75
-    },
-    {
-      "name": "NextJS",
-      "extras": [
-        "TypeScript"
-      ],
-      "date": "2020-12-01",
-      "confidence": 25
-    },
-    {
-      "name": "React",
-      "extras": [
-        "TypeScript"
-      ],
-      "date": "2019-09-01",
-      "confidence": 50
-    },
-    {
-      "name": "Vue",
-      "extras": [
-        "TypeScript"
-      ],
-      "date": "2021-02-09",
-      "confidence": 50
-    },
-    {
-      "name": "ExpressJS",
-      "extras": [
-        "TypeScript"
-      ],
-      "date": "2019-09-01",
-      "confidence": 50
-    }
-  ]
+    "name": "Frameworks",
+    "image": "/img/skills/ssh.jpg",
+    "entries": [
+        {
+            "name": "Laravel",
+            "extras": ["PHP"],
+            "date": "2018",
+            "confidence": 75
+        },
+        {
+            "name": "NextJS",
+            "extras": ["TypeScript"],
+            "date": "2020-12-01",
+            "confidence": 25
+        },
+        {
+            "name": "React",
+            "extras": ["TypeScript"],
+            "date": "2019-09-01",
+            "confidence": 50
+        },
+        {
+            "name": "Vue",
+            "extras": ["TypeScript"],
+            "date": "2021-02-09",
+            "confidence": 50
+        },
+        {
+            "name": "ExpressJS",
+            "extras": ["TypeScript"],
+            "date": "2019-09-01",
+            "confidence": 50
+        }
+    ]
 }

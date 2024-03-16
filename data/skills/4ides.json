@@ -1,35 +1,27 @@
 {
-  "name": "IDEs",
-  "subname": "These are the Tools I develop with",
-  "image": "/img/skills/ide.jpg",
-  "entries": [
-    {
-      "name": "Jetbrains PhpStorm",
-      "extras": [
-        "PHP, HTML and Javascript"
-      ],
-      "date": "2017"
-    },
-    {
-      "name": "Jetbrains Rider",
-      "extras": [
-        ".NET"
-      ],
-      "date": "2020-12-01"
-    },
-    {
-      "name": "Jetbrains IntelliJ",
-      "extras": [
-        "Java and more"
-      ],
-      "date": "2017"
-    },
-    {
-      "name": "Jetbrains DataGrip",
-      "extras": [
-        "Database Management"
-      ],
-      "date": "2021-01-15"
-    }
-  ]
+    "name": "IDEs",
+    "description": "All the editors!",
+    "image": "/img/skills/ide.jpg",
+    "entries": [
+        {
+            "name": "Jetbrains PhpStorm",
+            "extras": ["PHP, HTML and Javascript"],
+            "date": "2017"
+        },
+        {
+            "name": "Jetbrains Rider",
+            "extras": [".NET"],
+            "date": "2020-12-01"
+        },
+        {
+            "name": "Jetbrains IntelliJ",
+            "extras": ["Java and more"],
+            "date": "2017"
+        },
+        {
+            "name": "Jetbrains DataGrip",
+            "extras": ["Database Management"],
+            "date": "2021-01-15"
+        }
+    ]
 }

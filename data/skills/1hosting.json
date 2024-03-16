@@ -1,38 +1,32 @@
 {
-  "name": "Hosting Tools",
-  "subname": "This includes all things hosting",
-  "entries": [
-    {
-      "name": "Kubernetes",
-      "extras": [
-        "Container Orchestration"
-      ],
-      "date": "2020-12-01",
-      "confidence": 70
-    },
-    {
-      "name": "Google Cloud Run",
-      "extras": [
-        "Knative hosting"
-      ],
-      "date": "2024-01-01",
-      "confidence": 40
-    },
-    {
-      "name": "Docker",
-      "extras": [
-        "Containerized Applications"
-      ],
-      "date": "2020-12-01",
-      "confidence": 60
-    },
-    {
-      "name": "Terraform",
-      "extras": [
-        "My infra as code!"
-      ],
-      "date": "2022-03-01",
-      "confidence": 75
-    }
-  ]
+    "name": "Hosting Tools",
+    "description": "Is this where things run on?",
+    "entries": [
+        {
+            "name": "Kubernetes",
+            "extras": ["Container Orchestration"],
+            "date": "2020-12-01",
+            "confidence": 70
+        },
+        {
+          "name": "Google Cloud Run",
+          "extras": [
+            "Knative hosting"
+          ],
+          "date": "2024-01-01",
+          "confidence": 40
+        },
+        {
+            "name": "Docker",
+            "extras": ["Containerized Applications"],
+            "date": "2020-12-01",
+            "confidence": 60
+        },
+        {
+            "name": "Terraform",
+            "extras": ["My infra as code!"],
+            "date": "2022-03-01",
+            "confidence": 75
+        }
+    ]
 }

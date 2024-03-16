@@ -1,15 +1,12 @@
 {
-  "title": "SystemManager Cloud",
-  "slug": "systemmanagercloud",
-  "short_description": "The place to find your plugins/hosting for SystemManager.",
-  "long_description": [],
-  "url": "https://systemmanager.cloud",
-  "images": [],
-  "languages": [
-    "PHP",
-    "TypeScript"
-  ],
-  "source_control": {
-    "github": "https://github.com/systemmanager-io/Core"
-  }
+    "title": "SystemManager Cloud",
+    "slug": "systemmanagercloud",
+    "short_description": "The place to find your plugins/hosting for SystemManager.",
+    "long_description": [],
+    "url": "https://systemmanager.cloud",
+    "images": [],
+    "languages": ["PHP", "TypeScript"],
+    "source_control": {
+        "github": "https://github.com/systemmanager-io/Core"
+    }
 }

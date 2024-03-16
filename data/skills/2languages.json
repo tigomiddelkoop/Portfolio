@@ -1,35 +1,34 @@
 {
-  "name": "Languages",
-  "image": "/img/skills/languages.jpg",
-  "entries": [
-    {
-      "name": "PHP",
-      "date": "2018",
-      "confidence": 50
-    },
-    {
-      "name": "TypeScript",
-      "extras": [
-        "Also JavaScript"
-      ],
-      "date": "2018",
-      "confidence": 75
-    },
-    {
-      "name": "Java",
-      "date": "2019",
-      "confidence": 10
-    },
-    {
-      "enabled": true,
-      "name": "C++, C#, C",
-      "date": "2020-06-01",
-      "confidence": 10
-    },
-    {
-      "name": "Rust",
-      "date": "2020-06-01",
-      "confidence": 10
-    }
-  ]
+    "name": "Languages",
+    "description": "Very much PHP",
+    "image": "/img/skills/languages.jpg",
+    "entries": [
+        {
+            "name": "PHP",
+            "date": "2018",
+            "confidence": 50
+        },
+        {
+            "name": "TypeScript",
+            "extras": ["Also JavaScript"],
+            "date": "2018",
+            "confidence": 75
+        },
+        {
+            "name": "Java",
+            "date": "2019",
+            "confidence": 10
+        },
+        {
+            "enabled": true,
+            "name": "C++, C#, C",
+            "date": "2020-06-01",
+            "confidence": 10
+        },
+        {
+            "name": "Rust",
+            "date": "2020-06-01",
+            "confidence": 10
+        }
+    ]
 }
