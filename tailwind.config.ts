@@ -1,24 +1,24 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss"
 
 const config: Config = {
     content: [
-        './pages/**/*.{js,ts,jsx,tsx,mdx}',
-        './components/**/*.{js,ts,jsx,tsx,mdx}',
-        './app/**/*.{js,ts,jsx,tsx,mdx}',
+        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
-    darkMode: 'class', // or 'media' or 'class' // @TODO make a system that lets the user automagically switch or let them choose to toggle it themselves
+    darkMode: "class", // or 'media' or 'class' // @TODO make a system that lets the user automagically switch or let them choose to toggle it themselves
     theme: {
         extend: {
             fontFamily: {
-                sans: ['var(--font-satoshi)'],
+                sans: ["var(--font-satoshi)"],
             },
             screens: {
-                '3xl': '1600px',
+                "3xl": "1600px",
             },
             backgroundImage: {
-                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                'gradient-conic':
-                    'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+                "gradient-conic":
+                    "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
             },
         },
     },
