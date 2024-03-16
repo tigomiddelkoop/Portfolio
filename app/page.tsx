@@ -1,48 +1,29 @@
+"use client";
+
 import Button from "./components/Button";
 import Image from "next/image";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faAnglesDown} from "@fortawesome/free-solid-svg-icons";
-import React, {Fragment} from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import Separator from "@/app/components/Separator";
-import Navbar from "@/app/components/Navbar";
-import SkillCard from "@/app/components/SkillCard";
+import SkillCard from "./components/SkillCard";
 
 export default function Home() {
 
+    const [projects, setProjects] = useState([]);
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch('/api/projects');
+            const result = await response.json();
+            setProjects(result);
+        }
 
-    const skills: Array<
-        {
-            name: string,
-            subname: string,
-            // image?: string,
-            image: string,
-            entries: {
-                enabled: boolean
-                name: string
-                extras: Array<string>
-                confidence: number
-                date: string
-            }
-        }
-    > = [{
-        name: "Developing",
-        subname: "Is Cool",
-        image: "none",
-        entries: {
-            enabled: true,
-            name: "Developing",
-            extras: ["Is Cool"],
-            confidence: 50,
-            date: "2024-01-01"
-        }
-    }];
+        fetchData();
+    }, []);
 
     return (
         <Fragment>
-            {/*<div className={"m-4 flex items-center justify-center"}>*/}
-            {/*    <Navbar></Navbar>*/}
-            {/*</div>*/}
             <div
                 className={"w-full flex flex-col items-center"}>
                 <div
@@ -74,7 +55,8 @@ export default function Home() {
                     {/*Job function and quick summary of languages*/}
                     <div
                         className={"mb-2 p-0 h-auto text-wrap dark:text-slate-300 text-purple-300 font-black text-center"}>
-                        <p>PHP, TypeScript<span className={"text-xs font-light"}>/JavaScript</span>, Rust, Linux <span className={"text-xs font-light"}>(Arch, Debian)</span>, Kubernetes & Docker</p>
+                        <p>PHP, TypeScript<span className={"text-xs font-light"}>/JavaScript</span>, Rust, Linux <span
+                            className={"text-xs font-light"}>(Arch, Debian)</span>, Kubernetes & Docker</p>
                     </div>
 
                     <div className={"flex justify-center space-x-1"}>
@@ -114,13 +96,14 @@ export default function Home() {
                         </h1>
                         <h5 className={"text-xl font-bold dark:text-slate-300 text-purple-300"}>WHO AM I?!?!?!?!?!</h5>
 
-                </div>
-                <p className={"font-normal"}>Hi! I'm, as you have probably seen up top, Tigo. I specialise in building Clouds using mostly Kubernetes. I also love doing stuff with baremetal servers</p>
-            {/*
+                    </div>
+                    <p className={"font-normal"}>Hi! I'm, as you have probably seen up top, Tigo. I specialise in
+                        building Clouds using mostly Kubernetes. I also love doing stuff with baremetal servers</p>
+                    {/*
             Talk about yourself a bit more, what you do, your hobbies and your current work. Might also be intresting to show of your home setup using TALOS,
             Maybe run this whole site on there including SystemManager and everything else :)
             */}
-            </div>
+                </div>
 
                 <Separator classNames={"w-1/2 my-2"}/>
 
@@ -129,50 +112,16 @@ export default function Home() {
                         <h1 className={"text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white dark:to-slate-600 to-purple-600 text-center"}>
                             Experiences
                         </h1>
-                        <h5 className={"text-xl font-bold dark:text-slate-300 text-purple-300"}>The stuff I have experience in</h5>
+                        <h5 className={"text-xl font-bold dark:text-slate-300 text-purple-300"}>The stuff I have
+                            experience in</h5>
                     </div>
 
                     <div
                         className={"p-2 xl:p-0 w-full md:w-3/4 lg:w-5/6 xl:w-7/8 2xl:w-4/6 grid grid-flow-dense grid-cols-1 lg:grid-cols-3 gap-2 mt-5 text-center"}>
-                        <SkillCard>
-                            Experience 1
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 2
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 3
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 4
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 5
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 6
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 7
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 8
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 9
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 10
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 11
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 12
-                        </SkillCard>
-                        <SkillCard>
-                            Experience 13
-                        </SkillCard>
+                        {projects.map(project => {
+                            return (<SkillCard data={project}></SkillCard>)
+                        })}
+
                     </div>
                 </div>
 

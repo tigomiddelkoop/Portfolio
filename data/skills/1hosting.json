@@ -1,6 +1,6 @@
 {
   "name": "Hosting Tools",
-  "subname": "This includes all things hosting",
+  "description": "Is this where things run on?",
   "entries": [
     {
       "name": "Kubernetes",
