@@ -6,6 +6,7 @@ import {faAnglesDown} from "@fortawesome/free-solid-svg-icons";
 import React, {Fragment} from "react";
 import Separator from "@/app/components/Separator";
 import Navbar from "@/app/components/Navbar";
+import SkillCard from "@/app/components/SkillCard";
 
 export default function Home() {
 
@@ -114,7 +115,7 @@ export default function Home() {
                         <h5 className={"text-xl font-bold dark:text-slate-300 text-purple-300"}>WHO AM I?!?!?!?!?!</h5>
 
                 </div>
-                <p className={"font-normal"}>Hi! I'm, as you have probably seen up top, Tigo. I specialise in building Clouds using mostly Kubernetes.</p>
+                <p className={"font-normal"}>Hi! I'm, as you have probably seen up top, Tigo. I specialise in building Clouds using mostly Kubernetes. I also love doing stuff with baremetal servers</p>
             {/*
             Talk about yourself a bit more, what you do, your hobbies and your current work. Might also be intresting to show of your home setup using TALOS,
             Maybe run this whole site on there including SystemManager and everything else :)
@@ -132,66 +133,53 @@ export default function Home() {
                     </div>
 
                     <div
-                        className={"p-2 xl:p-0 w-full md:w-3/4 lg:w-5/6 xl:w-7/8 2xl:w-4/6 grid grid-flow-dense grid-cols-1 lg:grid-cols-3 gap-4 mt-5 text-center"}>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        className={"p-2 xl:p-0 w-full md:w-3/4 lg:w-5/6 xl:w-7/8 2xl:w-4/6 grid grid-flow-dense grid-cols-1 lg:grid-cols-3 gap-2 mt-5 text-center"}>
+                        <SkillCard>
                             Experience 1
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 2
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 3
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 4
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 5
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 6
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 7
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 8
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 9
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 10
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 11
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1 lg:col-span-2"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 12
-                        </div>
-                        <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                        </SkillCard>
+                        <SkillCard>
                             Experience 13
-                        </div>
+                        </SkillCard>
                     </div>
                 </div>
 
-                <Separator classNames={"w-1/2 my-2"}/>
+                <Separator classNames={"w-1/2 my-2 hidden"}/>
 
 
-                <div className={"w-full flex flex-col items-center my-2"}>
+                <div className={"w-full flex-col items-center my-2 hidden"}>
                     <div className={"text-center"}>
                         <h1 className={"text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-white dark:to-slate-600 to-purple-600 text-center"}>
                             Projects
@@ -202,27 +190,27 @@ export default function Home() {
                     <div
                         className={"p-2 xl:p-0 w-full md:w-3/4 lg:w-5/6 xl:w-7/8 2xl:w-4/6 grid grid-flow-dense grid-cols-1 lg:grid-cols-3 gap-4 mt-5 text-center"}>
                         <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                            className={"p-2 border-2 dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
                             Project 1
                         </div>
                         <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                            className={"p-2 border-2 dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
                             Project 2
                         </div>
                         <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                            className={"p-2 border-2 dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
                             Project 3
                         </div>
                         <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                            className={"p-2 border-2 dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
                             Project 4
                         </div>
                         <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                            className={"p-2 border-2 dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
                             Project 5
                         </div>
                         <div
-                            className={"p-2 border dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
+                            className={"p-2 border-2 dark:border-slate-600 border-purple-600 rounded-lg col-span-1"}>
                             Project 6
                         </div>
                     </div>
