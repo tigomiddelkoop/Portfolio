@@ -112,7 +112,7 @@ export default function Home() {
 
                 <div
                     className={
-                        "absolute bottom-5 flex animate-bounce flex-col text-purple-300 dark:text-slate-300"
+                        "absolute bottom-5 flex animate-bounce flex-col text-purple-300 dark:text-slate-300 -z-10"
                     }
                 >
                     <p className={"mb-2 text-xs font-bold"}>
@@ -173,10 +173,10 @@ export default function Home() {
 
                     <div
                         className={
-                            "xl:w-7/8 xl2:grid-cols-4 mt-5 grid w-full grid-flow-dense grid-cols-1 gap-2 p-2 text-center md:w-3/4 lg:w-5/6 lg:grid-cols-2 xl:grid-cols-3 xl:p-0 2xl:w-4/6"
+                            "xl:w-7/8 xl2:grid-cols-4 mt-5 grid w-full grid-flow-dense grid-cols-1 gap-2 p-2 text-center md:w-3/4 lg:w-5/6 lg:grid-cols-2 xl:grid-cols-3 xl:p-0 2xl:w-4/6 -z-10"
                         }
                     >
-                        {projects.map((project) => {
+                        {projects.map((project: never) => {
                             return <SkillCard data={project}></SkillCard>
                         })}
                     </div>
