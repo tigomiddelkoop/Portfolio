@@ -1,11 +1,11 @@
 {
-  "name": "Cloud Platforms",
-  "description": "The Cloud is everywhere and neverywhere",
-  "entries": [
-    {
-      "name": "Google Cloud",
-      "date": "2021-06-01",
-      "confidence": 60
-    }
-  ]
+    "name": "Cloud Platforms",
+    "description": "The Cloud is everywhere and neverywhere",
+    "entries": [
+        {
+            "name": "Google Cloud",
+            "date": "2021-06-01",
+            "confidence": 60
+        }
+    ]
 }

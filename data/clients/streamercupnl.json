@@ -1,10 +1,7 @@
 {
-  "name": "StreamerCupNL",
-  "logo": "/img/clients/streamercupnl.svg",
-  "about": "StreamerCupNL is a community focussed charity organization that creates events and works together with streamers.",
-  "website": "https://streamercup.nl",
-  "services": [
-    "Hosting",
-    "Development"
-  ]
+    "name": "StreamerCupNL",
+    "logo": "/img/clients/streamercupnl.svg",
+    "about": "StreamerCupNL is a community focussed charity organization that creates events and works together with streamers.",
+    "website": "https://streamercup.nl",
+    "services": ["Hosting", "Development"]
 }

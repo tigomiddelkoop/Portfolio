@@ -1,13 +1,13 @@
 [
-  {
-    "name": "Beat Saber",
-    "image": "/img/games/beatsaber.png"
-  },
-  {
-    "name": "Minecraft",
-    "image": "/img/games/minecraft.png"
-  },
-  {
-    "name": "Guild Wars 2"
-  }
+    {
+        "name": "Beat Saber",
+        "image": "/img/games/beatsaber.png"
+    },
+    {
+        "name": "Minecraft",
+        "image": "/img/games/minecraft.png"
+    },
+    {
+        "name": "Guild Wars 2"
+    }
 ]

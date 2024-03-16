@@ -1,18 +1,18 @@
 .categoryContainer {
-  @apply py-2 px-8 flex flex-col;
+    @apply flex flex-col px-8 py-2;
 }
 
 .categoryTitle {
-  @apply text-lg font-bold;
+    @apply text-lg font-bold;
 }
 
 .categorySubTitle {
-  @apply text-xs
+    @apply text-xs;
 }
 .link {
-  @apply flex flex-row my-0.5 w-auto px-2 py-1 rounded-lg justify-center hover:bg-pink-500;
+    @apply my-0.5 flex w-auto flex-row justify-center rounded-lg px-2 py-1 hover:bg-pink-500;
 }
 
 .socialMediaCategory {
-  @apply flex flex-col;
+    @apply flex flex-col;
 }
