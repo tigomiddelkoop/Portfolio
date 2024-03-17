@@ -5,22 +5,22 @@
     "entries": [
         {
             "name": "Jetbrains PhpStorm",
-            "extras": ["PHP, HTML and Javascript"],
+            "extra": "PHP, HTML and Javascript IDE",
             "date": "2017"
         },
         {
             "name": "Jetbrains Rider",
-            "extras": [".NET"],
+            "extra": ".NET IDE",
             "date": "2020-12-01"
         },
         {
             "name": "Jetbrains IntelliJ",
-            "extras": ["Java and more"],
+            "extra": "Java and more IDE",
             "date": "2017"
         },
         {
             "name": "Jetbrains DataGrip",
-            "extras": ["Database Management"],
+            "extra": "Database IDE",
             "date": "2021-01-15"
         }
     ]

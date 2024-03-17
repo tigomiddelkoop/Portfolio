@@ -76,28 +76,17 @@ export default function RootLayout({
     return (
         <html className={`${fonts.variable} ${theme}`} lang="en">
             <body
-                className={`h-screen bg-gradient-to-br from-purple-950 via-purple-800 to-purple-950 bg-fixed text-white duration-1000 dark:from-slate-950 dark:via-slate-800 dark:to-slate-950`}
+                className={`h-screen scroll-smooth bg-gradient-to-br from-purple-950 via-purple-800 to-purple-950 bg-fixed text-white duration-1000 dark:from-slate-950 dark:via-slate-800 dark:to-slate-950`}
             >
                 <div className={"h-full w-full"}>
-                    <div className={"m-4 flex items-center justify-center"}>
-                        <Navbar
-                            changeTheme={changeTheme}
-                            theme={theme}
-                        ></Navbar>
+                    <div className={"flex items-center justify-center"}>
+                        <Navbar changeTheme={changeTheme} theme={theme} />
                     </div>
-                    {children}
-                    <div className={""}>
+                    <div>{children}</div>
+                    <div>
                         <Footer />
                     </div>
                 </div>
-
-                {/*<footer>*/}
-                {/*    - Pink and purple are one of my favorite colors, so I will reflect that here*/}
-                {/*    - All pictures shown are selfmade, no stock pictures are used*/}
-                {/*    - Build version*/}
-                {/**/}
-                {/*    - Auto switch to darkmode when at night (can be forced to either one ofc)*/}
-                {/*</footer>*/}
             </body>
         </html>
     )

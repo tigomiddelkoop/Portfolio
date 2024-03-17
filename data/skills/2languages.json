@@ -10,7 +10,7 @@
         },
         {
             "name": "TypeScript",
-            "extras": ["Also JavaScript"],
+            "extras": "JavaScript too!",
             "date": "2018",
             "confidence": 75
         },
@@ -21,7 +21,7 @@
         },
         {
             "enabled": true,
-            "name": "C++, C#, C",
+            "name": "C++, C# & C",
             "date": "2020-06-01",
             "confidence": 10
         },

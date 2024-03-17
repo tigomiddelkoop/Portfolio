@@ -4,31 +4,31 @@
     "entries": [
         {
             "name": "Laravel",
-            "extras": ["PHP"],
+            "extra": "PHP",
             "date": "2018",
             "confidence": 75
         },
         {
             "name": "NextJS",
-            "extras": ["TypeScript"],
+            "extra": "TypeScript",
             "date": "2020-12-01",
             "confidence": 25
         },
         {
             "name": "React",
-            "extras": ["TypeScript"],
+            "extra": "TypeScript",
             "date": "2019-09-01",
             "confidence": 50
         },
         {
             "name": "Vue",
-            "extras": ["TypeScript"],
+            "extra": "TypeScript",
             "date": "2021-02-09",
             "confidence": 50
         },
         {
             "name": "ExpressJS",
-            "extras": ["TypeScript"],
+            "extra": "TypeScript",
             "date": "2019-09-01",
             "confidence": 50
         }

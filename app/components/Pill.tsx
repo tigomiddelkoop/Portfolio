@@ -5,6 +5,7 @@ interface Props {
     color?: "primary" | "secondary" | "danger" | "warning" | "success" | "info"
     className?: string
 }
+
 export default function Pill(props: Props) {
     let type = styles.primary
 

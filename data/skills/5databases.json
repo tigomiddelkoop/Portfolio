@@ -4,7 +4,8 @@
     "image": "/img/skills/databases.jpg",
     "entries": [
         {
-            "name": "MySQL/MariaDB",
+            "name": "MySQL",
+            "extra": "Includes MariaDB",
             "date": "2018-01-01",
             "confidence": 50
         },
