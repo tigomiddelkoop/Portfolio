@@ -23,7 +23,7 @@ export default function Navbar(props: Props): React.JSX.Element {
             <div className={"flex w-full items-center justify-center"}>
                 <div
                     className={
-                        "grid h-16 w-full grid-cols-2 items-center justify-between px-4 lg:w-3/4 xl:grid-cols-4"
+                        "grid h-16 w-full grid-cols-2 items-center justify-between px-4 lg:w-3/4 md:grid-cols-4"
                     }
                 >
                     <Link href={"/"}>
@@ -54,7 +54,7 @@ export default function Navbar(props: Props): React.JSX.Element {
 
                     <div
                         className={
-                            "col-span-2 hidden items-center justify-center xl:flex"
+                            "col-span-2 hidden items-center justify-center md:flex"
                         }
                     >
                         {getNavbar()}
@@ -101,7 +101,7 @@ export default function Navbar(props: Props): React.JSX.Element {
 
             <div
                 className={
-                    "col-span-2 mb-2 flex w-full items-center justify-center xl:hidden"
+                    "col-span-2 mb-2 flex w-full items-center justify-center md:hidden"
                 }
             >
                 {getNavbar()}
