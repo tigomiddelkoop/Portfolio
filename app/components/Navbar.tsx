@@ -116,7 +116,7 @@ function getNavbar() {
     return (
         <div
             className={
-                "text-md xl:overflow-none scroll-hidden mx-4 flex w-screen justify-center space-x-2 overflow-auto rounded-full border border-purple-600 bg-black/[0.2] px-6 py-2 shadow-lg dark:border-slate-600 xl:w-auto xl:space-x-6 xl:px-8"
+                "text-md xl:overflow-none scroll-hidden mx-4 flex justify-center space-x-2 overflow-auto rounded-full border border-purple-600 bg-black/[0.2] px-6 py-2 shadow-lg dark:border-slate-600 xl:space-x-6 xl:px-8"
             }
         >
             <Link
