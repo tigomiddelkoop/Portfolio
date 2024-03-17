@@ -50,8 +50,9 @@ export default function Home() {
                         }
                     >
                         <h1 className="mb-1 text-4xl md:text-6xl">
-                            <span className={"font-black"}>Tigo</span>
-                            <span className={"font-light"}>Middelkoop</span>
+                            <span className={'font-black'}>T</span><span className={"font-normal"}>igo</span>
+                            <span className={'font-black'}>M</span><span className={"font-normal"}>iddelkoop</span>
+
                         </h1>
                         <h4 className="text-1xl font-bold md:text-2xl">
                             Cloud Engineer & Fullstack Developer
