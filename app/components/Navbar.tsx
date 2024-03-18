@@ -19,7 +19,7 @@ export default function Navbar(props: Props): React.JSX.Element {
     const [navBarOpen, setNavBarOpen] = useState(false)
 
     return (
-        <div className={"fixed top-0 w-full backdrop-blur-3xl"}>
+        <div className={"fixed z-10 top-0 w-full backdrop-blur-3xl"}>
             <div className={"flex w-full items-center justify-center"}>
                 <div
                     className={
