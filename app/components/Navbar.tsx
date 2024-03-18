@@ -23,7 +23,7 @@ export default function Navbar(props: Props): React.JSX.Element {
             <div className={"flex w-full items-center justify-center"}>
                 <div
                     className={
-                        "grid h-16 w-full grid-cols-2 items-center justify-between px-4 lg:w-3/4 md:grid-cols-4"
+                        "grid h-16 w-full grid-cols-2 items-center justify-between px-4 md:grid-cols-4 lg:w-3/4"
                     }
                 >
                     <Link href={"/"}>

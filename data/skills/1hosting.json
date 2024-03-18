@@ -4,31 +4,31 @@
     "entries": [
         {
             "name": "Kubernetes",
-            "extras": "Container Orchestration",
+            "extra": "Container Orchestration",
             "date": "2020-12-01",
             "confidence": 70
         },
         {
             "name": "Google Cloud Run",
-            "extras": "Knative hosting",
+            "extra": "Knative hosting",
             "date": "2024-01-01",
             "confidence": 40
         },
         {
             "name": "Docker",
-            "extras": "Containerized Applications",
+            "extra": "Containerized Applications",
             "date": "2020-12-01",
             "confidence": 60
         },
         {
             "name": "Terraform",
-            "extras": "My infra as code!",
+            "extra": "My infra as code!",
             "date": "2022-03-01",
             "confidence": 75
         },
         {
-            "name": "Proxmox",
-            "extras": "My home server runs on this! :O",
+            "name": "Proxmox VE",
+            "extra": "My home server runs on this! :O",
             "date": "2023-12-01",
             "confidence": 75
         }

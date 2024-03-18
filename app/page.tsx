@@ -11,6 +11,8 @@ import SkillCard from "./components/SkillCard"
 import Title from "@/app/components/Title"
 import SubTitle from "@/app/components/SubTitle"
 import Container from "@/app/components/Container"
+import ProjectCard from "@/app/components/ProjectCard"
+import Grid from "@/app/components/Grid"
 
 export default function Home() {
     const [projects, setProjects] = useState([])
@@ -32,10 +34,10 @@ export default function Home() {
                     "flex h-screen flex-col items-center justify-center px-4 py-6 dark:border-gray-600 xl:px-12 xl:py-10"
                 }
             >
-                <div className="mb-3 flex flex-col md:flex-row items-center justify-center ">
+                <div className="mb-3 flex flex-col items-center justify-center md:flex-row ">
                     <Image
                         className={
-                            "xl:mr-4 h-24 w-24 rounded-full border-2 border-purple-900 shadow-lg dark:border-slate-900 xl:h-32 xl:w-32"
+                            "h-24 w-24 rounded-full border-2 border-purple-900 shadow-lg dark:border-slate-900 xl:mr-4 xl:h-32 xl:w-32"
                         }
                         alt="Tigo"
                         src={"/img/pf_new.jpg"}
@@ -50,9 +52,10 @@ export default function Home() {
                         }
                     >
                         <h1 className="mb-1 text-4xl md:text-6xl">
-                            <span className={'font-black'}>T</span><span className={"font-normal"}>igo</span>
-                            <span className={'font-black'}>M</span><span className={"font-normal"}>iddelkoop</span>
-
+                            <span className={"font-black"}>T</span>
+                            <span className={"font-normal"}>igo</span>
+                            <span className={"font-black"}>M</span>
+                            <span className={"font-normal"}>iddelkoop</span>
                         </h1>
                         <h4 className="text-1xl font-bold md:text-2xl">
                             Cloud Engineer & Fullstack Developer
@@ -122,45 +125,43 @@ export default function Home() {
                 <FontAwesomeIcon height={16} icon={faAnglesDown} />
             </div>
 
-            <Separator classNames={"mb-8"} />
+            <Separator className={"mb-8"} />
 
             <Container>
                 <div>
                     <Title>About me</Title>
-                    <SubTitle>WHO AM I?!?!?!?!?!</SubTitle>
+                    <SubTitle>Who am I? You'll read below!</SubTitle>
                 </div>
 
-                <p className={"font-normal"}>
+                <p className={"p-2 font-normal"}>
                     Hi! I'm, as you have probably seen up top, Tigo. I
                     specialise in building Clouds using mostly Kubernetes. I
                     also love doing stuff with baremetal servers
                 </p>
                 {/*
-            Talk about yourself a bit more, what you do, your hobbies and your current work. Might also be intresting to show of your home setup using TALOS,
+            Talk about yourself a bit more, what you do, your hobbies and your current work. Might also be interesting to show of your home setup using TALOS,
             Maybe run this whole site on there including SystemManager and everything else :)
             */}
             </Container>
 
-            <Separator classNames={"w-1/2 my-8"} />
+            <Separator className={"my-8 w-1/2"} />
 
-            <Container id={"experiences"}>
-                <div>
-                    <Title>Experiences</Title>
-                    <SubTitle>The things I have experience in</SubTitle>
+            <Container id={"experience"}>
+                <div className={"text-center"}>
+                    <Title>Experience</Title>
+                    <SubTitle>
+                        The software, tooling and others I have experience with
+                    </SubTitle>
                 </div>
 
-                <div
-                    className={
-                        "xl:w-7/8 xl2:grid-cols-4 -z-10 mt-5 grid w-full grid-flow-dense grid-cols-1 gap-2 p-2 text-center md:w-3/4 lg:w-5/6 lg:grid-cols-2 xl:grid-cols-3 xl:p-0 2xl:w-4/6"
-                    }
-                >
+                <Grid>
                     {projects.map((project: any) => {
                         return <SkillCard key={project.name} data={project} />
                     })}
-                </div>
+                </Grid>
             </Container>
 
-            <Separator classNames={"my-8"} />
+            <Separator className={"my-8"} />
 
             <Container id={"projects"}>
                 <div className={"text-center"}>
@@ -168,54 +169,17 @@ export default function Home() {
                     <SubTitle>Projects i've built</SubTitle>
                 </div>
 
-                <div
-                    className={
-                        "xl:w-7/8 mt-5 grid w-full grid-flow-dense grid-cols-1 gap-4 p-2 text-center md:w-3/4 lg:w-5/6 lg:grid-cols-3 xl:p-0 2xl:w-4/6"
-                    }
-                >
-                    <div
-                        className={
-                            "col-span-1 rounded-lg border-2 border-purple-600 p-2 dark:border-slate-600"
-                        }
-                    >
-                        Project 1
-                    </div>
-                    <div
-                        className={
-                            "col-span-1 rounded-lg border-2 border-purple-600 p-2 dark:border-slate-600"
-                        }
-                    >
-                        Project 2
-                    </div>
-                    <div
-                        className={
-                            "col-span-1 rounded-lg border-2 border-purple-600 p-2 dark:border-slate-600"
-                        }
-                    >
-                        Project 3
-                    </div>
-                    <div
-                        className={
-                            "col-span-1 rounded-lg border-2 border-purple-600 p-2 dark:border-slate-600"
-                        }
-                    >
-                        Project 4
-                    </div>
-                    <div
-                        className={
-                            "col-span-1 rounded-lg border-2 border-purple-600 p-2 dark:border-slate-600"
-                        }
-                    >
-                        Project 5
-                    </div>
-                    <div
-                        className={
-                            "col-span-1 rounded-lg border-2 border-purple-600 p-2 dark:border-slate-600"
-                        }
-                    >
-                        Project 6
-                    </div>
-                </div>
+                <Grid>
+                    <ProjectCard />
+                    <ProjectCard />
+                    <ProjectCard />
+                    <ProjectCard />
+                    <ProjectCard />
+                    <ProjectCard />
+                    <ProjectCard />
+                    <ProjectCard />
+                    <ProjectCard />
+                </Grid>
             </Container>
         </Fragment>
     )

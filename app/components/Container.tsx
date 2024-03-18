@@ -12,7 +12,7 @@ export default function Container(props: Props): React.JSX.Element {
     return (
         <div
             id={id}
-            className={`${classNames} my-2 flex w-full flex-col items-center`}
+            className={`${classNames} flex w-full flex-col items-center p-2`}
         >
             {props.children}
         </div>

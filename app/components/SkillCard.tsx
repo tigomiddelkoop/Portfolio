@@ -3,7 +3,6 @@ import { DateTime, Duration } from "luxon"
 import Separator from "@/app/components/Separator"
 
 interface Props {
-    className?: string
     data: {
         name: string
         description?: string
@@ -22,7 +21,7 @@ export default function SkillCard(props: Props): React.JSX.Element {
     return (
         <div
             className={
-                "col-span-1 m-2 flex flex-col rounded-lg border-2 border-purple-600 bg-black bg-opacity-25 backdrop-blur-3xl dark:border-slate-600"
+                "col-span-1 flex flex-col rounded-lg border-2 border-purple-600 bg-black bg-opacity-25 backdrop-blur-3xl dark:border-slate-600"
             }
         >
             <div
@@ -64,7 +63,7 @@ export default function SkillCard(props: Props): React.JSX.Element {
                                     <p
                                         className={`text-sm ${skill.confidence == undefined ? "hidden" : ""}`}
                                     >
-                                        {calculateConfidence(skill.confidence)}
+                                        {calculateConfidence(skill.confidence)}{" "}
                                         confidence{" "}
                                         <span className={"font-light"}>
                                             ({skill.confidence}%)
