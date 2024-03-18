@@ -27,7 +27,7 @@ export default function Footer(): React.JSX.Element {
 
     return (
         <footer>
-            <Separator classNames={"mt-8"} />
+            <Separator className={"mt-8"} />
             <div
                 className={
                     "items-center justify-center border-gray-100 p-4 text-center align-bottom text-white backdrop-blur-3xl dark:border-gray-500"
