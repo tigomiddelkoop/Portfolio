@@ -8,7 +8,7 @@ export default function Separator(props: Props): React.JSX.Element {
 
     return (
         <div
-            className={`${className} h-px w-full bg-gradient-to-r from-transparent via-purple-600 to-transparent dark:via-slate-600`}
+            className={`${className} h-[2px] w-full bg-gradient-to-r from-transparent via-purple-600 to-transparent dark:via-slate-600`}
         ></div>
     )
 }

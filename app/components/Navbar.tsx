@@ -1,10 +1,11 @@
 "use client"
+
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
-import React, { Fragment } from "react"
+import React from "react"
 import Link from "next/link"
 import Button from "@/app/components/Button"
 import Separator from "@/app/components/Separator"
@@ -14,7 +15,7 @@ interface Props {
     theme: string
 }
 
-export default function Navbar(props: Props): React.JSX.Element {
+export default function Navbar(props: Props) {
     const router = useRouter()
     const [navBarOpen, setNavBarOpen] = useState(false)
 
@@ -30,7 +31,7 @@ export default function Navbar(props: Props): React.JSX.Element {
                         <div className={"flex h-10 items-center"}>
                             <Image
                                 className={
-                                    "h-10 w-10 rounded-full border border-purple-600 bg-black/[0.2] shadow-lg dark:border-slate-600"
+                                    "h-10 w-10 rounded-full border-2 border-purple-600 bg-black/[0.2] shadow-lg dark:border-slate-600"
                                 }
                                 alt="Tigo"
                                 src={"/img/pf_new.jpg"}
@@ -44,9 +45,10 @@ export default function Navbar(props: Props): React.JSX.Element {
                                 }
                             >
                                 <h1>
-                                    <span className={"font-black"}>T</span>igo
-                                    <span className={"font-black"}>M</span>
-                                    iddelkoop
+                                    <span className={'font-black'}>T</span>
+                                    <span className={'font-normal'}>igo</span>
+                                    <span className={'font-black'}>M</span>
+                                    <span className={'font-normal'}>iddelkoop</span>
                                 </h1>
                             </div>
                         </div>
@@ -54,7 +56,7 @@ export default function Navbar(props: Props): React.JSX.Element {
 
                     <div
                         className={
-                            "col-span-2 hidden items-center justify-center md:flex"
+                            'col-span-2 hidden items-center justify-center md:flex'
                         }
                     >
                         {getNavbar()}
@@ -116,7 +118,7 @@ function getNavbar() {
     return (
         <div
             className={
-                "text-md xl:overflow-none scroll-hidden mx-4 flex justify-center space-x-2 overflow-auto rounded-full border border-purple-600 bg-black/[0.2] px-6 py-2 shadow-lg dark:border-slate-600 xl:space-x-6 xl:px-8"
+                "text-md xl:overflow-none scroll-hidden mx-4 flex justify-center space-x-2 overflow-auto rounded-full border-2 border-purple-600 bg-black/[0.2] px-6 py-2 shadow-lg dark:border-slate-600 xl:space-x-6 xl:px-8"
             }
         >
             <Link

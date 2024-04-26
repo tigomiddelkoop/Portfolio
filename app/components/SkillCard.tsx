@@ -3,6 +3,7 @@ import { DateTime, Duration } from "luxon"
 import Separator from "@/app/components/Separator"
 
 interface Props {
+    last: boolean
     data: {
         name: string
         description?: string
@@ -21,14 +22,14 @@ export default function SkillCard(props: Props): React.JSX.Element {
     return (
         <div
             className={
-                "col-span-1 flex flex-col rounded-lg border-2 border-purple-600 bg-black bg-opacity-25 backdrop-blur-3xl dark:border-slate-600"
+                "col-span-1 flex flex-col rounded-3xl border-4 border-purple-600 bg-black bg-opacity-25 dark:border-slate-600 shadow-lg"
             }
         >
             <div
-                className={`flex h-40 flex-col justify-center rounded-t-lg border-b-2 border-purple-600 bg-cover dark:border-slate-600`}
-                style={{ backgroundImage: `url('${props.data.image}')` }}
+                className={`flex h-40 flex-col justify-center border-b-2 border-purple-600 bg-cover dark:border-slate-600 bg-clip-content`}
+                // style={{ backgroundImage: `url('${props.data.image}')` }}
             >
-                <h1 className={"text-4xl font-bold"}>{props.data.name}</h1>
+                <h1 className={"text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-gray-400"}>{props.data.name}</h1>
                 <p className={"text-sm font-bold"}>{props.data.description}</p>
             </div>
             <div className={"flex flex-col"}>
@@ -71,7 +72,7 @@ export default function SkillCard(props: Props): React.JSX.Element {
                                     </p>
                                 </div>
                             </div>
-                            <Separator />
+                            {!props.last ? <Separator /> : ""}
                         </div>
                     )
                 })}
